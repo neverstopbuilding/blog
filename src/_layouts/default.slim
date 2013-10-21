@@ -1,12 +1,11 @@
 html
   head
     | {% css_asset_tag global_css %}
-      - /_assets/stylesheets/main.scss
-      - /_assets/stylesheets/syntax.css
+      - /_assets/css/app.scss
     | {% endcss_asset_tag %}
 
     | {% javascript_asset_tag head_js %}
-      - /_assets/javascripts/head.js
+      - /_assets/js/head.js
     | {% endjavascript_asset_tag %}
 
   body
@@ -14,5 +13,5 @@ html
       | {{ content }}
 
     | {% javascript_asset_tag tail_js %}
-      - /_assets/javascripts/tail.js
+      - /_assets/js/tail.js
     | {% endjavascript_asset_tag %}
