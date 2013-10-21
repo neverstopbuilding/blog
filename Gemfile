@@ -4,6 +4,7 @@ source "http://rubygems.org"
 
 gem 'jekyll'
 gem 'jekyll-slim'
+gem 'jekyll-asset-pipeline'
 
 group :development  do
   gem 'rake'
