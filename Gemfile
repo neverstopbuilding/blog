@@ -3,6 +3,7 @@
 source "http://rubygems.org"
 
 gem 'jekyll'
+gem 'jekyll-slim'
 
 group :development  do
   gem 'rake'
