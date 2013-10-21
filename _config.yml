@@ -1,4 +1,8 @@
+# Directory Settings
 source: ./src
 destination: ./build/deploy
+plugins: ./src/_plugins
+
+# Plugin Settings
 markdown: redcarpet
 pygments: true

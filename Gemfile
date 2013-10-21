@@ -6,7 +6,7 @@ gem 'jekyll'
 
 group :development  do
   gem 'rake'
-  gem 'guard-rubocop'
   gem 'rubocop'
-  gem 'guard'
+  gem 'guard-jekyll-plus', git: 'https://github.com/imathis/guard-jekyll-plus', branch: 'master'
+  gem 'guard-rubocop'
 end
