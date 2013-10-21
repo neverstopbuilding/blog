@@ -1,0 +1,18 @@
+# Directory Settings
+source: ./src
+destination: ./build/deploy
+plugins: ./src/_plugins
+
+# Site Specific Settings
+timezone: America/New_York
+
+# Plugin Settings
+markdown: redcarpet
+pygments: true
+
+asset_pipeline:
+  bundle: true
+  compress: true
+  output_path: assets
+  display_path: nil
+  gzip: true
