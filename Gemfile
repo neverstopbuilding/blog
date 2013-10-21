@@ -7,6 +7,7 @@ gem 'jekyll-slim'
 gem 'jekyll-asset-pipeline'
 gem 'compass'
 gem 'zurb-foundation'
+gem 'yui-compressor'
 
 group :development  do
   gem 'rake'

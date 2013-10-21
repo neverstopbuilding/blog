@@ -1,0 +1,6 @@
+asset_pipeline:
+  bundle: true
+  compress: false
+  output_path: assets
+  display_path: nil
+  gzip: false
