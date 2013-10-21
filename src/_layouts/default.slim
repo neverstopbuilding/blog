@@ -5,6 +5,7 @@ html
     | {% endcss_asset_tag %}
 
     | {% javascript_asset_tag head_js %}
+      - /_assets/js/vendor/custom.modernizr.js
       - /_assets/js/head.js
     | {% endjavascript_asset_tag %}
 
@@ -12,6 +13,9 @@ html
     .content-wrapper
       | {{ content }}
 
+    script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"
+
     | {% javascript_asset_tag tail_js %}
+      - /_assets/js/foundation/foundation.js
       - /_assets/js/tail.js
     | {% endjavascript_asset_tag %}
