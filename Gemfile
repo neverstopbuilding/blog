@@ -9,4 +9,6 @@ group :development  do
   gem 'rubocop'
   gem 'guard-jekyll-plus', git: 'https://github.com/imathis/guard-jekyll-plus', branch: 'master'
   gem 'guard-rubocop'
+  gem 'rb-fsevent'
+  gem 'guard-livereload'
 end

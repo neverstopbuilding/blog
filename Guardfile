@@ -6,3 +6,7 @@ guard 'jekyll-plus', :serve => true, :config => ['_config.yml'] do
   watch /^src/
   watch /_config.yml/
 end
+
+guard 'livereload' do
+  watch /^build\/deploy/
+end
