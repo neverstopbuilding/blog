@@ -6,4 +6,7 @@ gem 'jekyll'
 
 group :development  do
   gem 'rake'
+  gem 'guard-rubocop'
+  gem 'rubocop'
+  gem 'guard'
 end
