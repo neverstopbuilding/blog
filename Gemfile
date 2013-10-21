@@ -5,6 +5,8 @@ source "http://rubygems.org"
 gem 'jekyll'
 gem 'jekyll-slim'
 gem 'jekyll-asset-pipeline'
+gem 'compass'
+gem 'zurb-foundation'
 
 group :development  do
   gem 'rake'
