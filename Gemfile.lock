@@ -1,13 +1,4 @@
 GIT
-  remote: git://github.com/adaoraul/rack-jekyll.git
-  revision: 6a4b832c5b2350c8c1263b534ebf02135deb6363
-  ref: 6a4b832c5b2350c8c1263b534ebf02135deb6363
-  specs:
-    rack-jekyll (0.4.0)
-      jekyll (>= 0.12.0, < 2.0)
-      rack (~> 1.5.0)
-
-GIT
   remote: https://github.com/imathis/guard-jekyll-plus
   revision: d6a18711c1e8cf20994c150065a88e1fd26ab7eb
   branch: master
@@ -140,7 +131,6 @@ DEPENDENCIES
   jekyll-asset-pipeline
   jekyll-slim
   rack-contrib
-  rack-jekyll!
   rack-rewrite
   rake
   rb-fsevent
