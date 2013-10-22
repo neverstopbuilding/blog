@@ -42,11 +42,11 @@ end
 ##Update your README.md
 Finally, I added the Travis notifications to my `README.md` to indicate the status of the build, for example:
 
-{% codeblock %}
+```
 Master branch: [![Build Status](https://travis-ci.org/jrobertfox/chef-broiler-platter.png?branch=master)](https://travis-ci.org/jrobertfox/chef-broiler-platter)
 
 Develop branch: [![Build Status](https://travis-ci.org/jrobertfox/chef-broiler-platter.png?branch=develop)](https://travis-ci.org/jrobertfox/chef-broiler-platter)
-{% endcodeblock %}
+```
 
 That's it! If you have followed thus far, and even though we aren't testing much yet (or perhaps because we aren't
 ) when you commit this and push it up, you should shortly see that the build has intact passed!

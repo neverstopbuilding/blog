@@ -18,7 +18,7 @@ Invoking the agile manifesto's "Working software is the primary measure of progr
 ##Avoid Silos
 The presenters encouraged limiting silos so that bottle necks could be reduced as well as dependencies on specific team members for knowledge. They suggested creating "activity bingo," plotting team members vs. skill sets and checking off the intersections. Here is a funny example with me and my girlfriend:
 
-![](http://media.tumblr.com/tumblr_m8pb20v8Kt1r1y0wi.jpg)
+![Example of activity bingo](http://media.tumblr.com/tumblr_m8pb20v8Kt1r1y0wi.jpg)
 
 The point is that you don't want diagonals where each person has a particular skill (silo), but rather some "personal breadth" or "team depth" where either one person can wear many hats or the team can all take on a particular need, respectively. Having overlap prevents "some one being out" from causing delays or blockers.
 
@@ -27,7 +27,7 @@ It is also important to remember that this "bingo" game is just for team purpose
 ##Collaborative Design
 One of my favorite topics was on collaborative design as a way to encourage more interactive, get-out-of-the-chair-and-do-something planning sessions. The suggestion was that during the process of breaking down stories into tasks that you (I assume the evangelist/scrum master) would "model the behavior" by getting up and starting to draw during the discussion. They showed a cool example of a process flow with post-its for classes interacting on the white board.
 
-![](http://media.tumblr.com/tumblr_m8paxrXJeY1r1y0wi.jpg)
+![Post it notes attached to a whiteboard with a process flow](http://media.tumblr.com/tumblr_m8paxrXJeY1r1y0wi.jpg)
 
 It really resonated that by defining classes as post its you could move them around a lot, draw flows and get everyone on the same page on how the feature is going to work.
 
@@ -44,6 +44,6 @@ The final item they discussed regarding "making collaboration visible" was the t
 
 Here is a funny example:
 
-![](http://media.tumblr.com/tumblr_m8pb2lASSU1r1y0wi.jpg)
+![Pirate map of an organization](http://media.tumblr.com/tumblr_m8pb2lASSU1r1y0wi.jpg)
 
 More to come! This is a great conference.

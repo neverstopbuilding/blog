@@ -22,11 +22,11 @@ And so I spent the next several hours building a Dashboard Widget to do the same
 
 **Front**
 
-![](http://media.tumblr.com/tumblr_m78jecokWd1r1y0wi.png)
+![Screenshot of the widget front](http://media.tumblr.com/tumblr_m78jecokWd1r1y0wi.png)
 
 **Back**
 
-![](http://media.tumblr.com/tumblr_m78jekA17w1r1y0wi.png)
+![Screenshot of the widget back](http://media.tumblr.com/tumblr_m78jekA17w1r1y0wi.png)
 
 The source is open and can be found here: [https://github.com/jasonrobertfox/GQueues-Dashboard-Widget](https://github.com/jasonrobertfox/GQueues-Dashboard-Widget)
 
@@ -44,7 +44,7 @@ Ok to underline a text label you just gotta use ol' css:
 
     text-decoration: underline;
 
-![](http://media.tumblr.com/tumblr_m78jffTKl61r1y0wi.png)
+![Corner showing small link to my name](http://media.tumblr.com/tumblr_m78jffTKl61r1y0wi.png)
 To get this little guy to look as fresh as it does required two separate text elements one of which was the actual link that was underlined and did something.
 
 ###"make text link to website dashcode mac widget"
@@ -93,7 +93,7 @@ Saves you a lot of hassle and you can just use all the jQuery goodness to deal w
 I hope you enjoyed the tips, and the widget if you downloaded it. I encourage you to contribute or make suggestions for improvements. I guess the moral of the story is that you can't just ignore that itch to innovate or make something a little bit better. And now that I can add my task, finally, to my task list, I can move on to actually completing it ;)
 
 
-####Resources
+###Resources
 I came across a bunch of articles while trying to figure out building this thing:
 
 - [http://www.dashboardwidgets.com/showcase/index.php](http://www.dashboardwidgets.com/showcase/index.php)

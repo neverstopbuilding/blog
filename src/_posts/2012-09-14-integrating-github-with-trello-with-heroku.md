@@ -27,9 +27,9 @@ This post will serve as a general set up guide for the whole *thang.*
 Go get a free account [here](http://www.heroku.com/). Follow the instructions to install the terminal tools. Login with your account.
 
 ##Gather config values
-- **api_key** - Go to [https://trello.com/1/appKey/generate](https://trello.com/1/appKey/generate)<br> ![](http://media.tumblr.com/tumblr_mablr1SXWm1r1y0wi.png)
-- **oauth_token** - Go to _https://trello.com/1/authorize?response_type=token&name=Trello+Github+Integration&scope=read,write&expiration=never&key=[your-key-here]_ replacing __[your-key-here]__ with the **api_key** from above. Authorize the request:<br> ![](http://media.tumblr.com/tumblr_mablrk95521r1y0wi.png) <br> and record the token.<br> ![](http://media.tumblr.com/tumblr_mablrxjGZG1r1y0wi.png)
-- **board_id** - You can get the board id from the URL, for example https://trello.com/board/trello-development/4d5ea62fd76aa1136000000c the board id is _4d5ea62fd76aa1136000000ca_.
+- **api_key** - Go to [https://trello.com/1/appKey/generate](https://trello.com/1/appKey/generate)<br> ![Location of developer API Key](http://media.tumblr.com/tumblr_mablr1SXWm1r1y0wi.png)
+- **oauth_token** - Go to `https://trello.com/1/authorize?response_type=token&name=Trello+Github+Integration&scope=read,write&expiration=never&key=[your-key-here]_ replacing __[your-key-here]__` with the **api_key** from above. Authorize the request:<br> ![Trello authorization screen](http://media.tumblr.com/tumblr_mablrk95521r1y0wi.png) <br> and record the token.<br> ![Confirmation Screen](http://media.tumblr.com/tumblr_mablrxjGZG1r1y0wi.png)
+- **board_id** - You can get the board id from the URL, for example `https://trello.com/board/trello-development/4d5ea62fd76aa1136000000c` the board id is _4d5ea62fd76aa1136000000ca_.
 - **…list_target_id** - These can be found by opening a card in the list, exporting it as json, and grabbing the "idList" value.
 
 ##Deploy to Heroku
@@ -39,7 +39,7 @@ Follow these steps replacing the flagged values with the ones you gathered above
 - `cd github-trello` - go into that directory
 - `heroku create` - create the Heroku app
 - `heroku config:add api_key=<API_KEY> oauth_token=<OATH_TOKEN> board_id=<BOARD_ID> start_list_target_id=<ID> finish_list_target_id=<ID>` - add all your details
-- `git push heroku master` - deploy! <br> ![](http://media.tumblr.com/tumblr_mablsi8NDc1r1y0wi.png)
+- `git push heroku master` - deploy! <br> ![Screenshot of deploying to heroku](http://media.tumblr.com/tumblr_mablsi8NDc1r1y0wi.png)
 
 Now the server should be running on Heroku.
 
@@ -48,7 +48,7 @@ Simply add you your Heroku app url + "/posthook" as a WebHook url under "Admin" 
 
 `http://crazy-cow-123.herokuapp.com/posthook`
 
-![](http://media.tumblr.com/tumblr_mablsyCtn31r1y0wi.png)
+![Github post hook screen](http://media.tumblr.com/tumblr_mablsyCtn31r1y0wi.png)
 
 ##Thats it!
 
@@ -59,6 +59,6 @@ Now when you commit to your git repo with the right flags:
 
 Your Trello card will be updated with a comment or moved between lists, something like this:
 
-![](http://media.tumblr.com/tumblr_mablt77kQK1r1y0wi.png)
+![Example trello message from a github update](http://media.tumblr.com/tumblr_mablt77kQK1r1y0wi.png)
 
 Have fun!

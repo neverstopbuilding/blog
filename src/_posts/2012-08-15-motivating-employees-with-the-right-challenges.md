@@ -8,7 +8,7 @@ categories: [agile, productivity]
 
 One of the take-aways I have been raving about to people I meet at this [conference](http://agile2012.agilealliance.org/) is Kati Vilkki's Challenge vs. Skill diagram:
 
-![](http://media.tumblr.com/tumblr_m8sy6aaJkV1r1y0wi.jpg)
+![Chart of challenge versus skillset](http://media.tumblr.com/tumblr_m8sy6aaJkV1r1y0wi.jpg)
 
 It is a cool way to capture the dynamics of work and motivation. Anything far above the dividing line would be classified as something that causes anxiety, the challenge is far beyond the workers' skills. In essence they don't know what they don't know. On the other hand anything below the line is boring, the skills outweigh the challenge, the work is tedious, and as Kati said:
 

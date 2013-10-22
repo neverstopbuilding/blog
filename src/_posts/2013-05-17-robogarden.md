@@ -18,11 +18,11 @@ Having just received an Arduino kit I set to work figuring out how all this woul
 
 Following this [article](http://bitbeam.org/2011/09/09/the-next-step/) lead me to the schematic for my stepper motor, a Pololu [Bipolar, 200 Steps/Rev, 28×45mm, 4.5V, 0.67 A/Phase](http://www.pololu.com/catalog/product/1206) or part number #1206.
 
-![image](http://arduino.cc/en/uploads/Reference/bipolar_stepper_four_pins.jpg)
+![H Bridge circuit diagram](http://arduino.cc/en/uploads/Reference/bipolar_stepper_four_pins.jpg)
 
 Here is the corresponding stepper diagram:
 
-![image](http://a.pololu-files.com/picture/0J2296.230.jpg?c7e99069fbc52380102527649a55ec76)
+![Stepper motor wiring diagram](http://a.pololu-files.com/picture/0J2296.230.jpg?c7e99069fbc52380102527649a55ec76)
 
 I was able to successfully get the thing working by mapping the pins as follows:
 
@@ -33,12 +33,12 @@ I was able to successfully get the thing working by mapping the pins as follows:
 
 Here is the assembled test:
 
-![image](https://lh6.googleusercontent.com/-m9I_EkwiyPs/UZVPivVSofI/AAAAAAAAHYE/UBIk8FhObRQ/w533-h710-no/662B0169-DF2B-4486-86E5-015593EDA70A.JPG)
+![Test of stepper wired to H Bridge](https://lh6.googleusercontent.com/-m9I_EkwiyPs/UZVPivVSofI/AAAAAAAAHYE/UBIk8FhObRQ/w533-h710-no/662B0169-DF2B-4486-86E5-015593EDA70A.JPG)
 
 ##Playing with Software
 Next I'm interested in controlling this with some Javascript library, namely [johnny-five](https://github.com/rwldrn/johnny-five).
 
-While I did create a repo for this code: [https://github.com/jasonrobertfox/robo-garden](https://github.com/jasonrobertfox/robo-garden) it appears there are two problems with the johnny-five library:
+While I did create a repo for this code: [https://github.com/neverstopbuilding/robo-garden](https://github.com/jasonrobertfox/robo-garden) it appears there are two problems with the johnny-five library:
 
 1. I'll need to keep the bot teathered to the machine.
 2. There does not appear to be a way to control stepper motors.

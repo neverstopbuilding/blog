@@ -19,7 +19,7 @@ The purpose of this post is to share how I have set it up, which I hope will hel
 
 Here are my "queues":
 
-![](http://media.tumblr.com/tumblr_mam52zkWcf1r1y0wi.png)
+![Screenshot of my queues panel](http://media.tumblr.com/tumblr_mam52zkWcf1r1y0wi.png)
 
 ###The Basics
 
