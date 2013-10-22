@@ -32,9 +32,9 @@ YES! (And because of the way Text Expander can be set up, it is still in the cli
 
 You can do it too by adding this simple script to the snippet:
 
-{% codeblock lang:bash %}
+```bash
 #!/bin/bash
 curl -s http://www.famkruithof.net/uuid/uuidgen | grep -o '<h3>\([0-9a-z\-]\+\)</h3>' | sed 's/<h3>\(.*\)<\/h3>/\1/'
-{% endcodeblock %}
+```
 
 Enjoy.

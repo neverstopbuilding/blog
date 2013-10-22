@@ -15,7 +15,7 @@ To begin, if you have created a repository for the code as part of this series, 
 ##Configuring Travis
 Create a new `.travis.yml` file in the root of the project directory with this content:
 
-{% codeblock lang:ruby %}
+```ruby
 language: ruby
 bundler_args: --without development
 script: "bundle exec rake build"
@@ -27,17 +27,17 @@ branches:
   only:
     - master
     - develop
-{% endcodeblock %}
+```
 
 This tests on the CI server and excludes development gem dependencies to speed things up, it also tests just the master and development branches.
 
 ##Update your Gemfile
 To ensure that any future development related Gems are correctly excluded, add this to your `Gemfile`:
 
-{% codeblock lang:ruby %}
+```ruby
 group :development do
 end
-{% endcodeblock %}
+```
 
 ##Update your README.md
 Finally, I added the Travis notifications to my `README.md` to indicate the status of the build, for example:
@@ -66,11 +66,11 @@ Create a `.chef` configuration directory, and `knife.rb` file
 
 Update `Gemfile` development dependencies to include Chef:
 
-{% codeblock lang:ruby %}
+```ruby
 group :development do
   gem 'chef', '11.4.4'
 end
-{% endcodeblock %}
+```
 
 ##Determining your Variable Dependencies
 
@@ -78,7 +78,7 @@ There are a few settings that will have to be configured on a per user basis, ad
 
 I created an `environments.sh` file to hold all the settings as they should be exported:
 
-{% codeblock lang:bash %}
+```bash
 export OPSCODE_USER="jrobertfox"
 export OPSCODE_ORGNAME="nsb"
 export KNIFE_CLIENT_KEY_FOLDER="$HOME/.chef"
@@ -88,7 +88,7 @@ export KNIFE_CACHE_PATH="$HOME/.chef/checksums"
 export KNIFE_COOKBOOK_COPYRIGHT="Never Stop Building"
 export KNIFE_COOKBOOK_LICENSE="none"
 export KNIFE_COOKBOOK_EMAIL="jasonrobertfox@gmail.com"
-{% endcodeblock %}
+```
 
 Then updated the rake task `check` to loop through a list of the environment variables and report on if they are set or not. (Be sure to check out my [Rakefile](https://github.com/jasonrobertfox/chef-broiler-plate/blob/develop/Rakefile) to see how I'm checking these dependencies.)
 
@@ -104,7 +104,7 @@ Ensure that the keys you downloaded as part of setting up your Opscode account a
 ##Setup your Knife Configurations
 Configure the `knife.rb` file to use your environment variables. Later the Vagrant file will have dependencies on these environment variables as well. This will allow hard coding of certain variables (perhaps company name) in forks of the project for a specific application.
 
-{% codeblock lang:ruby %}
+```ruby
 #Configurable Variables (Change these to not depend on environment variables!)
 my_orgname              = ENV['OPSCODE_ORGNAME']
 my_chef_server_url      = ENV['KNIFE_CHEF_SERVER']
@@ -134,7 +134,7 @@ cookbook_path           ["#{current_dir}/../cookbooks"]
 cookbook_copyright      my_cookbook_copyright
 cookbook_license        my_cookbook_license
 cookbook_email          my_cookbook_email
-{% endcodeblock %}
+```
 
 Now if you have actually set up your environment variables, you should be able to run `knife client list` to get a list of your clients from your Chef server. If nothing else you would have a "validator" client, which would tell you this is all working.
 

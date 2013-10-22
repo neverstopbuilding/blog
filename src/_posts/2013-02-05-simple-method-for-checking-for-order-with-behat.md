@@ -43,7 +43,7 @@ The query here `table.results-table tr td:first-child` simply selects the `td` e
 ##Implementing the Context
 Of course the key to tying this all together is to implement a context function that will determine the precedence. One implementation of the the context is as follows:
 
-{% codeblock lang:php %}
+```php
 <?php
     /**
      * @Then /^"([^"]*)" should precede "([^"]*)" for the query "([^"]*)"$/
@@ -62,7 +62,7 @@ Of course the key to tying this all together is to implement a context function 
             "$textBefore does not proceed $textAfter"
         );
     }
-{% endcodeblock %}
+```
 
 I wanted to avoid a `foreach` loop so this function simply gathers all the elements found by the css query, and then maps an anonymous function that returns the text from the element onto the found elements.
 

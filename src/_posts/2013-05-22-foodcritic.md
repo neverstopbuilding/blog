@@ -21,12 +21,12 @@ Use `bundle update` to update our gems.
 ##Creating a Rake Task
 Lets add a rake task to execute the Foodcritic against any of our cookbooks:
 
-{% codeblock lang:ruby %}
+```ruby
 desc "Runs foodcritic against all the cookbooks."
 task :foodcritic do
   sh "bundle exec foodcritic -f any cookbooks"
 end
-{% endcodeblock %}
+```
 
 ##Follow the Rules!
 I like the idea of adding the Custom Ink and Etsy rule repositories as detailed [here](http://technology.customink.com/blog/2012/08/03/testing-chef-cookbooks/). We should do that by adding some git submodules and updating our 'README.md file (to add clear install instructions):

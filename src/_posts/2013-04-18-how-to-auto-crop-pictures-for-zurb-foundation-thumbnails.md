@@ -14,7 +14,7 @@ Here is what I am trying to avoid:
 
 Which is achieved with something like this:
 
-{% codeblock lang:html %}
+```html
 <ul class="large-block-grid-4 clearing-thumbs" data-clearing>
     <li>
       <a class="th" href="/image.jpg">
@@ -23,30 +23,30 @@ Which is achieved with something like this:
     </li>
 ...
 </ul>
-{% endcodeblock %}
+```
 
-In this situation Zurb's `clearing` javascript will construct the light box, while the `th` class styles the thumbnails correctly. 
+In this situation Zurb's `clearing` javascript will construct the light box, while the `th` class styles the thumbnails correctly.
 
 ##Make The Image Transparent
 First thing we need to do is to make the image transparent. Seems like a strange idea, but it will soon become important. This can be achieved with something like this:
 
-{% codeblock lang:html %}
+```html
 <img class="transparent" src="/image.jpg" />
-{% endcodeblock %}
+```
 
 I am using [Compass](http://compass-style.org/) mixins below:
-{% codeblock lang:css %}
+```css
 .transparent{
     @include opacity(0);
 }
-{% endcodeblock %}
+```
 
 Now you should have a bunch of empty boxes. Ut oh… Well not quite.
 
 ##Show Your Thumbnail as a Background
 Oh. Duh. Yeah that makes perfect sense. All we need to do is make our thumbnail the background of the anchor link:
 
-{% codeblock lang:html %}
+```html
 <ul class="large-block-grid-4 clearing-thumbs" data-clearing>
     <li>
       <a class="th" href="/image.jpg" style="background-image: url(/image.jpg);">
@@ -55,14 +55,14 @@ Oh. Duh. Yeah that makes perfect sense. All we need to do is make our thumbnail 
     </li>
 ...
 </ul>
-{% endcodeblock %}
+```
 
 I know that in general it is a high sin to put `style` attributes in your html, but I think it makes sense in this instance. If you are using a template system you can just iterate through your images and set the background of each.
 
 ##Resize All the Things
 Now we just add one more class to the anchor tag that lets us customize the size of our thumbnails. Something like:
 
-{% codeblock lang:html %}
+```html
 <ul class="large-block-grid-4 clearing-thumbs" data-clearing>
     <li>
       <a class="th th-item" href="/image.jpg" style="background-image: url(/image.jpg);">
@@ -71,16 +71,16 @@ Now we just add one more class to the anchor tag that lets us customize the size
     </li>
 ...
 </ul>
-{% endcodeblock %}
+```
 
-{% codeblock lang:css %}
+```css
 .th-item{
     height: 11em;
     width: 100%;
     overflow: hidden;
     background-position: center;
-}    
-{% endcodeblock %}
+}
+```
 
 The height is arbitrary and you may need to play around with the width or height settings depending on what kind of images you are dealing with.
 
@@ -88,4 +88,4 @@ The height is arbitrary and you may need to play around with the width or height
 With this little trick you should now have something that looks like this:
 {% img /images/post-content/clearing-finished.png %}
 
-Which looks pretty good, plus the Zurb Foundation responsive lightbox still works. 
+Which looks pretty good, plus the Zurb Foundation responsive lightbox still works.

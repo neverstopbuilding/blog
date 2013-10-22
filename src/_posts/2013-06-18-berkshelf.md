@@ -14,14 +14,14 @@ twitter: [opschef, devops, chefsurvivalguide, berkshelf]
 What we aren't going to do is download the cookbook and plop it all willy-nilly in this repository. That is where Berkshelf comes in!
 
 ##Update your Gemfile
-Update the Gemfile and dependencies; this is also in the development block because the CI will not need it: 
+Update the Gemfile and dependencies; this is also in the development block because the CI will not need it:
 
-{% codeblock lang:ruby %}
+```ruby
 group :development do
   gem "knife-spork", "1.0.17"
   gem "berkshelf", "2.0.3"
 end
-{% endcodeblock %}
+```
 
 ##Configure your Cookbook Dependencies
 Create a new file `Berksfile` in the root of the project with the following content:
@@ -39,13 +39,13 @@ Now we want to install the cookbook dependency:
 
 Before uploading our community cookbooks to the chef server, we need to override one of the default configurations by creating a `config/berks-config.json` file with the following content:
 
-{% codeblock lang:json %}
+```json
 {
   "ssl": {
     "verify": false
   }
 }
-{% endcodeblock %}
+```
 
 When we upload the community cookbooks, Berkshelf will pull the settings from our `knife.rb` file and then the `berks-config.json` file. We could run this command to do so:
 
@@ -53,24 +53,24 @@ When we upload the community cookbooks, Berkshelf will pull the settings from ou
 
 But it makes sense to wrap this in a rake task for usability:
 
-{% codeblock lang:ruby %}
+```ruby
 desc "Uploads Berkshelf cookbooks to our chef server"
 task :berks_upload do
   sh "bundle exec berks upload -c config/berks-config.json"
 end
-{% endcodeblock %}
+```
 
 ##Update the Vagrant File Run List
 Finally we modify the run list for in our Vagrant file to support the mini test handler:
 
-{% codeblock lang:ruby %}
+```ruby
 ...
 chef.run_list = [
     'motd',
     'minitest-handler'
 ]
 ...
-{% endcodeblock %}
+```
 
 Running a `vagrant provision` will now execute our motd cookbook, and then run a blank minitest suite against it.
 

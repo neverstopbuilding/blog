@@ -20,13 +20,13 @@ Create a `.rvmrc` and `.rbenv-version` files to set the ruby version for the pro
 ##Create a Gemfile
 Make a Gemfile to set the project dependencies:
 
-{% codeblock lang:ruby %}
+```ruby
 source "http://rubygems.org"
 
 ruby '1.9.3'
 
 gem 'rake', '10.0.4'
-{% endcodeblock %}
+```
 
 ##Install the Dependencies
 
@@ -35,7 +35,7 @@ gem 'rake', '10.0.4'
 ##Create Rakefile
 Create a new `Rakefile` with place holder task per those that we outlined in our Readme file:
 
-{% codeblock lang:ruby %}
+```ruby
 require "bundler/setup"
 
 task :default => [:list]
@@ -59,7 +59,7 @@ desc "Fires up the Vagrant box."
 task :start do
   puts "Nothing to do yet..."
 end
-{% endcodeblock %}
+```
 
 Great! Now we have the beginnings of a build system for the project.
 #Coming up…

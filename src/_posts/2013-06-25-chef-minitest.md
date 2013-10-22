@@ -19,7 +19,7 @@ The files need to be in the right place so let's add the defaults to our existin
 
 In order to prevent ever having to do this heinous act again, let's modify the `new_cookbook` rake task to make this part of the cookbook buildout:
 
-{% codeblock lang:ruby %}
+```ruby
 desc "Creates a new cookbook."
 task :new_cookbook, :name do |t, args|
   sh "bundle exec knife cookbook create #{args.name}"
@@ -32,21 +32,21 @@ task :new_cookbook, :name do |t, args|
     test.puts "end"
   end
 end
-{% endcodeblock %}
+```
 
 This now creates a basic minitest that can be modified to your hearts content.
 
 ##Building the Test
 Our test is pretty simple for this cook book, I just want to assert that the file was created:
 
-{% codeblock lang:ruby %}
+```ruby
 require 'minitest/spec'
 describe_recipe 'motd::default' do
     it 'creates motd.tail' do
         file('/etc/motd.tail').must_exist
     end
 end
-{% endcodeblock %}
+```
 
 
 ##Deploying the Cookbook and Testing

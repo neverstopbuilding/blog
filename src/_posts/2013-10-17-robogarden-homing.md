@@ -43,7 +43,7 @@ The printing was a pretty straight forward process, once the part was done, all 
 
 #Hardware Debouncing
 
-I noticed while testing the micro switch some noise in the switch, using the multimeter as a continuity check, I heard more than one "beep." As such this switch would benefit from a debouncing circuit so that the signal sent to the Arduino is definitely either high or low. 
+I noticed while testing the micro switch some noise in the switch, using the multimeter as a continuity check, I heard more than one "beep." As such this switch would benefit from a debouncing circuit so that the signal sent to the Arduino is definitely either high or low.
 
 To do this I followed this [great tutorial](http://www.jeremyblum.com/2011/03/07/arduino-tutorial-10-interrupts-and-hardware-debouncing/) which will involve the following parts:
 
@@ -68,7 +68,7 @@ The initial test turned out to be a success, so I thought it would be worth addi
 There are two ways to think about this operation:
 
 - Home sub-routine.
-- Home interrupt with subroutine. 
+- Home interrupt with subroutine.
 
 The first, a more simple subroutine would have this basic logic:
 
@@ -77,19 +77,19 @@ The first, a more simple subroutine would have this basic logic:
 3. If the position is low continue to move toward home.
 
 
-I'm not wild about this because it requires checking a switch for state on each cycle and more often than no the switch would be low. Homing should only really happen when I turn the machine on and when there is a screw up. I'd prefer the home process to occur whenever the button is pressed, this way, if some wise acre moves the carriage in between waterings, the movement will be stopped by the home interrupt. 
+I'm not wild about this because it requires checking a switch for state on each cycle and more often than no the switch would be low. Homing should only really happen when I turn the machine on and when there is a screw up. I'd prefer the home process to occur whenever the button is pressed, this way, if some wise acre moves the carriage in between waterings, the movement will be stopped by the home interrupt.
 
 ##Iterating on the Logic
-I went through many iterations of the home function logic to understand how interrupts worked and the Arduino loop system. The result is was a near complete refactoring of the existing code. Plus I cleaned up the variable names and comments a bit too. 
+I went through many iterations of the home function logic to understand how interrupts worked and the Arduino loop system. The result is was a near complete refactoring of the existing code. Plus I cleaned up the variable names and comments a bit too.
 
 The result was a multi function button:
 
 - Press for more than a certain threshold I'll trigger a home routine.
-- A normal press just increments the number and consequently sets the moves the carriage to that position. 
+- A normal press just increments the number and consequently sets the moves the carriage to that position.
 
 The basic movement logic is captured in this statement:
 
-{% codeblock lang:c %}
+```c
   //Movement logic sends carriage to a location based on distance in mm and direction (-1 is right, 1 is left)
   if (absoluteDistance > 0) {
     digitalWrite(stepperEnable, HIGH);
@@ -106,13 +106,13 @@ The basic movement logic is captured in this statement:
     }
   }
   digitalWrite(stepperEnable, LOW);
-{% endcodeblock %}
+```
 
-So often other parts of the program change and reset the `absoluteDistance` and `direction`. When I hold down the control switch I tell the program to change the "amount to go" to a large value, and the direction to the right. The carriage then moves all the way to the right where it hits the home switch. 
+So often other parts of the program change and reset the `absoluteDistance` and `direction`. When I hold down the control switch I tell the program to change the "amount to go" to a large value, and the direction to the right. The carriage then moves all the way to the right where it hits the home switch.
 
 The home switch then updates the settings again so that on the next loop it starts to move to the correct position relative to home.
 
-{% codeblock lang:c %}
+```c
 void resetHomePosition(){
   direction = 1;
   currentPosition = - homeOffset;
@@ -120,11 +120,11 @@ void resetHomePosition(){
   displayNumber = 0;
   oldDisplayNumber = 0;
 }
-{% endcodeblock %}
+```
 
 Similarly, each time I increment the "position" display, that value is used to fetch the distance and direction needed to go to that location from the `currentPosition`. I also change how the distances were fetched from an absolute list to dimensions driven by some settings:
 
-{% codeblock lang:c %}
+```c
 float getPlantLocation(int plantNumber){
   if (plantNumber == 0){
     return 0;
@@ -132,7 +132,7 @@ float getPlantLocation(int plantNumber){
   float plantWidth = maxDistance / numberOfPlants;
   return ((plantNumber - 1) * plantWidth ) + (.5 * plantWidth);
 }
-{% endcodeblock %}
+```
 
 The net result is that you would chose to have between 1 and 8 plants, and they would be evenly distributed under the frame. For the full source code, check out the [github repository](https://github.com/neverstopbuilding/robo-garden).
 

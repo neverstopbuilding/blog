@@ -22,7 +22,7 @@ to create the configuration file.
 
 Following along with [this article](https://coderwall.com/p/dt1idw) we will build out our Vagrant file to access the environment variables we specified when we set up Knife. This is necessary because we can no longer access the Chef gem from the Vagrant file due to the recent upgrades to the system. (as the article suggests) As of this writing there are some pull requests in process that could add more interactivity between chef settings and Vagrant. I'm using a [bentobox](https://github.com/opscode/bento) that is configured from Opscode to be ready to roll with Vagrant. Our Vagrant file should look something like this:
 
-{% codeblock lang:ruby %}
+```ruby
 Vagrant.configure("2") do |config|
   config.vm.box = "opscode-ubuntu-12.04"
   config.vm.box_url = "https://opscode-vm.s3.amazonaws.com/vagrant/opscode_ubuntu-12.04_chef-11.2.0.box"
@@ -38,7 +38,7 @@ Vagrant.configure("2") do |config|
     ]
   end
 end
-{% endcodeblock %}
+```
 
 ##Set up the Project Location
 The files that will be shared between your virtual machine and local machine should be located in a `shared` folder, this way you can "develop locally."

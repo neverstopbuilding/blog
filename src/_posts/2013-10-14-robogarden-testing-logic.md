@@ -34,9 +34,9 @@ A better way is to use a chip like the the CD4511 Latch Decoder to drive the  di
 - 0010 Would show up as 4 (0+0+4+0)
 - 1001 Would show up as 9 (1+0+0+8)
 
-And so fourth. 
+And so fourth.
 
-This is great, I get 3 pins back. 
+This is great, I get 3 pins back.
 
 But I think we can do better than that. Enter the shift register, 74HC595. With a shift register you only need to use 3 pins of the Arduino to "shift" bits into the register. The result is you can get 8 bits of state out of the register. So I can use 4 of them to control the LED driver chip and the other 4 for whatever I want. This could be another display chip, or simply high/low pin outs for other devices like relays.
 
@@ -53,15 +53,15 @@ The basic operation is to connect 4 of the output bits of the shift register to 
 
 {% img https://lh5.googleusercontent.com/-64wc4ot3Ar4/Ulx4B9bIOaI/AAAAAAAAI7o/CY2DmmjoGdA/w1102-h516-no/testing.png %}
 
-###Hooking up the 7 Segment 
+###Hooking up the 7 Segment
 
 Starting with the 7 Segment display, we need to determine the proper current limiting resistors. The voltage supplied will be 5 and the typical forward voltage listed on the data sheet is 2 volts. The forward current is rated at 15 mA so some quick Ohm's law:
 
-- R = V / I 
+- R = V / I
 - R = (5v - 2v) / 0.015A
 - R = 200 Ohms (Red Black Brown)
 
-I'll use the 220 Ohm resistors that I have available. For initial tests I put in a dip switch array to pick the bits adding 10k Ohm resistors to pull down to ground on the 4 bit inputs, as shown in this schematic: 
+I'll use the 220 Ohm resistors that I have available. For initial tests I put in a dip switch array to pick the bits adding 10k Ohm resistors to pull down to ground on the 4 bit inputs, as shown in this schematic:
 
 {% img https://lh5.googleusercontent.com/-okfQTFNJCsA/UlymBmNE5ZI/AAAAAAAAI8c/fAUU4Jd2yvM/w600-h362-no/7-Segment-schematic.jpg %}
 
@@ -74,28 +74,28 @@ The next step will be to add the shift register in place of the dip switches. I 
 
 {% img https://lh3.googleusercontent.com/-cHFID2Vz2gM/Ulx3ax2KwsI/AAAAAAAAI7U/LLA0iuDq7ko/w501-h668-no/IMG_1702.JPG %}
 
-##Programming 
+##Programming
 I started with this simple code, which causes the display to count up to 9 in order:
 
-{% codeblock lang:c %}
+```c
 int sr_serial = 4;
 int sr_clock = 5;
 int sr_register = 6;
 
 for (int j = 0; j < 10; j++) {
   digitalWrite(sr_register, LOW);
-  shiftOut(sr_serial, sr_clock, MSBFIRST, j);   
+  shiftOut(sr_serial, sr_clock, MSBFIRST, j);
   digitalWrite(sr_register, HIGH);
   delay(1000);
 }
-{% endcodeblock %}
+```
 
 ##Adding a Cycling Button
 Now that I could display the value I wanted, I needed to add a button that will cycle up through the positions, and after the button is no longer being pressed, adjust the carriage to that location.
 
 {% img https://lh4.googleusercontent.com/-jZ8C7se2pDw/Ulx43bbwVFI/AAAAAAAAI78/q_T6decg0S8/w388-h189-no/switch.png %}
 
-For this we just have a button pulled low and read by the Arduino. I added a delays and logic in the code such that a timer is reset each time the button is pressed, if the timer has run out, *and* the location number is different than the previous number we fire a move command. What is nice about the stepper movement routine is that it is locking, so pressing the button during the carriage movement doesn't do anything. This will also come in handy so I don't spray water by accident when moving between plants. 
+For this we just have a button pulled low and read by the Arduino. I added a delays and logic in the code such that a timer is reset each time the button is pressed, if the timer has run out, *and* the location number is different than the previous number we fire a move command. What is nice about the stepper movement routine is that it is locking, so pressing the button during the carriage movement doesn't do anything. This will also come in handy so I don't spray water by accident when moving between plants.
 
 #Good Progress
 Pretty soon though I won't need to worry about manual manipulation as moisture sensors and a stop micro switch will provide feedback to the system.

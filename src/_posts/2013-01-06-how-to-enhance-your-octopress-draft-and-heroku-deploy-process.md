@@ -20,7 +20,7 @@ This task does basically what the `new_post` task does except it:
 - Eliminates the date from both the file name and the yaml front matter.
 - Adds `published: false` to the front matter.
 
-{% codeblock lang:ruby %}
+```ruby
 # usage rake new_draft[my-new-draft] or rake new_draft['my new draft']
 desc "Begin a new draft in #{source_dir}/#{drafts_dir}"
 task :new_draft, :title do |t, args|
@@ -47,7 +47,7 @@ task :new_draft, :title do |t, args|
   end
   system "open #{filename}"
 end
-{% endcodeblock %}
+```
 
 
 ##rake publish_draft
@@ -59,7 +59,7 @@ This task lists all of the draft posts, prompting you to select one. After you s
 
 This way you can compose draft posts at will. Then when you are ready you can publish them and they will appear that you "released them" on that day.
 
-{% codeblock lang:ruby %}
+```ruby
 # usage rake publish_draft
 desc "Select a draft to publish from #{source_dir}/#{drafts_dir} on the current date."
 task :publish_draft do
@@ -96,7 +96,7 @@ task :publish_draft do
     puts "Index not found!"
   end
 end
-{% endcodeblock %}
+```
 
 ##rake deploy_heroku
 Finally this task just automates the deployment process to heroku by:
@@ -105,7 +105,7 @@ Finally this task just automates the deployment process to heroku by:
 - Committing all the files.
 - Pushing both to master and heroku.
 
-{% codeblock lang:ruby %}
+```ruby
 # usage rake deploy_heroku
 desc "Commits all source changes and pushes to master and heroku"
 task :deploy_heroku do
@@ -116,6 +116,6 @@ task :deploy_heroku do
   system "git push origin master"
   system "git push heroku master"
 end
-{% endcodeblock %}
+```
 
 Now my writting and publishing process is much quicker and more organized. A next step might be to use an automatic job to publish drafts, or specifically tagged drafts, per a set cadence. This would be similar to the tumblr "queue."

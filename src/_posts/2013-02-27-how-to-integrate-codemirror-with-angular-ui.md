@@ -23,7 +23,7 @@ I was able to track down all the needed scripts by [inspecting the page](http://
 
 Here is an example of the HTML for the beginning of this adventure:
 
-{% codeblock lang:html %}
+```html
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="//angular-ui.github.com/angular-ui/build/angular-ui.css">
@@ -43,23 +43,23 @@ Here is an example of the HTML for the beginning of this adventure:
     <body>
     </body>
 </html>
-{% endcodeblock %}
+```
 
 ##Setting Up the View
 The easiest part of this process is setting up your view with the directive. You can pretty much copy what they have on the AngularUI site. The code below ignores the theme and should be added in our example's body:
 
-{% codeblock lang:html %}
+```html
 <div ng-app="myApp">
     <div ng-controller="codeCtrl">
         <textarea ui-codemirror ng-model="code"></textarea>
     </div>
 </div>
-{% endcodeblock %}
+```
 
 ##Polishing Your Codemirror
 The final step is to update your application javascript (which you could include as another linked file) with the appropriate directions to set up your code mirror directive and in this case pass some data to the view:
 
-{% codeblock lang:js %}
+```js
 var myApp = angular.module('myApp', ['ui']);
 
 myApp.value('ui.config', {
@@ -73,7 +73,7 @@ myApp.value('ui.config', {
 function codeCtrl($scope) {
     $scope.code = '<?php echo "Hello World"; ?>';
 }
-{% endcodeblock %}
+```
 
 The Angular part of this is very simple, simply update the model with a string of PHP. Note the use of the `ui.config` to pass Codemirror specific settings along.
 

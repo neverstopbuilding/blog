@@ -42,7 +42,7 @@ Initialize a new git repository to track our work:
 ##Update Your Gemfile
 In order to have Heroku handle your gems correctly you need to make the required dependencies available in production. Update your Gemfile to look like this:
 
-{% codeblock lang:ruby %}
+```ruby
 source "http://rubygems.org"
 
 gem 'rake', '~> 0.9'
@@ -61,7 +61,7 @@ gem 'sinatra', '~> 1.4.2'
 group :development do
   gem 'rb-fsevent', '~> 0.9'
 end
-{% endcodeblock %}
+```
 
 ##Update Your .slugignore
 The directories that are listed in the `.slugignore` file are required by Heroku. So simply clear out the file and leave it blank. (It still must exist however.)

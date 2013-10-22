@@ -126,7 +126,7 @@ The color codes indicate the wire colors of the specific stepper motor I'm using
 
 The final part of this test was some basic code to play around with the stepper. Modifying the example code for a stepper resulted in this:
 
-{% codeblock lang:c %}
+```c
 #include <Stepper.h>
 
 const int stepsPerRevolution = 200;  // change this to fit the number of steps per revolution
@@ -163,7 +163,7 @@ if (Serial.available())
     delay(20);
     digitalWrite(enable, LOW);
 }
-{% endcodeblock %}
+```
 
 What this code will do is listen for input on the serial terminal, when you enter a number of centimeters the program converts that to the number of steps required to move the carriage that far.
 

@@ -41,7 +41,7 @@ Obviously there will likely be more settings in both cases, but they are omitted
 ##Preparing our Controller
 As noted in [these release notes](http://www.readability.com/articles/ycfvxsho) we have to explicitly specify which types of data we want to return to the view. I'll list the full code of the controller action and then we can go over each area:
 
-{% codeblock lang:php %}
+```php
 <?php
 public function clamsAction()
 {
@@ -61,7 +61,7 @@ public function clamsAction()
 
     return $viewModel->setVariables(array("clams" => $clamList));
 }
-{% endcodeblock %}
+```
 
 - On line 4 we define which types of view models should be created depending on the accept header, so for an Accept header of `application/json` we will return a `JsonModel` but for a `text/html` Accept header then we return just the regular old `ViewModel`.
 
@@ -86,17 +86,17 @@ However, there is a solution, if the object has a `toJson` method, the Zend Fram
 
 To achieve this in a clean way, we first define a simple interface:
 
-{% codeblock lang:php %}
+```php
 <?php
 interface JsonProvider
 {
     public function toJson();
 }
-{% endcodeblock %}
+```
 
 And then have our delicious `ClamList` object implement it:
 
-{% codeblock lang:php %}
+```php
 <?php
 class ClamList implements JsonProvider
 {
@@ -116,7 +116,7 @@ class ClamList implements JsonProvider
         return Json::Encode($object);
     }
 }
-{% endcodeblock %}
+```
 
 The above is a rather simplified example, but the idea is that only inside your `toJson` method do you assemble an object with public properties, which is ultimately returned as JSON data.
 
