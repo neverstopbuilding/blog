@@ -19,3 +19,11 @@ task :prepare do
 end
 
 Rubocop::RakeTask.new
+
+namespace :assets do
+  desc 'Precompile assets'
+  task :precompile do
+    Rake::Task['clean'].invoke
+    sh "bundle exec jekyll build"
+  end
+end
