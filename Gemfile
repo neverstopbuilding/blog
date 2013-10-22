@@ -12,7 +12,7 @@ gem 'zurb-foundation'
 
 gem 'yui-compressor'
 
-gem 'pump'
+gem 'puma'
 gem 'rack-contrib'
 gem 'rack-rewrite'
 
