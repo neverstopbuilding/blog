@@ -1,6 +1,6 @@
-guard :rubocop, all_on_start: false do
-  watch /^src\/_plugins/
-end
+#guard :rubocop, all_on_start: false do
+ # watch /^src\/_plugins/
+#end
 
 guard 'jekyll-plus', :serve => true, :config => ['_config.yml', '_development.yml'] do
   watch /^src/
