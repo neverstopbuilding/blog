@@ -2,7 +2,7 @@
 
 require 'rubocop/rake_task'
 
-task default: :build
+task default: 'assets:precompile'
 
 task build: [:clean, :prepare, :quality]
 
