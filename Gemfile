@@ -9,8 +9,10 @@ gem 'jekyll-slim'
 gem 'jekyll-asset-pipeline'
 gem 'compass'
 gem 'zurb-foundation'
+
 gem 'yui-compressor'
-gem 'unicorn'
+
+gem 'pump'
 gem 'rack-contrib'
 gem 'rack-rewrite'
 
