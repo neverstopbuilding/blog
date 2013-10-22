@@ -113,6 +113,4 @@ I hope some of these tools will help improve your code quality and your developm
 
 For more information on my sublime set up, including the specific configurations of some of these plugins, check out the source controlled settings in my [dotfiles](https://github.com/jasonrobertfox/dotfiles) repository.
 
-{% c2a icon:"$" title:"Helpful? Follow me on Twitter!" action:"Let's Go!" link:"https://twitter.com/jasonrobertfox" label:"10 Sublime Plugins" %}
-If you love Sublime Text 2 and found this post helpful, why not follow me on Twitter, I tweet about tools, devops, testing, and programming best practices.
-{% endc2a %}
+

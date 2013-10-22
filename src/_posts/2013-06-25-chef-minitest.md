@@ -69,6 +69,4 @@ Not only do these act as integration tests, ensuring you have built cookbooks th
 I hope that those who followed this series have learned a bunch on how to build cookbooks in a true, test-driven way. I encourage you to check out the [Chef Broiler Plate](https://github.com/jasonrobertfox/chef-broiler-plate) repository, and also the book: [The Chef Survival Guide](https://leanpub.com/chef-survival-guide). I'll summarize the ways to test Chef Cookbooks in a future post. Best of luck with your automated infrastructure adventures.
 
 
-{% c2a icon:"K" title:"Hungry for more? Get the Book!" action:"Check it out!" link:"https://leanpub.com/Chef-survival-guide?utm_source=nsb&utm_medium=blog&utm_campaign=Verify+your+Chef+Infrastructure+with+Minitest" label:"Chef Survival Guide" %}
-This series of posts related to the build out of Chef Broiler Plate are consolidated in "The Chef Survival Guide." The book includes more detail and examples (and you can put it in your back pocket!)
-{% endc2a %}
+

@@ -65,6 +65,4 @@ Great! Now we have the beginnings of a build system for the project.
 #Coming up…
 In the next post we will flesh out the build system with a task that checks for dependencies and implement our Knife configuration.
 
-{% c2a icon:"K" title:"Hungry for more? Get the Book!" action:"Check it out!" link:"https://leanpub.com/Chef-survival-guide?utm_source=nsb&utm_medium=blog&utm_campaign=Setting+up+a+Chef+Build+System+with+Rake" label:"Chef Survival Guide" %}
-This and future posts related to the build out of Chef Broiler Plate are being consolidated in "The Chef Survival Guide." The book will include more detail and examples.
-{% endc2a %}
+

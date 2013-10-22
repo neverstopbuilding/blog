@@ -29,6 +29,4 @@ Finally you can find the source code for the presentation over at Github: [https
 ##Thanks
 Thanks to all who came out an supported, and especially to [@TourDeDave](https://twitter.com/TourDeDave) and [@DCSelenium](https://twitter.com/DCSelenium) for holding the [meetup](http://www.meetup.com/DC-Selenium-Meetup-Group/). If anyone has any follow up questions, don't hesitate to contact me below!
 
-{% c2a icon:"P" title:"Interested in Selenium?" action:"Sign Up Now!" link:"http://elementalselenium.com/" label:"Elemental Selenium" %}
-At the end of the presentation Dave Haeffner of Arrgyle and I announced that we would be launching a weekly Selenium Tips newsletter: Elemental Selenium. Super concentrated knowledge to improve your testing process! Check it out below.
-{% endc2a %}
+

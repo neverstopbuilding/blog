@@ -143,6 +143,4 @@ Setting up your Knife configuration like this allows your Chef project to be muc
 #Coming up…
 In the next post we will set up our local virtual machine with Vagrant and have a live server on our hands!
 
-{% c2a icon:"K" title:"Hungry for more? Get the Book!" action:"Check it out!" link:"https://leanpub.com/Chef-survival-guide?utm_source=nsb&utm_medium=blog&utm_campaign=Preparing+for+Chef+CI+with+Travis+and+Sharpening+our+Knife" label:"Chef Survival Guide" %}
-This and future posts related to the build out of Chef Broiler Plate are being consolidated in "The Chef Survival Guide." The book will include more detail and examples.
-{% endc2a %}
+

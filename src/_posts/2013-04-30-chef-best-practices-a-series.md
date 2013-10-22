@@ -90,8 +90,6 @@ Write a readme file that describes the project dependencies, how to get started 
 #Coming up…
 In the next post we will dive into the creation of a basic Rake build system and setting up a basic continuous integration system.
 
-{% c2a icon:"K" title:"Hungry for more? Get the Book!" action:"Check it out!" link:"https://leanpub.com/Chef-survival-guide?utm_source=nsb&utm_medium=blog&utm_campaign=Chef+Best+Practices:+A+Series" label:"Chef Survival Guide" %}
-This and future posts related to the build out of Chef Broiler Plate are being consolidated in "The Chef Survival Guide." The book will include more detail and examples.
-{% endc2a %}
+
 
 

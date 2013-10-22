@@ -54,6 +54,4 @@ Running either command will start your server, hook it into your Chef Server acc
 #Coming up…
 Next up we will (finally) start building a sample cookbook and in the process begin outfitting our framework with great TDD tools (like "Chefspec".)
 
-{% c2a icon:"K" title:"Hungry for more? Get the Book!" action:"Check it out!" link:"https://leanpub.com/Chef-survival-guide?utm_source=nsb&utm_medium=blog&utm_campaign=Configuring+Vagrant+for+Chef" label:"Chef Survival Guide" %}
-This and future posts related to the build out of Chef Broiler Plate are  consolidated in "The Chef Survival Guide." The book includes more detail and examples.
-{% endc2a %}
+

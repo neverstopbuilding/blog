@@ -48,6 +48,4 @@ Now whenever we push code to our repository, Travis will kick off a review of ou
 #Coming up…
 In the next installment we will use Knife to continue testing our cookbooks and building out the framework.
 
-{% c2a icon:"K" title:"Hungry for more? Get the Book!" action:"Check it out!" link:"https://leanpub.com/Chef-survival-guide?utm_source=nsb&utm_medium=blog&utm_campaign=Chef+Cookbook+Code+Quality+with+Foodcritic" label:"Chef Survival Guide" %}
-This and future posts related to the build out of Chef Broiler Plate are  consolidated in "The Chef Survival Guide." The book includes more detail and examples.
-{% endc2a %}
+
