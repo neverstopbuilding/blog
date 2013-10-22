@@ -23,15 +23,15 @@ The frame is completely assembled, and putting it together went rather well but 
 
 ###Attaching the Feet
 
-{% img https://lh4.googleusercontent.com/-12LdMufsG6Y/UlWIHBeVhrI/AAAAAAAAIws/X3PmK7bjbx4/w534-h712-no/IMG_1653.JPG %}
+![Printed feet attached to aluminum uprights](https://lh4.googleusercontent.com/-12LdMufsG6Y/UlWIHBeVhrI/AAAAAAAAIws/X3PmK7bjbx4/w534-h712-no/IMG_1653.JPG)
 
 As I mentioned before, future iterations of the feet would be universal, you can't really tell here but the rear feet point one way and the front feet point another. They also were quite tight in assembly and required some sanding down. This dimension should be enlarged a bit.
 
 ###Basic Frame Assembly
 
-{% img https://lh6.googleusercontent.com/-5AecY_ACxI4/UlWIKFCbJlI/AAAAAAAAIws/oQbzfMwvyjg/w534-h712-no/IMG_1654.JPG %}
+![LED heat sink mounts attached to cross members](https://lh6.googleusercontent.com/-5AecY_ACxI4/UlWIKFCbJlI/AAAAAAAAIws/oQbzfMwvyjg/w534-h712-no/IMG_1654.JPG)
 
-{% img https://lh5.googleusercontent.com/-VqCmS-H50GA/UlWIRHWOKdI/AAAAAAAAIws/UPueYK3DNQY/w534-h712-no/IMG_1656.JPG %}
+![Assembled frame](https://lh5.googleusercontent.com/-VqCmS-H50GA/UlWIRHWOKdI/AAAAAAAAIws/UPueYK3DNQY/w534-h712-no/IMG_1656.JPG)
 
 Both the LED heat sink holders and the support components of the frame snapped together easily. I was really happy with the tightness of the connections, although I think they could still be a little looser and still have everything tightly held together.
 
@@ -39,23 +39,23 @@ Another future improvement would be to dimension everything for more readily ava
 
 ###Attaching the Motor
 
-{% img https://lh3.googleusercontent.com/-5hvLj-iSwx0/UlWIUBCETdI/AAAAAAAAIws/05SJe16tf6k/w534-h712-no/IMG_1657.JPG %}
+![Mounted stepper motor on motor mount](https://lh3.googleusercontent.com/-5hvLj-iSwx0/UlWIUBCETdI/AAAAAAAAIws/05SJe16tf6k/w534-h712-no/IMG_1657.JPG)
 
 The motor mount is a little flimsy with the motor hanging off the back, some additional support could be used. Also while putting this together I realized I had forgotten to build a place to add the micro switch for preventing carriage over travel. This will be easy to add with a little snap on bracket to the travel tubes in the short term. A longer term solution would be to integrate the part in with the motor mount.
 
 ###Carriage Assembly
 
-{% img https://lh5.googleusercontent.com/-cSP3kIKYgGg/UlWIXV_JXFI/AAAAAAAAIws/EQ5oUTleLN4/w534-h712-no/IMG_1658.JPG %}
+![Assembled carriage on rails](https://lh5.googleusercontent.com/-cSP3kIKYgGg/UlWIXV_JXFI/AAAAAAAAIws/EQ5oUTleLN4/w534-h712-no/IMG_1658.JPG)
 
 The carriage went together well but I need slightly longer screws so that I can use lock nuts. In testing one of the nuts already vibrated off and I can't tighten them down too much or else the carriage won't move! One way to solve this in the near term would be printing head recesses into the carriage front. On the other hand, I needed some shorter screws for the belt mount, but this isn't anything that would hurt operation.
 
 ###Idler Assembly
 
-{% img https://lh5.googleusercontent.com/-vcXp8rz06Uo/UlWIedcVPQI/AAAAAAAAIws/IrJF6T5SCJM/w534-h712-no/IMG_1660.JPG %}
+![Idler bearing on mount with shaft](https://lh5.googleusercontent.com/-vcXp8rz06Uo/UlWIedcVPQI/AAAAAAAAIws/IrJF6T5SCJM/w534-h712-no/IMG_1660.JPG)
 
 The idler was an area that could use a lot of improvement. Not only were the holes a little tight and the part just as flimsy as the motor mount, but the geometry while the belt was installed caused bad flexing:
 
-{% img https://lh3.googleusercontent.com/-KAN1EHQZJOE/UlWIlFjMPpI/AAAAAAAAIws/jgqg9ssvo1o/w949-h712-no/IMG_1662.JPG %}
+![Idler pully with belt](https://lh3.googleusercontent.com/-KAN1EHQZJOE/UlWIlFjMPpI/AAAAAAAAIws/jgqg9ssvo1o/w949-h712-no/IMG_1662.JPG)
 
 Ultimately, I ended up just having the belt ride on the collar of the pulley, as it otherwise was too tight and strained the stepper motor operation.
 
@@ -69,11 +69,11 @@ Ultimately, I ended up just having the belt ride on the collar of the pulley, as
 
 And here we have it, the completed RoboGarden frame:
 
-{% img https://lh6.googleusercontent.com/-mRv7b_ZcqMc/UlWIrUuWAoI/AAAAAAAAIws/Sr2SPWueKLc/w949-h712-no/IMG_1664.JPG %}
+![Complete frame](https://lh6.googleusercontent.com/-mRv7b_ZcqMc/UlWIrUuWAoI/AAAAAAAAIws/Sr2SPWueKLc/w949-h712-no/IMG_1664.JPG)
 
 Here is another shot which shows the big 10 watt grow LED:
 
-{% img https://lh3.googleusercontent.com/-UejBppCf4hk/UlWIu3gF87I/AAAAAAAAIws/U20BNqHW0PA/w534-h712-no/IMG_1665.JPG %}
+![Looking up at the underside of the frame](https://lh3.googleusercontent.com/-UejBppCf4hk/UlWIu3gF87I/AAAAAAAAIws/U20BNqHW0PA/w534-h712-no/IMG_1665.JPG)
 
 ##Electronics Design
 
@@ -100,17 +100,17 @@ Before building the moisture sensors, I thought it would make sense to provide a
 
 Some of the parts I started out with:
 
-{% img https://lh3.googleusercontent.com/jlszbDGZf1uaLAV7RMDb1pOYEySvFRtszDPRlJDRQq0=w1009-h712-no %}
+![Power supply, arduino, breadboards and relays](https://lh3.googleusercontent.com/jlszbDGZf1uaLAV7RMDb1pOYEySvFRtszDPRlJDRQq0=w1009-h712-no)
 
 ###Powering the Arduino
 
 To power the Arduino from the large power supply I built a small and simple voltage regulator to drop down the voltage to about 7 Volts, something the Arduino likes as input. This also ended up being the supply voltage for the stepper controller, as the raw 12 was a bit to high. Here is the schematic which also includes a power on indicator LED:
 
-{% img https://lh6.googleusercontent.com/-n2X-Z3UhIcA/UlsKzxzscdI/AAAAAAAAI2I/X7SNT6Iqw0Y/w314-h310-no/power-supply.png %}
+![Basic lm317 power regulator schematic](https://lh6.googleusercontent.com/-n2X-Z3UhIcA/UlsKzxzscdI/AAAAAAAAI2I/X7SNT6Iqw0Y/w314-h310-no/power-supply.png)
 
 And the resulting prototype on the breadboard:
 
-{% img https://lh5.googleusercontent.com/-YYZp2jk1cTg/UlgUMekGsiI/AAAAAAAAIzE/ep4nxLvvO2Q/w534-h712-no/IMG_1668.JPG %}
+![Power regulator prototype on breadboard](https://lh5.googleusercontent.com/-YYZp2jk1cTg/UlgUMekGsiI/AAAAAAAAIzE/ep4nxLvvO2Q/w534-h712-no/IMG_1668.JPG)
 
 On this breadboard the "bottom" rail as shown in the photo are the raw power supply and the "top" rail is the regulated voltage which I supply to the `Vin` pin on the Arduino. I've confirmed that this set up works even with the USB connector in place.
 
@@ -120,7 +120,7 @@ Driving the stepper motor is nearly the same circuit that I detailed back in [th
 
 There is not much to show on the breadboard, the schematic is more useful here:
 
-{% img https://lh3.googleusercontent.com/-GD1ItqhPRFo/UlsPpsWfL7I/AAAAAAAAI2g/3jYbHnOj81s/w435-h452-no/stepper-h-bridge.png %}
+![H bridge to arduino wiring diagram](https://lh3.googleusercontent.com/-GD1ItqhPRFo/UlsPpsWfL7I/AAAAAAAAI2g/3jYbHnOj81s/w435-h452-no/stepper-h-bridge.png)
 
 The color codes indicate the wire colors of the specific stepper motor I'm using, a [Pololu Bipolar](http://www.pololu.com/catalog/product/1206). And the numbered lines indicate the Arduino pins I'm using.
 

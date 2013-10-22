@@ -75,7 +75,7 @@ This adds a new browser type, `phantomjs` using the same icon as safari, points 
 
 You can verify that you have added this additional browser by running the `start_dashboard.sh` script at `/usr/local/share/sahi/userdata/bin/start_dashboard.sh` which will open the Sahi dashboard allowing you to see the additional browser:
 
-{% img /images/post-content/sahi-dash.png %}
+![Sahi browser launch dashboard.](/images/post-content/sahi-dash.png)
 
 #5. Modify behat.yml
 Using the [sample source code](https://github.com/jasonrobertfox/blog-behat-sahi) from last time you need to make one modification to the existing `behat.yml` file, changing the browser you are using from "firefox" to "phantomjs". You updated file should look like this:

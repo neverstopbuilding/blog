@@ -10,7 +10,7 @@ One of the problems you may run across while building a website is dealing with 
 
 ##Stock Clearing Gallery
 Here is what I am trying to avoid:
-{% img /images/post-content/clearing-avoid.png %}
+![Images of different heights.](/images/post-content/clearing-avoid.png)
 
 Which is achieved with something like this:
 
@@ -86,6 +86,6 @@ The height is arbitrary and you may need to play around with the width or height
 
 ##The Finished Product
 With this little trick you should now have something that looks like this:
-{% img /images/post-content/clearing-finished.png %}
+![Images are the same size.](/images/post-content/clearing-finished.png)
 
 Which looks pretty good, plus the Zurb Foundation responsive lightbox still works.

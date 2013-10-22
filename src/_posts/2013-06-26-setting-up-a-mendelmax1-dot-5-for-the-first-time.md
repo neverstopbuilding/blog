@@ -9,7 +9,7 @@ twitter: [mendelmax, 3dprinting, 3dprinter, maker]
 
 Recently I finished the construction and calibration of my first 3D printer. It's a MendelMax1.5 that I purchased from [3D Factory](http://store.makea3dfactory.com/) in kit form. Here is a pic of its "beta" state:
 
-{% img https://lh4.googleusercontent.com/-L88VJFmOztw/Uci42nQ2ITI/AAAAAAAAHlw/mGiyi2P-PZM/w554-h738-no/Photo+Jun+24%252C+2+45+18+PM.jpg %}
+![MendelMax with crazy wiring.](https://lh4.googleusercontent.com/-L88VJFmOztw/Uci42nQ2ITI/AAAAAAAAHlw/mGiyi2P-PZM/w554-h738-no/Photo+Jun+24%252C+2+45+18+PM.jpg)
 
  DON'T JUDGE! I need to clean up the wiring and, as anyone who knows me can attest, I take extreme pride in clean wiring. It was a pretty fun project to build, however it confirmed my assumptions about some of the current 3D printer designs; namely that they:
 
@@ -68,7 +68,7 @@ Netfabb should be used to take the STL files that your modeling program produces
 Depending on the quality of the model, you might notice red "surfaces" in place of where some desired holes are. I found that in SketchUp this seems to be correlated with having surface cutting two other surfaces. Particularly if I made two extrusions, then lofted between their outlines. The fix was to "go inside" the model and delete any surfaces that prevented the whole model from being one, continuos, hollow shell.
 
 ###SketchUp (or Similar)
-I started with [SketchUp](http://www.sketchup.com/) to create simple 3d objects for printing. I love the software and it is really easy to use. Use [this plugin](https://github.com/SketchUp/sketchup-stl) to export the file as an STL. Note that when I installed the plugin I had some problems that were solved by changing the permissions on the plugin directory. 
+I started with [SketchUp](http://www.sketchup.com/) to create simple 3d objects for printing. I love the software and it is really easy to use. Use [this plugin](https://github.com/SketchUp/sketchup-stl) to export the file as an STL. Note that when I installed the plugin I had some problems that were solved by changing the permissions on the plugin directory.
 
 Also, the plugin [Curviloft](http://sketchupdate.blogspot.com/2012/01/organic-modeling-made-simple-with.html) is quite useful for making nice organic manifolds, like for [fan ducts](http://www.thingiverse.com/thing:108972).
 
@@ -98,9 +98,9 @@ The three main things you need to calibrate on the printer are the feed rates, t
 For each of the x, y and z axes you need to do the following steps:
 
 1. Rig up a high precision caliper in such a way that you can set the origin on a known distance. For example, for the x axis, between one of the liner bearings and the side bracket.
-2. Instruct the machine to move 100mm (ideally) so you can increase your measurement. 
+2. Instruct the machine to move 100mm (ideally) so you can increase your measurement.
 3. Increase the opening of the calipers to get the new measurement, it likely will not be 100mm.
-4. In the firmware there is a feed number for each axis in the `DEFAULT_AXIS_STEPS_PER_UNIT` variable. My X is `80.0960288` for example. If you take the existing number, divided by the found number, multiplied by the desired number, you will have the new rate to input in this file. For example: `(80.0960288 / 95.6) * 100 = 83.78245690`. 
+4. In the firmware there is a feed number for each axis in the `DEFAULT_AXIS_STEPS_PER_UNIT` variable. My X is `80.0960288` for example. If you take the existing number, divided by the found number, multiplied by the desired number, you will have the new rate to input in this file. For example: `(80.0960288 / 95.6) * 100 = 83.78245690`.
 5. Update the variable with your new number.
 6. Reload the firmware.
 7. Go back to 1 and repeat this process until the distance moved is the same as the distance specified.
@@ -113,35 +113,35 @@ Depending on how your printer is constructed, your bed could be out of level for
 3. Back Z off the bed by 1mm.
 4. Start to move in the positive X direction, paying attention to if the head moves up or down toward the bed.
 5. Using your hand adjust the right side lead screw until the head is clearly above where you stared back at home.
-6. When you get to the other side of the bed, go back down 1mm and your head should be slightly off the bed. 
+6. When you get to the other side of the bed, go back down 1mm and your head should be slightly off the bed.
 7. Turn the lead screw in the other direction, repeating the paper process until you have the same effect: snug paper sliding.
 8. Now you should move back toward home and notice that the head should slide perfectly level just above the bed.
 
 At this point your X Axis is level with your bed, but you still could have problems with the Y axis. Repeat the process outlined above but for the Y direction. If your bed is far out of level as mine was you may need to add a washer or two to the spacers on one side of the bed. If only a small adjustment is required, you could adjust the linear rod brackets slightly up or down.
 
 ###Extrusion Rate
-Finally, calibrating the extrusion rate is very similar to the axes; you have to measure how much filament is fed into your head versus how much you instruct the head to feed. I measured out 30mm of filament after straightening the filament as much as possible. Then I marked the distance with a marker. 
+Finally, calibrating the extrusion rate is very similar to the axes; you have to measure how much filament is fed into your head versus how much you instruct the head to feed. I measured out 30mm of filament after straightening the filament as much as possible. Then I marked the distance with a marker.
 
-After instructing the head to feed 30mm, I recorded the difference between the top of the head and the mark and used these measurements along with the same formula as the directional axes to determine the new feed rate number. 
+After instructing the head to feed 30mm, I recorded the difference between the top of the head and the mark and used these measurements along with the same formula as the directional axes to determine the new feed rate number.
 
 ##Printing a Test Object
 Finally having calibrated the printer, and crashed the carriage into the side of the machine more than once, it was time for a test print. I started out with [this test block](http://www.thingiverse.com/thing:24809) that I found on on Thingiverse:
 
-{% img https://lh5.googleusercontent.com/-98R-VHQrjYw/Uci42ri8IJI/AAAAAAAAHls/5BJpkfGYAI4/w984-h738-no/Photo+Jun+24%252C+1+46+13+PM.jpg %}
+![20mm test block](https://lh5.googleusercontent.com/-98R-VHQrjYw/Uci42ri8IJI/AAAAAAAAHls/5BJpkfGYAI4/w984-h738-no/Photo+Jun+24%252C+1+46+13+PM.jpg)
 
 The print went better than expected:
 
-{% img https://lh6.googleusercontent.com/-SsaTSA1-4M0/Uci42QpdfdI/AAAAAAAAHlo/_dC19ceW6LI/w554-h738-no/Photo+Jun+24%252C+1+43+10+PM.jpg %}
+![Measuring the test block](https://lh6.googleusercontent.com/-SsaTSA1-4M0/Uci42QpdfdI/AAAAAAAAHlo/_dC19ceW6LI/w554-h738-no/Photo+Jun+24%252C+1+43+10+PM.jpg)
 
 Some small warping at the corners due to heat, but I was pleased with the general dimensions. The main problem was that the holes included in the model were too small to test fit the 3mm fastener. And so I set out building another test object with some various hole sizes:
 
-{% img https://lh3.googleusercontent.com/-h0_l6ZVI-aM/Uci43vSSVBI/AAAAAAAAHl8/d7t0gLGLuIo/w984-h738-no/Photo+Jun+24%252C+2+59+20+PM.jpg %}
+![A heart shaped test](https://lh3.googleusercontent.com/-h0_l6ZVI-aM/Uci43vSSVBI/AAAAAAAAHl8/d7t0gLGLuIo/w984-h738-no/Photo+Jun+24%252C+2+59+20+PM.jpg)
 
-According to this test, it seems a 3mm machine screw needs a minimum hole of 3.4mm for a snug fit and 3.6 or maybe even 3.8 for a clearance hole. One of the problems I ran into when building my printer was that the fastener holes were too small, requiring cleaning and filing to get things to fit. Even the nut hole I printed with a 6.2mm of clearance was too tight. 
+According to this test, it seems a 3mm machine screw needs a minimum hole of 3.4mm for a snug fit and 3.6 or maybe even 3.8 for a clearance hole. One of the problems I ran into when building my printer was that the fastener holes were too small, requiring cleaning and filing to get things to fit. Even the nut hole I printed with a 6.2mm of clearance was too tight.
 
 Armed with this I though I'd print a little gauge to test various clearance levels:
 
-{% img https://lh5.googleusercontent.com/-LadW1HmKvyE/Uci44NWOA-I/AAAAAAAAHmA/Yfy7Giv9CRg/w984-h738-no/Photo+Jun+24%252C+4+24+12+PM.jpg %}
+![Bolt and nut test block](https://lh5.googleusercontent.com/-LadW1HmKvyE/Uci44NWOA-I/AAAAAAAAHmA/Yfy7Giv9CRg/w984-h738-no/Photo+Jun+24%252C+4+24+12+PM.jpg)
 
 In this test I created 5 bolt holes, 5 nut slots and 5 nut recesses to simulate the possible configurations when joining 3d printed parts with external hardware. The idea is that once I have this gauge I should know how to spec my fittings holes in the models. The dimensions are as follows:
 
@@ -165,7 +165,7 @@ The initial tests and calibration went well. At this point there are a few thing
 - Clean up this insane wiring.
 - Update the firmware to the latest version.
 
-To that end I've ordered a big role of PLA and Kapton tape as well as a set of **long tweezers** these will come in handy for cleaning away test plastic from the tip without burning your fingers. 
+To that end I've ordered a big role of PLA and Kapton tape as well as a set of **long tweezers** these will come in handy for cleaning away test plastic from the tip without burning your fingers.
 
 I hope to post more details of the build out soon!
 

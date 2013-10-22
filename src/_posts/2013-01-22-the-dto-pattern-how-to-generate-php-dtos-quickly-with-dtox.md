@@ -21,7 +21,7 @@ How this communication is achieved is where the DTO becomes important, providing
 
 Here is a useful graphic taken from this [rather helpful article](http://msdn.microsoft.com/en-us/magazine/ee236638.aspx) on DTOs:
 
-{% img http://i.msdn.microsoft.com/ee236638.fig03(en-us).gif %}
+![DTO used as a go between the presentation and business layer.](http://i.msdn.microsoft.com/ee236638.fig03(en-us).gif)
 
 ##This sounds like a lot of code...
 I hear this gripe a lot. Especially from the PHP crowd where the lack of types make it less simple to use code generation features of an IDE (like you might do with Java).

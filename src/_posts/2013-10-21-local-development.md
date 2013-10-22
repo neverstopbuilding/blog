@@ -69,7 +69,7 @@ This will launch a Firefox browser window in an X window within OSX.
 
 Here's a screenshot:
 
-{% img /images/post-content/local-dev-shot.png 'Firefox in an X Window in OSX' 'Firefox in an X Window in OSX' %}
+![Firefox in an X Window in OSX](/images/post-content/local-dev-shot.png)
 
 ##Part 5 - Leftovers
 

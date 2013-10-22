@@ -19,7 +19,7 @@ Now allow me to stop off my soapbox and offer you the 10 plugins that I use in m
 ##1. Package Control
 This one goes without saying. I hope you are not installing Sublime plugins by cloning repos and copying folders!? With Package Control you can quickly install any of the other plugins directly from within Sublime Text 2! Similarly, you can uninstall plugins that you thought were cool, but now are just giving you a headache. You won't find every plugin available through Package Control, but rest assured that all of those mentioned in this article are there.
 
-{% img /images/post-content/package-control.png Package Control %}
+![Package Control](/images/post-content/package-control.png)
 
 Get [Package Control here](http://wbond.net/sublime_packages/package_control/installation).
 ##2. Phpcs
@@ -27,7 +27,7 @@ If not for Package Control, this would be at the top of the list. Maybe it's the
 
 The great thing about this plugin is that not only does it flag code that does not conform to the standards you configure, but in doing so it actually teaches you the standards! After the umpteenth time fixing a bracket location, I just developed the habit to do it the right way the first time. And that is what we want, good quality to be a habit.
 
-{% img /images/post-content/phpcs.png PHP CodeSniffer %}
+![PHP CodeSniffer](/images/post-content/phpcs.png)
 
 This plugin leverages a few external libraries you will have to install and configure. Specifically [PHP CodeSniffer](http://pear.php.net/package/PHP_CodeSniffer/redirected), [PHP CodeSniffer Fixer](https://github.com/fabpot/PHP-CS-Fixer), and [PHP Mess Detector](http://phpmd.org/).
 
@@ -37,7 +37,7 @@ Learn about [Phpcs here](http://soulbroken.co.uk/code/sublimephpcs).
 ##3. SublimeLinter
 This plugin does a little bit better at preventing syntax errors versus the Phpcs plugin (which I still love) above. The key here is it can be run in background mode, so that as soon as you do something boneheaded, you will know about it. No save required.
 
-{% img /images/post-content/linter.png Sublime Linter %}
+![Sublime Linter](/images/post-content/linter.png)
 
 As an added benefit it also does this for nearly all popular programing languages. It is quite configurable but I was more than happy with the stock settings.
 
@@ -51,7 +51,7 @@ Thankfully there was hope for my poor, wretched soul and I was saved. Automated 
 
 DocBlocker comes to the rescue with some automated documentation macros you might be familiar with if you have experience with a larger IDE like Eclipse. Now there is no excuse!
 
-{% img /images/post-content/docblokr.png Not the best naming of things here… %}
+![Not the best naming of things here…](/images/post-content/docblokr.png)
 
 The above shows the default output after a simple `/**` invocation, now all I need to do is fill in the blanks.
 
@@ -67,7 +67,7 @@ This plugin is handy if you like to run your unit tests from within Sublime itse
 
 What *IS* cool about this plugin is that it provides a fast way to just run one test, or one class of tests. Usually I am constantly running a whole module's suite of tests in the terminal, this plugin saves me from having to type out the whole terminal command just for a single test.
 
-{% img /images/post-content/phpunit.png PHPUnit Sublime Plugin %}
+![PHPUnit Sublime Plugin](/images/post-content/phpunit.png)
 
 Learn about the [PHPUnit plugin here](https://github.com/stuartherbert/sublime-phpunit).
 ##7. Gist
@@ -77,7 +77,7 @@ Need to send a buddy a that bit of configuration? Well just clip a Gist and shoo
 
 Need to pull in that awesome test structure you wrote? Just browse your Gists from Sublime and open it up. Very cool.
 
-{% img /images/post-content/gist.png I want to make a Gist out of this function and the preceding bracket! %}
+![I want to make a Gist out of this function and the preceding bracket!](/images/post-content/gist.png)
 
 **The way I like to use this plugin ** is to create Gists from custom Sublime Text 2 snippet files. This way I can quickly version control and share things like my PHP file head block. All you need to do is:
 
@@ -98,7 +98,7 @@ Goto the documentation [here](https://github.com/kemayo/sublime-text-2-goto-docu
 ##9. Theme - Phoenix
 If Sublime Text 2 is a highly tuned race car, then this plugin is the flashy body work (that also provides down force.) This theme does some minor UI tweaks to the standard Sublime Text layout and lets you configure some things like the tab width. The best feature would be having the folder tree, look, well, like a folder tree. Those little triangles were getting on my nerves!
 
-{% img /images/post-content/phoenix.png Just like a file cabinet. %}
+![Just like a file cabinet.](/images/post-content/phoenix.png)
 
 Details on the [Phoenix Theme](http://netatoo.github.com/phoenix-theme/).
 

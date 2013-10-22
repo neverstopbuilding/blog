@@ -6,7 +6,7 @@ date: 2013-09-17 14:51
 categories: building, remote
 twitter: [pelican, hyperjuice, mil-spec, mac, air]
 ---
-{% img /images/post-content/mil-spec-mac/done.jpeg %}
+![Finished laptop case](/images/post-content/mil-spec-mac/done.jpeg)
 
 One thing that majorly bums me out when I'm working away from home (which is often) is the lack of power outlets. I enjoy working in cafes or coffee shops and there is rarely a place to plug in. My Air usually lasts about 4 or 5 hours with full brightness and the wifi turned on, but sometimes that is not enough. A long flight, train ride, or just a serious coding session is sure to sap my battery.
 
@@ -59,56 +59,56 @@ This was one of the rather hard parts of the build actually, because the pick-ap
 
 And so, in order to get the cuts I wanted, I first made separate interlocking blocks, then used a razor blade to more or less cut / shave off the bottom until the correct height was achieved. The foam was cut in order to store the battery pack, charger, various accessories and the cord, and then the laptop on top.
 
-{% img /images/post-content/mil-spec-mac/foam.jpeg %}
+![Case with foam cut to size](/images/post-content/mil-spec-mac/foam.jpeg)
 
 If I were to make these en masse, I'd think the best strategy would be to laser cut foam of various thicknesses and then put the blocks together. Or have the foam molded in one piece.
 
 ###2. Install the Charging Plug
 The next step involves taking a waterproof, dust-proof case and drilling a massive hole in it. The reason we do this is, of course, to provide a connector for the charging cable. Doing this will let the whole kit be charged while closed and locked. Here is the whole assembly, a Mil-spec 3 pin connector with gasket and dust cover:
 
-{% img /images/post-content/mil-spec-mac/connector.jpeg %}
+![Layout of all the military spec connector parts](/images/post-content/mil-spec-mac/connector.jpeg)
 
 I used the gasket to mark where the hole would be as well as the screw holes. **Note! I did not think too hard and placed the connector on the bottom of the case. This is dumb!** Why? Well Pelican has intelligently made it so that this case can be set down and stand upright on little bases. For example when you set it down at an airport kiosk or something. Adding the connector makes the bottom unbalanced, and likely to fall over. A better location would be the side of the case.
 
 I used a multi step drill bit to get the right size:
 
-{% img /images/post-content/mil-spec-mac/hole.jpeg %}
+![Drilled hole for military spec connector](/images/post-content/mil-spec-mac/hole.jpeg)
 
-{% img /images/post-content/mil-spec-mac/connector2.jpeg %}
+![Connector placed in hole](/images/post-content/mil-spec-mac/connector2.jpeg)
 
 Next attach the connector and dust cover to the case with little machine screws and rubber washers to ensure all possible joints were protected against evil water. (Be sure to get your finger partially in front of the lens while documenting this.)
 
-{% img /images/post-content/mil-spec-mac/cover.jpeg %}
+![Connector bolted in with dust cap attached](/images/post-content/mil-spec-mac/cover.jpeg)
 
 And lastly, I cut off the standard electrical plug from the Hyperjuice charger, soldered the leads to the inside of the connector, and finished with heat shrink tubing:
 
-{% img /images/post-content/mil-spec-mac/wiring.jpeg %}
+![Internal wires heatshinked against the connector](/images/post-content/mil-spec-mac/wiring.jpeg)
 
 ###3. Build a Serious Charging Cable
 The irony that one end of this cable is a water proof military grade connector and the other is a standard 3 prong wall plug is not lost on me. This cable was partially an experiment in building such a harsh-elements cable, and also needed to interface with its mating plug anyway. You might imagine an alternative cable with weather proof connectors at both ends.
 
 The starting point was the flexible Mac power cable from the charger donated to this project. I began by sliding on a highly abrasion resistant plastic sleaving:
 
-{% img /images/post-content/mil-spec-mac/sleave.jpeg %}
+![Abrasion resistant sleaving on power cord](/images/post-content/mil-spec-mac/sleave.jpeg)
 
 And then heat shrinking the wall end with a "high shrink ratio, glue lined, heat shrink tubing." This is not your father's heat shrink tubing, unless, of course, he worked 3M. It firstly is quite thick, and shrinks to a third or more of its original size. Secondly, it is lined with a heat activated glue, that fills all the nooks and crannies, sealing the bond against the elements:
 
-{% img /images/post-content/mil-spec-mac/plug.jpeg %}
+![Heat shrink tubing on plug end of cord](/images/post-content/mil-spec-mac/plug.jpeg)
 
 Turning to the the other side of the cable, I painstakingly soldered the leads to the connector. Then assembled the mil spec connector locking it against the wire. Finally, I applied the same heat shrink tubing to the connection:
 
-{% img /images/post-content/mil-spec-mac/heat-shrink.jpeg %}
+![Heat shrink tubing on connector end of cord](/images/post-content/mil-spec-mac/heat-shrink.jpeg)
 
 This cable is no joke.
 
 ###4. Wiring the Battery
 The last part of this build required some careful splicing of the standard Mac magnetic charger plug and the output cable of the battery pack. Simply strip off the two leads, splice, solder and heat shrink. While it is possible to use a "[Magic Box](http://www.hypershop.com/MBP-BOX.html)" or an assortment of various cables to do this in a plug-and-play fashion. I opted for the more customized approach so that things could be routed cleanly and I could save some money.
 
-{% img /images/post-content/mil-spec-mac/power-wire.jpeg %}
+![Building the power wire](/images/post-content/mil-spec-mac/power-wire.jpeg)
 
 Once it's all done, the charger has a clean and short connector with another short cable to charge the laptop:
 
-{% img /images/post-content/mil-spec-mac/charger.jpeg %}
+![Charger plugged in to battery pack](/images/post-content/mil-spec-mac/charger.jpeg)
 
 ##The Final Product
 As the image at the beginning of the articles shows, all the parts can be neatly tucked away in the case. The whole thing works quite well, I did a full stint on the train from Washington, DC to Connecticut without using any external power. There were no problems on the trip down to Argentina either. It also works flawlessly at coffee shops, or really anywhere without power, it will last about 2 days of standard working usage.

@@ -18,7 +18,7 @@ Very little has changed about the actual code generation methods, but some cool 
 - [Pagoda Box](https://pagodabox.com/) for rapid deployment and hosting.
 - A fresh UI thanks to [Twitter Bootstrap](http://twitter.github.com/bootstrap/), [Font Awesome](http://fortawesome.github.com/Font-Awesome/), and [Bootswatch](http://bootswatch.com/)
 
-{% img /images/post-content/dtox-capture.png %}
+![Dtox Interface Example.](/images/post-content/dtox-capture.png)
 
 ##What's next?
 Here is a list of things I'm thinking about doing in the short term, in no particular order:

@@ -80,6 +80,6 @@ The Angular part of this is very simple, simply update the model with a string o
 ##That's All Folks
 That's really all there is too it. It took a good while to figure all of this out and get it working, but there wasn't much in the way of answers floating around on the internet. Now you should have clean looking output like this:
 
-{% img /images/post-content/code-mirror-output.png %}
+![Example of codemirror output.](/images/post-content/code-mirror-output.png)
 
 If you would like to see this working live, check out a [fiddle of the same thing](http://jsfiddle.net/jrobertfox/RHLfG/2/).

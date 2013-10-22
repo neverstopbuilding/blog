@@ -23,7 +23,7 @@ After experimenting with a first iteration of the carriage back I proceeded to t
 
 One thing I learned after having printed the first prototype was that the indentations for the smooth aluminum rails to sit in were sufficient to constrain the carriage and act as linear bearings. The linear precision of the carriage is hardly a concern and the stepper motor and bely will be more than sufficient to handle the X axis travel between plants.Furthermore, the frequency and speed of the travel will be quite low so I'm not too concerned with friction between the rails that the carriage.
 
-{% img https://lh3.googleusercontent.com/-Gzwwj61Uh84/Uksya5PrH_I/AAAAAAAAIk0/OENviY4S_YY/w949-h712-no/13+-+7 %}
+![Print of the carriage back](https://lh3.googleusercontent.com/-Gzwwj61Uh84/Uksya5PrH_I/AAAAAAAAIk0/OENviY4S_YY/w949-h712-no/13+-+7)
 
 As a result, I decided to abandon the small washer wheels that would act as linear bearings and rely solely on the indentations in the carriage sliding against the rails.
 
@@ -38,11 +38,11 @@ This was a rather simple part to design and build, especially having learned of 
 
 The final feature was a tab for joining the belt to the carriage. The original intention was to rotate the belt at the point of connection so that the belt could be affixed to the carriage "flatly." However, it does not appear to matter as I could design the belt clamp to hold the belt without a bend. Ultimately I decided to prototype it this way, as that would avoid any potential issues with the belt rotating so close to the pulleys at far ends of carriage travel.
 
-{% img https://lh4.googleusercontent.com/-j1_5nExbJaY/Uksv4I6mu5I/AAAAAAAAIiw/5zCxNm0Kg1s/w816-h712-no/13+-+6 %}
+![Print of the carriage front](https://lh4.googleusercontent.com/-j1_5nExbJaY/Uksv4I6mu5I/AAAAAAAAIiw/5zCxNm0Kg1s/w816-h712-no/13+-+6)
 
 The small belt clamp turned out great, and by projecting the teeth of the belt onto the clamp, the part cleanly locks the belt to the carriage without needing to any clamping force at all.
 
-{% img https://lh3.googleusercontent.com/-a8e1JoHLJFs/Uksv4DrgD6I/AAAAAAAAIhI/5cd3j0e88pI/w534-h712-no/13+-+10 %}
+![Belt clip attached to the drive belt](https://lh3.googleusercontent.com/-a8e1JoHLJFs/Uksv4DrgD6I/AAAAAAAAIhI/5cd3j0e88pI/w534-h712-no/13+-+10)
 
 ##Motor and Idler Mounts
 With the design of the carriage complete, two important dimensions had been determined:
@@ -59,35 +59,35 @@ For these I made some rough guesses, but perhaps some knowledge about the plant 
 
 With the carriage and rails positioned relative to the lights the motor mounts could incorporate mounts for the carriage rails, the motor or idler, as well as an angled mount for the rail that would hold the lights aloft.
 
-{% img https://lh3.googleusercontent.com/-H0OF15rtyU0/Uksv4Hdu-EI/AAAAAAAAIkE/Dzus3PlTjjo/w949-h712-no/13+-+2 %}
+![Print of the stepper motor mount](https://lh3.googleusercontent.com/-H0OF15rtyU0/Uksv4Hdu-EI/AAAAAAAAIkE/Dzus3PlTjjo/w949-h712-no/13+-+2)
 
 Once the motor mount was designed the idler mount was a cinch. All that I needed to do was derive a part from the motor mount but mirror it across the Z axis and change the mounting geometry to hold the bearing. One feature I added to this was a set of pockets that allowed the bearing to be adjusted around one of its screw holes. This would let me adjust the tension on the belt.
 
-{% img https://lh5.googleusercontent.com/-DQr4JZV-nnY/Uksv4Ams7MI/AAAAAAAAIjo/x9vZS5BrMC8/w949-h712-no/13+-+4 %}
+![Print of the idler mount](https://lh5.googleusercontent.com/-DQr4JZV-nnY/Uksv4Ams7MI/AAAAAAAAIjo/x9vZS5BrMC8/w949-h712-no/13+-+4)
 
 ##Uprights and Feet
 The motor and idler mounts were the more complicated parts of the build, but once they were designed, their geometries influenced the rest of the parts, which came together quickly. The Upright mounts simply joined the light rails to the uprights with angled mounts.
 
-{% img https://lh3.googleusercontent.com/-OfuG_Pt5h7Y/Uksv4C4yePI/AAAAAAAAIjw/i_PouR98xSA/w534-h712-no/13+-+3 %}
+![Print of the upright to cross member bracket](https://lh3.googleusercontent.com/-OfuG_Pt5h7Y/Uksv4C4yePI/AAAAAAAAIjw/i_PouR98xSA/w534-h712-no/13+-+3)
 
 The uprights are simply shorter sections of the same rods used elsewhere, and because there is no stopper on the upright mounts, they can protrude through to any degree. Thus the height of the lights relative to the ground and carriage can be adjusted simply by sliding the rails through the upright mounts.
 
 The final prototype was the feet, just bases with the same angle and pads to stand against the ground.
 
-{% img https://lh4.googleusercontent.com/-1shLVIsVAbw/Uksv4Lhz7NI/AAAAAAAAIjY/6y82dU9Y3H8/w949-h712-no/13+-+1 %}
+![Print of the upright feet](https://lh4.googleusercontent.com/-1shLVIsVAbw/Uksv4Lhz7NI/AAAAAAAAIjY/6y82dU9Y3H8/w949-h712-no/13+-+1)
 
 I printed four of the feet and then realized there would be some asymmetry in the final construction, even though I designed the feet to be universal. This was not the case but they will still work. Future designs would have them work regardless of orientation.
 
 ##Improvements to the LED Mount
 After designing the upright mounts, it was clear that the rails would be very ridged, even without any light mounts attached. The previous design of the light mounts had a bit too much material, and given that I'd need to print 7 more I opted to strip down the material usage considerably. The resulting design still solidly holds the LED heat sink and clips easily to the rails.
 
-{% img https://lh6.googleusercontent.com/-F37a2yL9KsE/Uksv4A4pdiI/AAAAAAAAIh0/jZLoc8fpWaU/w949-h712-no/13+-+8 %}
+![Print of the initial and final LED mounts](https://lh6.googleusercontent.com/-F37a2yL9KsE/Uksv4A4pdiI/AAAAAAAAIh0/jZLoc8fpWaU/w949-h712-no/13+-+8)
 
 ##Getting Real
 That basically finishes up the bulk of the frame work. The next step will involve building the frame and hooking all the components together. Then I'll have to get down to the nitty gritty of programming the beast. Here is a picture of the assembled model:
 
-{% img /images/post-content/robo-garden/frame-model.png %}
+![Computer 3D rendering of the RoboGarden frame](/images/post-content/robo-garden/frame-model.png)
 
 And the majority of the parts awaiting assembly:
 
-{% img https://lh6.googleusercontent.com/-dH8LmxL5w7Y/Uksv4JFXtjI/AAAAAAAAIik/I5ew8oKB7zk/w1118-h629-no/13+-+9 %}
+![All the frame parts layed out next to each other](https://lh6.googleusercontent.com/-dH8LmxL5w7Y/Uksv4JFXtjI/AAAAAAAAIik/I5ew8oKB7zk/w1118-h629-no/13+-+9)

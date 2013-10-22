@@ -51,7 +51,7 @@ Ok, so we will need:
 
 The basic operation is to connect 4 of the output bits of the shift register to the 4 input bits of the decoder, and the output pins of the decoder to the inputs of the display.
 
-{% img https://lh5.googleusercontent.com/-64wc4ot3Ar4/Ulx4B9bIOaI/AAAAAAAAI7o/CY2DmmjoGdA/w1102-h516-no/testing.png %}
+![Circuit diagram with decoder and shift register](https://lh5.googleusercontent.com/-64wc4ot3Ar4/Ulx4B9bIOaI/AAAAAAAAI7o/CY2DmmjoGdA/w1102-h516-no/testing.png)
 
 ###Hooking up the 7 Segment
 
@@ -63,16 +63,16 @@ Starting with the 7 Segment display, we need to determine the proper current lim
 
 I'll use the 220 Ohm resistors that I have available. For initial tests I put in a dip switch array to pick the bits adding 10k Ohm resistors to pull down to ground on the 4 bit inputs, as shown in this schematic:
 
-{% img https://lh5.googleusercontent.com/-okfQTFNJCsA/UlymBmNE5ZI/AAAAAAAAI8c/fAUU4Jd2yvM/w600-h362-no/7-Segment-schematic.jpg %}
+![Correct decoder wiring](https://lh5.googleusercontent.com/-okfQTFNJCsA/UlymBmNE5ZI/AAAAAAAAI8c/fAUU4Jd2yvM/w600-h362-no/7-Segment-schematic.jpg)
 
 Here is the resulting, albeit messy, initial prototype:
 
-{% img https://lh4.googleusercontent.com/-wTSwZyL3gjo/Ulx3a9DrfUI/AAAAAAAAI7U/kmUmD_ezzv8/w949-h712-no/IMG_1700.JPG %}
+![7 Segment display on breadboard](https://lh4.googleusercontent.com/-wTSwZyL3gjo/Ulx3a9DrfUI/AAAAAAAAI7U/kmUmD_ezzv8/w949-h712-no/IMG_1700.JPG)
 
 ###Adding the Shift Register
 The next step will be to add the shift register in place of the dip switches. I found that [this article](http://bildr.org/2011/02/74hc595/) was quite helpful in learning about the shift register chip, as well as the above data sheet. The wiring was simple and only three pins of the Arduino were used for the connection.
 
-{% img https://lh3.googleusercontent.com/-cHFID2Vz2gM/Ulx3ax2KwsI/AAAAAAAAI7U/LLA0iuDq7ko/w501-h668-no/IMG_1702.JPG %}
+![Full prototype breadboards and circuits](https://lh3.googleusercontent.com/-cHFID2Vz2gM/Ulx3ax2KwsI/AAAAAAAAI7U/LLA0iuDq7ko/w501-h668-no/IMG_1702.JPG)
 
 ##Programming
 I started with this simple code, which causes the display to count up to 9 in order:
@@ -93,7 +93,7 @@ for (int j = 0; j < 10; j++) {
 ##Adding a Cycling Button
 Now that I could display the value I wanted, I needed to add a button that will cycle up through the positions, and after the button is no longer being pressed, adjust the carriage to that location.
 
-{% img https://lh4.googleusercontent.com/-jZ8C7se2pDw/Ulx43bbwVFI/AAAAAAAAI78/q_T6decg0S8/w388-h189-no/switch.png %}
+![Cycle button circuit diagram](https://lh4.googleusercontent.com/-jZ8C7se2pDw/Ulx43bbwVFI/AAAAAAAAI78/q_T6decg0S8/w388-h189-no/switch.png)
 
 For this we just have a button pulled low and read by the Arduino. I added a delays and logic in the code such that a timer is reset each time the button is pressed, if the timer has run out, *and* the location number is different than the previous number we fire a move command. What is nice about the stepper movement routine is that it is locking, so pressing the button during the carriage movement doesn't do anything. This will also come in handy so I don't spray water by accident when moving between plants.
 
@@ -102,7 +102,7 @@ Pretty soon though I won't need to worry about manual manipulation as moisture s
 
 Here is a picture of the completed circuit, much more cleaned up, replacing the jumpers with small wires:
 
-{% img https://lh5.googleusercontent.com/-pnKm0-2BhC8/Ulx3a3pY0YI/AAAAAAAAI7U/27Q8H4bWhEQ/w501-h668-no/IMG_1703.JPG %}
+![Improved breadboard with cleaned up wires](https://lh5.googleusercontent.com/-pnKm0-2BhC8/Ulx3a3pY0YI/AAAAAAAAI7U/27Q8H4bWhEQ/w501-h668-no/IMG_1703.JPG)
 
 And a nice video of the operation:
 

@@ -17,29 +17,29 @@ As I detailed before in a [previous post](http://neverstopbuilding.net/finished-
 
 Here is the basic operation:
 
-{% img https://lh5.googleusercontent.com/-3of26cFaQ60/Ul63sl8y5HI/AAAAAAAAI80/WOf8imX3340/w620-h487-no/homing.png %}
+![Carriage in relation to homing switch location](https://lh5.googleusercontent.com/-3of26cFaQ60/Ul63sl8y5HI/AAAAAAAAI80/WOf8imX3340/w620-h487-no/homing.png)
 
 When I run a `home` command, the carriage should move all the way to the right until the micro switch is triggered. This also seems like a great candidate to experiment with Arduino's hardware interrupt feature. But I'll get to that later. First step is building the clip to position the micro switch correctly.
 
 ##Modeling the Part
 Because the motor mount has the same clip geometry I need it makes sense to use that part as base for the new one. So I projected that profile into a new sketch and extruded it to the size of my clip. The rest of the geometry would be influenced by the position of the micro switch relative to the carriage at "home" position. For this I needed to first model the switch:
 
-{% img https://lh6.googleusercontent.com/-WDZLKokOTb4/Ul7FHKARdDI/AAAAAAAAI9Q/-t5C9vwQS6A/w753-h451-no/switch.png %}
+![Microswitch model](https://lh6.googleusercontent.com/-WDZLKokOTb4/Ul7FHKARdDI/AAAAAAAAI9Q/-t5C9vwQS6A/w753-h451-no/switch.png)
 
 Then I positioned the switch such that the edge of the carriage would hit it when there was just enough clearance around the rest of the parts:
 
-{% img https://lh5.googleusercontent.com/-XvPKeMRw6WQ/Ul7gBTQttkI/AAAAAAAAI-c/hY8n-5d3gVA/w675-h616-no/switch-position.png %}
+![Microswitch positioned relative to carriage](https://lh5.googleusercontent.com/-XvPKeMRw6WQ/Ul7gBTQttkI/AAAAAAAAI-c/hY8n-5d3gVA/w675-h616-no/switch-position.png)
 
 The final step would be to add geometry to the switch clip to meet the already positioned switch. So I projected the switch face into the bottom of the clip, joined the two areas together with some arcs and extruded it beyond the switch face:
 
-{% img https://lh4.googleusercontent.com/-SP9i2pyrYFM/Ul7gA7M4xbI/AAAAAAAAI-Y/qDwIOacU9SA/w741-h492-no/finished-clip.png %}
+![Microswitch mounting bracket](https://lh4.googleusercontent.com/-SP9i2pyrYFM/Ul7gA7M4xbI/AAAAAAAAI-Y/qDwIOacU9SA/w741-h492-no/finished-clip.png)
 
 ##Printing and Assembly
 The printing was a pretty straight forward process, once the part was done, all that was left was attaching the micro switch to the mount, soldering on some lead wires and affixing it to the frame.
 
-{% img https://lh6.googleusercontent.com/-6I019RaJhtU/UmAuh7Xp9vI/AAAAAAAAJAE/wEKQZ3x3QL4/w949-h712-no/IMG_1705.JPG %}
+![Assembled microswitch and bracket](https://lh6.googleusercontent.com/-6I019RaJhtU/UmAuh7Xp9vI/AAAAAAAAJAE/wEKQZ3x3QL4/w949-h712-no/IMG_1705.JPG)
 
-{% img https://lh5.googleusercontent.com/-J-yEeuODKtU/UmAuh62wLpI/AAAAAAAAJAE/vtR87IvCbHc/w949-h712-no/IMG_1706.JPG %}
+![Installed microswitch bracket](https://lh5.googleusercontent.com/-J-yEeuODKtU/UmAuh62wLpI/AAAAAAAAJAE/vtR87IvCbHc/w949-h712-no/IMG_1706.JPG)
 
 #Hardware Debouncing
 
@@ -55,11 +55,11 @@ To do this I followed this [great tutorial](http://www.jeremyblum.com/2011/03/07
 
 Because I already have a working button with code backing it in the form of the position cycle button. I'll experiment with the hardware debouncing logic here. If it works I'll carry it over to the microswitch. Let's start with the schematic:
 
-{% img https://lh6.googleusercontent.com/-Cs4MEURNJtg/UmAvXM9slvI/AAAAAAAAJAQ/S_7rbUTwAu4/w677-h349-no/debounce-schematic.png %}
+![Debouncing schematic](https://lh6.googleusercontent.com/-Cs4MEURNJtg/UmAvXM9slvI/AAAAAAAAJAQ/S_7rbUTwAu4/w677-h349-no/debounce-schematic.png)
 
 This diagram is rather simplified because it only shows one of the inverters and the power and ground leads for the IC separately. Here is a picture of the parts on the breadboard but it is not that helpful and kind of confusing at the moment.
 
-{% img https://lh5.googleusercontent.com/-wW-QuP61Z14/UmAuhyOIOjI/AAAAAAAAJAE/DIi571e1KC0/w949-h712-no/IMG_1707.JPG %}
+![Schmitt inverter installed on breadboard](https://lh5.googleusercontent.com/-wW-QuP61Z14/UmAuhyOIOjI/AAAAAAAAJAE/DIi571e1KC0/w949-h712-no/IMG_1707.JPG)
 
 The initial test turned out to be a success, so I thought it would be worth adding the micro switch in place of the button to test that, which also worked just fine. In returning the circuit to the original state, I added debouncing for both the control switch and the home switch.
 
