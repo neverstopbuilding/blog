@@ -65,7 +65,7 @@ I bump the version of my cookbook and provision the server. Turns out it works l
 
 Not only do these act as integration tests, ensuring you have built cookbooks that really work when used on the servers, but they also act as a safety net as they are run whenever the server is provisioned. If for any reason some other cookbook conflicts or an error occurs, you will know about it.
 
-#Conclusion
+##Conclusion
 I hope that those who followed this series have learned a bunch on how to build cookbooks in a true, test-driven way. I encourage you to check out the [Chef Broiler Plate](https://github.com/jasonrobertfox/chef-broiler-plate) repository, and also the book: [The Chef Survival Guide](https://leanpub.com/chef-survival-guide). I'll summarize the ways to test Chef Cookbooks in a future post. Best of luck with your automated infrastructure adventures.
 
 

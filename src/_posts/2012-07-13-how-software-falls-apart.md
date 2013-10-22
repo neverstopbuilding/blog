@@ -58,7 +58,7 @@ Ok, here are some tips:
 - Implement automated documentation tools and release notes; providing easy access to good current documentation will accelerate the learning process for new team members.
 - Take the initiative to mentor and train anyone you can on the nuances of your software, keeping the oral tradition alive will clear up confusion as opposed to written documentation which is almost always out of date.
 
-#The Big Picture
+##The Big Picture
 All of these causes of failure really can be boiled down to one: Software will fall apart if you try to build it without the big picture in mind. Having a unified design, vision, and team will do wonders for producing amazing products!
 
 ###Some Resources

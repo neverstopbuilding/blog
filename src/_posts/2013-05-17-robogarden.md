@@ -13,7 +13,7 @@ I'm pretty good at some things, not so good at others. One of the things I'm *no
 ##The Project
 And so this post begins the build lot of "RoboGarden," a device that once finished will specifically water the plants I put in it, the right amount, on the right schedule. It will also shine lots of nice light on them. As the build progresses, I'll drip out more of the design. Stay tuned!
 
-#RoboGarden Build Log: 5/16/13
+##RoboGarden Build Log: 5/16/13
 Having just received an Arduino kit I set to work figuring out how all this would work and hacking away.
 
 Following this [article](http://bitbeam.org/2011/09/09/the-next-step/) lead me to the schematic for my stepper motor, a Pololu [Bipolar, 200 Steps/Rev, 28×45mm, 4.5V, 0.67 A/Phase](http://www.pololu.com/catalog/product/1206) or part number #1206.

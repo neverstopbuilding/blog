@@ -74,7 +74,7 @@ chef.run_list = [
 
 Running a `vagrant provision` will now execute our motd cookbook, and then run a blank minitest suite against it.
 
-#Coming up…
+##Coming up…
 Next time we will conclude our series by setting up final verification tests with a post on "Minitest" and making it part of our workflow process.
 
 

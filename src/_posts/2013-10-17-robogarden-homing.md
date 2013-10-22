@@ -41,7 +41,7 @@ The printing was a pretty straight forward process, once the part was done, all 
 
 ![Installed microswitch bracket](https://lh5.googleusercontent.com/-J-yEeuODKtU/UmAuh62wLpI/AAAAAAAAJAE/vtR87IvCbHc/w949-h712-no/IMG_1706.JPG)
 
-#Hardware Debouncing
+##Hardware Debouncing
 
 I noticed while testing the micro switch some noise in the switch, using the multimeter as a continuity check, I heard more than one "beep." As such this switch would benefit from a debouncing circuit so that the signal sent to the Arduino is definitely either high or low.
 
@@ -63,7 +63,7 @@ This diagram is rather simplified because it only shows one of the inverters and
 
 The initial test turned out to be a success, so I thought it would be worth adding the micro switch in place of the button to test that, which also worked just fine. In returning the circuit to the original state, I added debouncing for both the control switch and the home switch.
 
-#Programming the Home Function
+##Programming the Home Function
 
 There are two ways to think about this operation:
 
@@ -136,7 +136,7 @@ float getPlantLocation(int plantNumber){
 
 The net result is that you would chose to have between 1 and 8 plants, and they would be evenly distributed under the frame. For the full source code, check out the [github repository](https://github.com/neverstopbuilding/robo-garden).
 
-#Next up...
+##Next up...
 Next I'll be tackling the water and lighting control circuit which will let me test this bad boy on some plants. I was recently able to procure some more parts that should aid in improved LED drivers.
 
 Finally an updated video of the operation:

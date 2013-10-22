@@ -61,7 +61,7 @@ We also need to update the Travis file to use our new ci task, simple:
 
 Hurray! Now both our CI server and standard build process will run the "knife cookbook test" to ensure our cookbooks are top notch!
 
-#Coming up…
+##Coming up…
 In the next post we will set up a workflow management tool and integrate it into our processes.
 
 

@@ -7,7 +7,7 @@ categories: ["robo garden"]
 twitter: [RoboGarden, 3dprinting]
 ---
 
-#RoboGarden Build Log: October 1, 2013
+##RoboGarden Build Log: October 1, 2013
 
 ##Parts Discussed
 - Carriage Back

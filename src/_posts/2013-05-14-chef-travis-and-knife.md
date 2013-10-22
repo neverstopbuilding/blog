@@ -53,7 +53,7 @@ That's it! If you have followed thus far, and even though we aren't testing much
 
 [This article](http://technology.customink.com/blog/2012/06/04/mvt-foodcritic-and-travis-ci/) buy Nathen Harvey was very helpful in pointing me in the right direction regarding the Travis stuff. Thanks!
 
-#Playing with Knives
+##Playing with Knives
 The goal here is to configure Knife so that it is universally applicable and can serve as a set of configuration settings for the whole project. Most of the settings will be fetched from data bags once we set up the Chef server, but certain required elements will be captured here.
 
 
@@ -105,7 +105,7 @@ Ensure that the keys you downloaded as part of setting up your Opscode account a
 Configure the `knife.rb` file to use your environment variables. Later the Vagrant file will have dependencies on these environment variables as well. This will allow hard coding of certain variables (perhaps company name) in forks of the project for a specific application.
 
 ```ruby
-#Configurable Variables (Change these to not depend on environment variables!)
+# Configurable Variables (Change these to not depend on environment variables!)
 my_orgname              = ENV['OPSCODE_ORGNAME']
 my_chef_server_url      = ENV['KNIFE_CHEF_SERVER']
 my_cookbook_copyright   = ENV['KNIFE_COOKBOOK_COPYRIGHT']
@@ -113,7 +113,7 @@ my_cookbook_license     = ENV['KNIFE_COOKBOOK_LICENSE']
 my_cookbook_email       = ENV['KNIFE_CACHE_PATH']
 
 
-#Configuration
+# Configuration
 current_dir             = File.dirname(__FILE__)
 node_name               ENV['OPSCODE_USER']
 client_key              "#{ENV['KNIFE_CLIENT_KEY_FOLDER']}/#{ENV['OPSCODE_USER']}.pem"
@@ -121,15 +121,15 @@ validation_client_name  "#{my_orgname}-validator"
 validation_key          "#{ENV['KNIFE_VALIDATION_KEY_FOLDER']}/#{my_orgname}-validator.pem"
 chef_server_url         my_chef_server_url
 
-#Caching
+# Caching
 cache_type              'BasicFile'
 cache_options( :path => ENV['KNIFE_CACHE_PATH'] )
 
-#Logging
+# Logging
 log_level               :info
 log_location            STDOUT
 
-#Cookbooks
+# Cookbooks
 cookbook_path           ["#{current_dir}/../cookbooks"]
 cookbook_copyright      my_cookbook_copyright
 cookbook_license        my_cookbook_license
@@ -140,7 +140,7 @@ Now if you have actually set up your environment variables, you should be able t
 
 Setting up your Knife configuration like this allows your Chef project to be much more portable. As long as contributing developers have their environment variables set up locally, they can seamlessly access the project.
 
-#Coming up…
+##Coming up…
 In the next post we will set up our local virtual machine with Vagrant and have a live server on our hands!
 
 

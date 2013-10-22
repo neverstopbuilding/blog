@@ -7,7 +7,7 @@ categories: ["robo garden"]
 twitter: [RoboGarden, 3dprinting]
 ---
 
-#RoboGarden Build Log: September 25, 2013
+##RoboGarden Build Log: September 25, 2013
 
 ##Parts Discussed
 - Light holders

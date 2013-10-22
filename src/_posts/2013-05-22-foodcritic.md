@@ -45,7 +45,7 @@ Lastly, we would need to add a line to our travis file to support the submodules
 
 Now whenever we push code to our repository, Travis will kick off a review of our cookbook quality. Many thanks to the guys over at Custom Ink for writing a [great article](http://technology.customink.com/blog/2012/06/04/mvt-foodcritic-and-travis-ci/) that helped me write this one.
 
-#Coming up…
+##Coming up…
 In the next installment we will use Knife to continue testing our cookbooks and building out the framework.
 
 

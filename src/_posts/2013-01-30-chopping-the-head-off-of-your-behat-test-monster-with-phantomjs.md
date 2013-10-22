@@ -57,7 +57,7 @@ And the contents of the file should be:
         });
     }
 
-#4. Add the PhantomJS Browser to Sahi
+##4. Add the PhantomJS Browser to Sahi
 The browsers for Sahi are defined in a `browser_types.xml` file, which if you followed the previous sahi installation would be located at `/usr/local/share/sahi/userdata/config/browser_types.xml` edit that file, adding the following to the bottom, inside the main tag:
 
     <browserType>
@@ -77,7 +77,7 @@ You can verify that you have added this additional browser by running the `start
 
 ![Sahi browser launch dashboard.](/images/post-content/sahi-dash.png)
 
-#5. Modify behat.yml
+##5. Modify behat.yml
 Using the [sample source code](https://github.com/jasonrobertfox/blog-behat-sahi) from last time you need to make one modification to the existing `behat.yml` file, changing the browser you are using from "firefox" to "phantomjs". You updated file should look like this:
 
     default:
@@ -91,7 +91,7 @@ Using the [sample source code](https://github.com/jasonrobertfox/blog-behat-sahi
           goutte: ~
           sahi: ~
 
-#6. Make sure it all works!
+##6. Make sure it all works!
 Make sure you start Sahi first, but running:
 
     bin/behat

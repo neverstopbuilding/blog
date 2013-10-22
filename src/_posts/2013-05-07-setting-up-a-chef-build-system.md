@@ -62,7 +62,7 @@ end
 ```
 
 Great! Now we have the beginnings of a build system for the project.
-#Coming up…
+##Coming up…
 In the next post we will flesh out the build system with a task that checks for dependencies and implement our Knife configuration.
 
 

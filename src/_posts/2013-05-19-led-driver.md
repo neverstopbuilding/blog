@@ -6,7 +6,7 @@ date: 2013-05-19 12:57
 categories: ["robo garden"]
 twitter: [RoboGarden, LED, growlight]
 ---
-#RoboGarden Build Log: May 18, 2013
+##RoboGarden Build Log: May 18, 2013
 
 My awesome  Chinese 10 Watt LEDs arrived in the mail Friday, so I was clearly excited to test them out. Some cursory research had revealed this schematic:
 

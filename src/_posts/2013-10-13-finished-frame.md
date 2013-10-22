@@ -7,7 +7,7 @@ categories: ["robo garden"]
 twitter: [RoboGarden, arduino, gardenhack]
 ---
 
-#RoboGarden Build Log: October 13, 2013
+##RoboGarden Build Log: October 13, 2013
 
 I've been busy hacking on the electronics for the RoboGarden and though it was time to post an update lest I move further down the rabbit hole. The frame is completely assembled, and putting it together went rather well but there were a few minor issues to bring up that could be improved in future iterations. Here is a run down of the frame assembly:
 
@@ -167,6 +167,6 @@ if (Serial.available())
 
 What this code will do is listen for input on the serial terminal, when you enter a number of centimeters the program converts that to the number of steps required to move the carriage that far.
 
-#Onward!
+##Onward!
 
 The most sensible modules to tackle next are the testing/control circuit and the micro switch input. All the code and schematics are now available in the [github repository for this project](https://github.com/neverstopbuilding/robo-garden). Enjoy!

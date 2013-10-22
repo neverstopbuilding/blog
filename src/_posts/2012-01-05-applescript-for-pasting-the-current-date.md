@@ -32,4 +32,4 @@ In the **Keyboard Preferences** create a new shortcut for this service:
 
 That's it! Now in any application you can just press **command-shift-d** and paste the date:
 
-``Thursday, January 5, 2012 10:47:22 AM``
+`Thursday, January 5, 2012 10:47:22 AM`

@@ -3,7 +3,7 @@ layout: post
 title: "Building a Military Spec MacBook Air Case with Long Life Battery"
 comments: true
 date: 2013-09-17 14:51
-categories: building, remote
+categories: [building, remote]
 twitter: [pelican, hyperjuice, mil-spec, mac, air]
 ---
 ![Finished laptop case](/images/post-content/mil-spec-mac/done.jpeg)

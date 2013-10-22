@@ -7,7 +7,7 @@ categories: ["robo garden"]
 twitter: [RoboGarden, Arduino, 7Segment]
 ---
 
-#RoboGarden Build Log: October 14, 2013
+##RoboGarden Build Log: October 14, 2013
 
 ##Parts Discussed
 - Manual Testing Circuit
@@ -97,7 +97,7 @@ Now that I could display the value I wanted, I needed to add a button that will 
 
 For this we just have a button pulled low and read by the Arduino. I added a delays and logic in the code such that a timer is reset each time the button is pressed, if the timer has run out, *and* the location number is different than the previous number we fire a move command. What is nice about the stepper movement routine is that it is locking, so pressing the button during the carriage movement doesn't do anything. This will also come in handy so I don't spray water by accident when moving between plants.
 
-#Good Progress
+##Good Progress
 Pretty soon though I won't need to worry about manual manipulation as moisture sensors and a stop micro switch will provide feedback to the system.
 
 Here is a picture of the completed circuit, much more cleaned up, replacing the jumpers with small wires:

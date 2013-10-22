@@ -51,7 +51,7 @@ I added a simple task to start the Vagrant server, `rake start` which really jus
 
 Running either command will start your server, hook it into your Chef Server account and, well, do nothing right now because our `run_list` is empty.
 
-#Coming up…
+##Coming up…
 Next up we will (finally) start building a sample cookbook and in the process begin outfitting our framework with great TDD tools (like "Chefspec".)
 
 

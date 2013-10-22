@@ -50,7 +50,7 @@ Chef is really awesome at keeping the cooking metaphor going, so in that spirit,
 
 This 12 course tasting menu looks really good. Let's get started!
 
-#Getting Started: Basic Requirements
+##Getting Started: Basic Requirements
 This and the posts to follow will be written in an instruction/guide style. You should be able to follow along and end up with the same type of framework that is finished here: [Chef Broiler Plate](https://github.com/jasonrobertfox/chef-broiler-plate)
 
 These are the prerequisites for starting the project:
@@ -87,7 +87,7 @@ At a bare minimum I want to describe how to install and use the most basic versi
 
 Write a readme file that describes the project dependencies, how to get started on development and usage, and the basic tasks.
 
-#Coming up…
+##Coming up…
 In the next post we will dive into the creation of a basic Rake build system and setting up a basic continuous integration system.
 
 
