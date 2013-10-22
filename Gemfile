@@ -3,6 +3,7 @@
 source "http://rubygems.org"
 ruby '2.0.0'
 
+gem 'rake'
 gem 'jekyll'
 gem 'jekyll-slim'
 gem 'jekyll-asset-pipeline'
@@ -13,9 +14,9 @@ gem 'unicorn'
 gem 'rack-contrib'
 gem 'rack-rewrite'
 
+gem 'rubocop'
+
 group :development  do
-  gem 'rake'
-  gem 'rubocop'
   gem 'guard-jekyll-plus', git: 'https://github.com/imathis/guard-jekyll-plus', branch: 'master'
   gem 'guard-rubocop'
   gem 'rb-fsevent'
