@@ -1,0 +1,9 @@
+div.light
+  | BY
+  | {% if page.author %}
+  a< href="{{ page.author_link }}" {{ page.author | upcase }}
+  | {% else %}
+  a< href="{{ site.twitter }}" {{ site.author | upcase }}
+  | {% endif %}
+  |&nbsp;|&nbsp;
+  | {{ page.date | date: "%B %e, %Y" | upcase }}

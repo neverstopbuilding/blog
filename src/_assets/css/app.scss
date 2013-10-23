@@ -54,3 +54,88 @@
 // @import "foundation/components/tooltips";
 // @import "foundation/components/dropdown";
 
+.header-image {
+    height: 20em;
+    background-size: cover;
+    margin-bottom: 3em;
+    & > .row {
+        position: relative;
+        height: 20em;
+        & > .columns {
+            position: absolute;
+            bottom: -3em;
+            padding-bottom: 2em;
+        }
+    }
+}
+
+.trans {
+    background-color: rgba(0,0,0,.85);
+}
+
+.dark {
+    font-weight: 100;
+    color: #fff;
+    p, h1, h2, h3, h4, h5, h6 {
+        font-weight: 100;
+        color: #fff;
+    }
+    a {
+        color: #ccc;
+        &:hover {
+            color: #fff;
+            @include single-transition;
+        }
+    }
+    .red {
+        a {
+            color: #2E0606;
+            &:hover {
+                color: #7E2A2A;
+            }
+        }
+    }
+}
+
+.light {
+    font-size: .8em;
+    font-weight: 200;
+    color: #222;
+}
+
+.spaced {
+    padding-top: 2em;
+    padding-bottom: 4em;
+}
+
+.top-spaced{
+    padding-top: 3em;
+}
+
+.large-right-small-center, .large-left-small-center {
+    text-align: center;
+}
+
+@media #{$small} {
+    .large-right-small-center {
+        text-align: right;
+    }
+
+    .large-left-small-center {
+        text-align: right;
+    }
+}
+
+.epic {
+    font-size: 3em;
+    line-height: 1.2em;
+    a {
+        font-weight: 200;
+    }
+}
+
+.default-footer {
+    background-color: #440000;
+    padding-top: 4em;
+    padding-bottom: 4em;
+}

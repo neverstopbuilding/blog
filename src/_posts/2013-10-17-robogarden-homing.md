@@ -3,8 +3,9 @@ layout: post
 title: "Designing and Building the Micro Switch Mount"
 date: 2013-10-17 16:02
 comments: true
-categories: "Robo Garden"
+categories: ["Robo Garden"]
 twitter: [arduino, RoboGarden, electronics]
+image: https://lh5.googleusercontent.com/-wW-QuP61Z14/UmAuhyOIOjI/AAAAAAAAJAE/DIi571e1KC0/w949-h712-no/IMG_1707.JPG
 ---
 ##RoboGarden Build Log: October 17, 2013
 ###Parts Discussed
@@ -141,4 +142,4 @@ Next I'll be tackling the water and lighting control circuit which will let me t
 
 Finally an updated video of the operation:
 
-<iframe width="640" height="480" src="//www.youtube.com/embed/n8XD46BQcEk" frameborder="0" allowfullscreen></iframe>
+{% youtube http//www.youtube.com/embed/n8XD46BQcEk %}

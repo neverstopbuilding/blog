@@ -1,0 +1,16 @@
+---
+layout: page
+title: Archives
+---
+
+| {% for post in site.posts reverse %}
+| {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
+| {% unless year == this_year %}
+| {% assign year = this_year %}
+h2 {{ year }}
+| {% endunless %}
+article.row
+  div.large-12.columns
+    a href="{{ post.url }}" {{ post.title }}
+    | - {{ post.date }}
+{% endfor %}

@@ -4,3 +4,5 @@ asset_pipeline:
   output_path: assets
   display_path: nil
   gzip: false
+
+url: http://localhost:4000

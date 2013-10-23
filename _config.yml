@@ -5,6 +5,16 @@ plugins: ./src/_plugins
 
 # Site Specific Settings
 timezone: America/New_York
+permalink: /:title
+url: http://neverstopbuilding.com
+default_post_image: http://cl.ly/image/0K2R3I2u0E0X/content
+
+#Contact Settings
+author: Jason Fox
+email: jasonrobertfox@gmail.com
+twitter: https://twitter.com/jasonrobertfox
+youtube: http://www.youtube.com/user/POtrippleX
+github: https://github.com/jasonrobertfox
 
 # Plugin Settings
 markdown: redcarpet

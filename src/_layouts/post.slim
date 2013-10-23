@@ -1,5 +1,36 @@
 ---
-layout: default
+layout: page
 ---
-.post
-  | {{ content }}
+.row.post
+  article.large-9.push-3.columns
+    header.row.spaced
+      .large-12.columns.large-right-small-center
+        | {% slim meta.slim %}
+    .row
+      .large-12.columns
+        | {{ content }}
+    .row.top-spaced
+      .large-12.columns
+        p
+          em
+            | Enjoy this article? Read more like it in the
+            a< href="{{ site.url }}/archive" Archives
+            | .
+    footer.row
+      .large-12.columns
+        | {% slim ads/article_footer.slim %}
+        .row.light.spaced
+          .small-6.columns
+            a href="{{ page.previous.url }}" &laquo; PREVIOUS
+          .small-6.columns.text-right
+            a href="{{ page.next.url }}" NEXT &raquo;
+  aside.large-3.pull-9.columns
+    .row.spaced
+    | {% slim ads/article_left.slim %}
+    .row
+      .large-12.columns
+        h3 Related Articles
+        | {% for a in site.related_posts %}
+        p
+          a href="{{ a.url }}" {{ a.title }}
+        | {% endfor %}

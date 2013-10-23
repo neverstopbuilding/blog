@@ -2,7 +2,10 @@ html
   head
     | {% css_asset_tag global_css %}
       - /_assets/css/app.scss
+      - /_assets/css/code.css
     | {% endcss_asset_tag %}
+
+    link href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" rel="stylesheet"
 
     | {% javascript_asset_tag head_js %}
       - /_assets/js/vendor/custom.modernizr.js
@@ -10,8 +13,9 @@ html
     | {% endjavascript_asset_tag %}
 
   body
-    .content-wrapper
+    div
       | {{ content }}
+      | {% slim footer.slim %}
 
     script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"
 

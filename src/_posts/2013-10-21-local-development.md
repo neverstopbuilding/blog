@@ -5,6 +5,8 @@ date: 2013-10-21 13:28
 comments: true
 categories: [productivity, devops]
 twitter: [localdevelopment, devops, baseline]
+author: Dave Haeffner
+author_link: https://twitter.com/TourDeDave
 ---
 
 *Thanks goes out to [Dave Haeffner](https://twitter.com/TourDeDave) for contributing this post. He runs the top-notch consulting outfit, [Arrgyle](http://arrgyle.com/), and is quite active in the Selenium community. Be sure to check him out!*
