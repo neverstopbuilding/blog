@@ -3,6 +3,7 @@ layout: post
 title: "The DTO Pattern: How to Generate PHP DTOs Quickly with DTOx"
 comments: true
 date: 2013-01-22 20:15
+permalink: /data-transfer-object
 categories: [dtox, design patterns]
 ---
 

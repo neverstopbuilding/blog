@@ -3,6 +3,7 @@ layout: post
 title: "How to Integrate Codemirror with Angular UI"
 comments: true
 date: 2013-02-27 16:24
+permalink: /integrate-codemirror-with-angular
 categories: [javascript, angular]
 twitter: [javascript, angularjs, codemirror, syntax, js]
 ---

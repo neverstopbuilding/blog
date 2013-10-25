@@ -3,6 +3,7 @@ layout: post
 title: "How to Mount a Filesystem via SSH on OSX Mountain Lion"
 date: 2013-01-04 14:13
 comments: true
+permalink: /mount-ssh-on-osx
 categories: [quick tips, devops]
 ---
 

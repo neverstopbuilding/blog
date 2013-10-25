@@ -3,6 +3,7 @@ layout: post
 title: "10 Crucial Sublime Text 2 Plugins for the PHP Craftsman"
 comments: true
 date: 2013-01-13 23:25
+permalink: /sublime-plugins-for-php
 categories: [php, sublime text, craftsmanship]
 ---
 

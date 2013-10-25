@@ -3,6 +3,7 @@ layout: post
 title: "Chef Best Practices: Chef Broiler Plate"
 date: 2013-04-30 12:24
 comments: true
+permalink: /opscode-chef-best-practices
 categories: [devops, chef, 'chef broiler plate']
 twitter: [chef, devops, tdd]
 ---
