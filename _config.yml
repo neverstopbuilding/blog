@@ -39,4 +39,4 @@ asset_pipeline:
 
 sitemap:
   local: false
-  repo: git@github.com:neverstopbuilding/blog.git
+  repo: git://github.com:neverstopbuilding/blog.git
