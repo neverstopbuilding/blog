@@ -84,7 +84,7 @@ Now add this information to your `behat.yml` file:
         bootstrap:  '%behat.paths.features%/bootstrap'
       extensions:
         Behat\MinkExtension\Extension:
-          base_url: http://neverstopbuilding.net
+          base_url: {{ site.url }}
           javascript_session: sahi
           browser_name: firefox
           goutte: ~

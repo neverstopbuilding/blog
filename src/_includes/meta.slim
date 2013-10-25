@@ -1,9 +1,13 @@
-div.light
+.light
   | BY
   | {% if page.author %}
-  a< href="{{ page.author_link }}" {{ page.author | upcase }}
+  | {% capture author_name %}{{ page.author }}{% endcapture %}
+  | {% capture author_link %}{{ page.author_link }}{% endcapture %}
   | {% else %}
-  a< href="{{ site.twitter }}" {{ site.author | upcase }}
+  | {% capture author_name %}{{ site.author }}{% endcapture %}
+  | {% capture author_link %}{{ site.twitter }}{% endcapture %}
   | {% endif %}
+  a< href="{{ author_link }}" rel="author" {{ author_name | upcase }}
   |&nbsp;|&nbsp;
-  | {{ page.date | date: "%B %e, %Y" | upcase }}
+  time pubdate="pubdate"
+    | {{ page.date | date: "%B %e, %Y" | upcase }}

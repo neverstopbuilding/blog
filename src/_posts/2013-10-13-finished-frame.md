@@ -116,7 +116,7 @@ On this breadboard the "bottom" rail as shown in the photo are the raw power sup
 
 ###Testing the Stepper Motor
 
-Driving the stepper motor is nearly the same circuit that I detailed back in [this post](http://neverstopbuilding.net/robogarden/). The few changes I made include using the regulated voltage to drive the motor rather than the Arduino `+5V` and also adding a trigger pin to the enable pins of the H Bridge. The reason I did this was so that I would not need to keep the stepper energized after it moved. I could "turn it on," move the carriage to a new location, and then, "turn it off."
+Driving the stepper motor is nearly the same circuit that I detailed back in [this post]({{ site.url }}/robogarden/). The few changes I made include using the regulated voltage to drive the motor rather than the Arduino `+5V` and also adding a trigger pin to the enable pins of the H Bridge. The reason I did this was so that I would not need to keep the stepper energized after it moved. I could "turn it on," move the carriage to a new location, and then, "turn it off."
 
 There is not much to show on the breadboard, the schematic is more useful here:
 

@@ -1,0 +1,18 @@
+---
+layout: nil
+---
+/* TEAM */
+Builder: {{ site.author }}
+Site: {{ site.url }}
+Twitter: @{{ site.twitter_username }}
+From: {{ site.from }}
+
+/* SITE */
+{{ site.title }}
+
+{{ site.description }}
+
+Last update: {{ site.time | date: "%Y/%m/%d" }}
+Standards: HTML5, CSS3
+Components: Jekyll, Zurb Foundation, Compass, Slim, Modernizr, jQuery
+Software: Sublime Text, iTerm, Chrome

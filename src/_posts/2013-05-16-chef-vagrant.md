@@ -7,9 +7,9 @@ categories: ['chef', 'chef broiler plate', 'devops']
 twitter: [chef, devops, chefsurvivalguide, vagrant]
 ---
 
-*This is the fourth installment of a [series on the development of Chef Broiler Plate](http://neverstopbuilding.net/blog/categories/chef-broiler-plate/) in which we go over setting up a robust, TDD framework for Chef cookbook development.*
+*This is the fourth installment of a [series on the development of Chef Broiler Plate]({{ site.url }}/blog/categories/chef-broiler-plate/) in which we go over setting up a robust, TDD framework for Chef cookbook development.*
 
-Having prepared our CI system and configured our Knife tool in the [last post](http://neverstopbuilding.net/chef-travis-and-knife/) its now time to finish or basic setup procedures by setting up a virtual machine with [Vagrant](http://www.vagrantup.com/). This will give us a local server in which to develop and test our sample cookbook.
+Having prepared our CI system and configured our Knife tool in the [last post]({{ site.url }}/chef-travis-and-knife/) its now time to finish or basic setup procedures by setting up a virtual machine with [Vagrant](http://www.vagrantup.com/). This will give us a local server in which to develop and test our sample cookbook.
 
 ##Creating a Vagrant Configuration
 First we need to upgrade to the latest version of [vagrant](http://downloads.vagrantup.com/) ([1.2.2](http://downloads.vagrantup.com/tags/v1.2.2) at the time of writing.) This, of course, assumes you have the older version of Vagrant. This 1.1+ version can no longer be installed as a Gem so we must add it to our dependency list, checking for it with our Rake `check` task.

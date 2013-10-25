@@ -7,9 +7,9 @@ categories: ['chef', 'chef broiler plate', 'devops']
 twitter: [chef, devops, chefsurvivalguide, knife]
 ---
 
-*After a brief hiatus into other topics, we return with the seventh installment in a [series on the development of Chef Broiler Plate](http://neverstopbuilding.net/blog/categories/chef-broiler-plate/) in which we go over setting up a robust, TDD framework for Chef cookbook development.*
+*After a brief hiatus into other topics, we return with the seventh installment in a [series on the development of Chef Broiler Plate]({{ site.url }}/blog/categories/chef-broiler-plate/) in which we go over setting up a robust, TDD framework for Chef cookbook development.*
 
-In the [last post](http://neverstopbuilding.net/foodcritic/) we added the Foodcritic to the framework in order to verify cookbook quality. This time we will add the ability to run the Knife cookbook testing utility and hook it up to CI. Thanks must go to Nathan Harvey for writing a [helpful article](http://www.nathenharvey.com/blog/2012/07/06/mvt-knife-test-and-travisci) on Knife testing.
+In the [last post]({{ site.url }}/foodcritic/) we added the Foodcritic to the framework in order to verify cookbook quality. This time we will add the ability to run the Knife cookbook testing utility and hook it up to CI. Thanks must go to Nathan Harvey for writing a [helpful article](http://www.nathenharvey.com/blog/2012/07/06/mvt-knife-test-and-travisci) on Knife testing.
 
 ##Prepare a Knife CI Configuration
 Knife will need CI specific configuration so we will create an alternative `knife.rb` file under our test directory:

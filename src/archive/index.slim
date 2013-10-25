@@ -1,16 +1,16 @@
 ---
-layout: page
+layout: list_page
 title: Archives
+image: https://lh6.googleusercontent.com/-X2O-APwAe5Y/Uml1w5ao5rI/AAAAAAAAJBg/KN18V_oW7eM/w1023-h668-no/archive.jpg
 ---
 
 | {% for post in site.posts reverse %}
-| {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
-| {% unless year == this_year %}
-| {% assign year = this_year %}
-h2 {{ year }}
+| {% capture this_month_year %}{{ post.date | date: "%B | %Y" }}{% endcapture %}
+| {% unless month_year == this_month_year %}
+| {% assign month_year = this_month_year %}
+section.row.top-spaced
+  .large-12-columns
+    h2 {{ this_month_year | upcase }}
 | {% endunless %}
-article.row
-  div.large-12.columns
-    a href="{{ post.url }}" {{ post.title }}
-    | - {{ post.date }}
+| {% slim small_post_preview.slim %}
 {% endfor %}

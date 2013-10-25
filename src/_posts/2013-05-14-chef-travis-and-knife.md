@@ -6,9 +6,9 @@ comments: true
 categories: ['chef', 'chef broiler plate', 'devops']
 twitter: [chef, devops, chefsurvivalguide, travis, knife]
 ---
-*This is the third installment of a [series on the development of Chef Broiler Plate](http://neverstopbuilding.net/blog/categories/chef-broiler-plate/) in which we go over setting up a robust, TDD framework for Chef cookbook development.*
+*This is the third installment of a [series on the development of Chef Broiler Plate]({{ site.url }}/blog/categories/chef-broiler-plate/) in which we go over setting up a robust, TDD framework for Chef cookbook development.*
 
-In the [last post](http://neverstopbuilding.net/setting-up-a-chef-build-system/) we set up a build system using Rake that would let us automate some common tasks. Now we will hook up the beginnings of our continuous integration system: [Travis](https://travis-ci.org/). There is not much to our CI set up at this point, but we are doing it now so as we add things in the future we are constantly testing our commits. Finally, we will dig into the configuration of the Knife tool, used to create and manage cookbooks, setting it up in a flexible and portable way.
+In the [last post]({{ site.url }}/setting-up-a-chef-build-system/) we set up a build system using Rake that would let us automate some common tasks. Now we will hook up the beginnings of our continuous integration system: [Travis](https://travis-ci.org/). There is not much to our CI set up at this point, but we are doing it now so as we add things in the future we are constantly testing our commits. Finally, we will dig into the configuration of the Knife tool, used to create and manage cookbooks, setting it up in a flexible and portable way.
 
 To begin, if you have created a repository for the code as part of this series, then go to Travis and create a link between the repository and travis.
 

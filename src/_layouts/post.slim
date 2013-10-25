@@ -21,9 +21,9 @@ layout: page
         | {% slim ads/article_footer.slim %}
         .row.light.spaced
           .small-6.columns
-            a href="{{ page.previous.url }}" &laquo; PREVIOUS
+            a href="{{ page.previous.url }}" rel="prev" &laquo; PREVIOUS
           .small-6.columns.text-right
-            a href="{{ page.next.url }}" NEXT &raquo;
+            a href="{{ page.next.url }}" rel="next" NEXT &raquo;
   aside.large-3.pull-9.columns
     .row.spaced
     | {% slim ads/article_left.slim %}

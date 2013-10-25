@@ -8,13 +8,23 @@ timezone: America/New_York
 permalink: /:title
 url: http://neverstopbuilding.com
 default_post_image: http://cl.ly/image/0K2R3I2u0E0X/content
+title: Never Stop Building
+description: "Learn about high quality software engineering, code craftsmanship, productivity, electronics and inventions. By Jason Fox, renaissance man and builder."
 
-#Contact Settings
+# Syndication Settings
+feed: http://feeds.feedburner.com/neverstopbuilding/TGMp
+
+
+#Builder Information
 author: Jason Fox
-email: jasonrobertfox@gmail.com
+email: mailto:jasonrobertfox@gmail.com
 twitter: https://twitter.com/jasonrobertfox
+twitter_username: jasonrobertfox
 youtube: http://www.youtube.com/user/POtrippleX
 github: https://github.com/jasonrobertfox
+google_plus: https://plus.google.com/109774408645971700391
+instagram: http://instagram.com/jasonrobertfox
+from: "Washington, DC, USA"
 
 # Plugin Settings
 markdown: redcarpet

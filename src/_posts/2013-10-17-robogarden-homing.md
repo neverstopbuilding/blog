@@ -3,7 +3,7 @@ layout: post
 title: "Designing and Building the Micro Switch Mount"
 date: 2013-10-17 16:02
 comments: true
-categories: ["Robo Garden"]
+category: robo garden
 twitter: [arduino, RoboGarden, electronics]
 image: https://lh5.googleusercontent.com/-wW-QuP61Z14/UmAuhyOIOjI/AAAAAAAAJAE/DIi571e1KC0/w949-h712-no/IMG_1707.JPG
 ---
@@ -14,7 +14,7 @@ image: https://lh5.googleusercontent.com/-wW-QuP61Z14/UmAuhyOIOjI/AAAAAAAAJAE/DI
 - Schmitt inverter
 - Control switch
 
-As I detailed before in a [previous post](http://neverstopbuilding.net/finished-frame/) I had forgotten to print a mount for the homing micro switch on the motor mount. That's not the end of the world as I can just make a little clip on mount and place it perfectly relative to the motor mount and use that to  help drive the improved motor mount design.
+As I detailed before in a [previous post]({{ site.url }}/finished-frame/) I had forgotten to print a mount for the homing micro switch on the motor mount. That's not the end of the world as I can just make a little clip on mount and place it perfectly relative to the motor mount and use that to  help drive the improved motor mount design.
 
 Here is the basic operation:
 

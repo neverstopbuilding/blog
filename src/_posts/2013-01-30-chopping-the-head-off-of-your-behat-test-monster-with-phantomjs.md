@@ -6,13 +6,13 @@ date: 2013-01-30 11:09
 categories: [behat, sahi, phantomjs, behavior driven development]
 ---
 
-Recently, I posted about [how to set up Behat with Sahi on OSX](http://neverstopbuilding.net/how-to-setup-behat-with-sahi-testing-on-osx/) to automate your web application testing including javascript. Today we will chop the head off this operation by swapping out a spawned browser instance with the open source, headless browser: [phantomjs](http://phantomjs.org/).
+Recently, I posted about [how to set up Behat with Sahi on OSX]({{ site.url }}/how-to-setup-behat-with-sahi-testing-on-osx/) to automate your web application testing including javascript. Today we will chop the head off this operation by swapping out a spawned browser instance with the open source, headless browser: [phantomjs](http://phantomjs.org/).
 
 This post is was helped along quite a bit by first [this article](http://shaneauckland.co.uk/2012/11/headless-behatmink-testing-with-sahi-and-phantomjs/) by Ryan Grenz, but ultimately [this one](http://shaneauckland.co.uk/2012/11/headless-behatmink-testing-with-sahi-and-phantomjs/) by Shane.
 
 ##1. Get a basic test project running.
 
-This post relies heavily on the work completed in the [last one](http://neverstopbuilding.net/how-to-setup-behat-with-sahi-testing-on-osx/). My suggestion is that you work through that one quickly, as I'll assume:
+This post relies heavily on the work completed in the [last one]({{ site.url }}/how-to-setup-behat-with-sahi-testing-on-osx/). My suggestion is that you work through that one quickly, as I'll assume:
 
 - You have the prerequisites for php and sahi testing.
 - You have installed sahi and know how to start the server.
@@ -85,7 +85,7 @@ Using the [sample source code](https://github.com/jasonrobertfox/blog-behat-sahi
         bootstrap:  '%behat.paths.features%/bootstrap'
       extensions:
         Behat\MinkExtension\Extension:
-          base_url: http://neverstopbuilding.net
+          base_url: {{ site.url }}
           javascript_session: sahi
           browser_name: phantomjs
           goutte: ~

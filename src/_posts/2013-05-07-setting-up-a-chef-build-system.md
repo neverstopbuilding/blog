@@ -6,7 +6,7 @@ comments: true
 categories: ['chef', 'chef broiler plate', 'devops']
 twitter: [chef, devops, chefsurvivalguide, rake]
 ---
-*This is the second in a [series on the development of Chef Broiler Plate](http://neverstopbuilding.net/blog/categories/chef-broiler-plate/) in which we go over setting up a robust, TDD framework for Chef cookbook development.*
+*This is the second in a [series on the development of Chef Broiler Plate]({{ site.url }}/blog/categories/chef-broiler-plate/) in which we go over setting up a robust, TDD framework for Chef cookbook development.*
 
 A mentor of mine once said:
 
