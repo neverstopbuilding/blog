@@ -5,15 +5,9 @@ date: 2013-10-17 16:02
 comments: true
 category: robo garden
 twitter: [arduino, RoboGarden, electronics]
-image: https://lh5.googleusercontent.com/-wW-QuP61Z14/UmAuhyOIOjI/AAAAAAAAJAE/DIi571e1KC0/w949-h712-no/IMG_1707.JPG
+image: https://lh3.googleusercontent.com/-J-yEeuODKtU/UmAuh62wLpI/AAAAAAAAJAE/vtR87IvCbHc/w891-h668-no/IMG_1706.JPG
+description: The design and 3D printing of the micro switch mount as well as hardware debouncing using a Schmitt inverter chip connected to the Ardunio. This will prevent over travel of the carriage and allow it to be homed to a default position.
 ---
-##RoboGarden Build Log: October 17, 2013
-###Parts Discussed
-- Homing switch
-- Homing switch mount
-- Schmitt inverter
-- Control switch
-
 As I detailed before in a [previous post]({{ site.url }}/finished-frame/) I had forgotten to print a mount for the homing micro switch on the motor mount. That's not the end of the world as I can just make a little clip on mount and place it perfectly relative to the motor mount and use that to  help drive the improved motor mount design.
 
 Here is the basic operation:

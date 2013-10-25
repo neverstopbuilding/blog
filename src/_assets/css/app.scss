@@ -58,7 +58,7 @@
 
 .header-image {
     height: 20em;
-    background-size: cover;
+    @include background-size(cover);
     margin-bottom: 3em;
     & > .row {
         position: relative;
@@ -84,6 +84,33 @@
       position: top left
     }
     @include background-size(cover);
+}
+
+.post-grid {
+    li {
+        padding-left: 2em;
+        padding-right: 2em;
+        padding-top: 1em;
+    }
+}
+
+.preview-image {
+    height: 27em;
+    @include background-size(cover);
+    position: relative;
+    & > .columns {
+        position: absolute;
+        bottom: 0em;
+    }
+    font-size: 1em;
+    .light {
+        color: #555555;
+    }
+    p {
+        a {
+            font-size: .8em;
+        }
+    }
 }
 
 .trans {

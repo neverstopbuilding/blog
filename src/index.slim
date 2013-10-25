@@ -24,8 +24,23 @@ header.home-image style="background-image: url({{ site.default_home_image }});"
       .row
         .large-12.columns.massive
           h1 Never Stop Building
-.section.intro
+section.intro
   .row
     .large-12.columns.text-center.dark.epic
       h2 My name is Jason Fox and I love building. I'm a software engineer, designer, maker, and inventor. Check out my latest articles below.
+section.row.spaced
+  .large-12.columns
+    ul.large-block-grid-2.small-block-grid-1.post-grid
+      | {% for post in site.posts limit:4 %}
+      li
+        | {% slim large_post_preview.slim %}
+      | {% endfor %}
+.row
+  .large-12.columns.text-center.spaced
+    p
+      em
+        | See all the articles in the
+        a< href="{{ site.url }}/archive" Archives
+        | .
+
 
