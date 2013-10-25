@@ -36,3 +36,6 @@ asset_pipeline:
   output_path: assets
   display_path: nil
   gzip: true
+
+sitemap:
+  branch: master

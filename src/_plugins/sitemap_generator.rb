@@ -117,6 +117,9 @@ module Jekyll
       # The root path where the .git folder is located
       root = File.expand_path(File.join(File.dirname(__FILE__), '..', '..'))
       @git = Grit::Repo.new(root)
+      @branch = site.config['sitemap']['branch']
+
+      puts "Generating sitemap from git branch '#{@branch}'"
 
       urlset = REXML::Element.new "urlset"
       urlset.add_attribute("xmlns",
@@ -233,7 +236,7 @@ module Jekyll
       path = page_or_post.full_path_to_source
 
       lastmod = REXML::Element.new "lastmod"
-      date = File.mtime(path)
+      date = get_modified_date(path)
       latest_date = find_latest_date(date, site, page_or_post)
 
       if @last_modified_post_date == nil
@@ -261,7 +264,7 @@ module Jekyll
       layout = layouts[page_or_post.data["layout"]]
       while layout
         path = layout.full_path_to_source
-        date = File.mtime(path)
+        date = get_modified_date(path)
 
         latest_date = date if (date > latest_date)
 
@@ -317,8 +320,8 @@ module Jekyll
     #
     # Returns date
     def get_modified_date(path)
-      log = @git.log('master', path, max_count: 1)[0]
-      if log
+      log = @git.log(@branch, path, max_count: 1)[0]
+      if log.date
         log.date
       else
         File.mtime(path)
