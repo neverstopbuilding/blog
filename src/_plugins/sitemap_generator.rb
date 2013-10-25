@@ -114,8 +114,6 @@ module Jekyll
     def generate(site)
       sitemap = REXML::Document.new << REXML::XMLDecl.new("1.0", "UTF-8")
 
-      puts site.config['sitemap']['local']
-
       if (site.config['sitemap']['local'])
         puts 'Building sitemap from local repository.'
         root = File.expand_path(File.join(File.dirname(__FILE__), '..', '..'))
