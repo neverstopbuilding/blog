@@ -54,6 +54,8 @@
 // @import "foundation/components/tooltips";
 // @import "foundation/components/dropdown";
 
+@import "compass/css3/background-size";
+
 .header-image {
     height: 20em;
     background-size: cover;
@@ -67,6 +69,21 @@
             padding-bottom: 2em;
         }
     }
+}
+
+.home-image {
+    & > .row {
+        padding-top: 10em;
+        @media #{$small} {
+            padding-top: 0em;
+            padding-bottom: 5em;
+        }
+    }
+    background: {
+      repeat: no-repeat;
+      position: top left
+    }
+    @include background-size(cover);
 }
 
 .trans {
@@ -112,6 +129,13 @@
     padding-top: 3em;
 }
 
+.small-top-spaced {
+    padding-top: 5em;
+    @media #{$small} {
+        padding-top: 0em;
+    }
+}
+
 .large-right-small-center, .large-left-small-center {
     text-align: center;
 }
@@ -131,6 +155,19 @@
     line-height: 1.2em;
     a {
         font-weight: 200;
+    }
+}
+
+.massive {
+    font-size: 3em;
+    @media #{$small} {
+        font-size: 4em;
+    }
+    padding-right: 0.2em;
+    padding-left: 0.2em;
+    h1 {
+        font-weight: 400;
+        line-height: 1em;
     }
 }
 
