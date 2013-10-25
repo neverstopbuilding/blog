@@ -6,6 +6,6 @@ asset_pipeline:
   gzip: false
 
 sitemap:
-  branch: develop
+  local: true
 
 url: http://localhost:4000

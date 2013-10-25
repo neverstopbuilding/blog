@@ -4,6 +4,10 @@ require 'rubocop/rake_task'
 
 task default: 'assets:precompile'
 
+task :local do
+  sh 'bundle exec jekyll build --config _config.yml,_development.yml'
+end
+
 task build: [:clean, :prepare, :quality]
 
 desc 'Runs quality checks.'

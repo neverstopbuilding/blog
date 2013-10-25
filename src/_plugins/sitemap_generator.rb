@@ -38,7 +38,7 @@
 #
 require 'rexml/document'
 require 'fileutils'
-require 'grit'
+require 'git'
 
 module Jekyll
 
@@ -114,12 +114,18 @@ module Jekyll
     def generate(site)
       sitemap = REXML::Document.new << REXML::XMLDecl.new("1.0", "UTF-8")
 
-      # The root path where the .git folder is located
-      root = File.expand_path(File.join(File.dirname(__FILE__), '..', '..'))
-      @git = Grit::Repo.new(root)
-      @branch = site.config['sitemap']['branch']
+      puts site.config['sitemap']['local']
 
-      puts "Generating sitemap from git branch '#{@branch}'"
+      if (site.config['sitemap']['local'])
+        puts 'Building sitemap from local repository.'
+        root = File.expand_path(File.join(File.dirname(__FILE__), '..', '..'))
+      else
+        puts 'Building sitemap from fresh cloned repository.'
+        root = File.expand_path(File.join(File.dirname(__FILE__), '..', '..', 'build', 'clone.git'))
+         Git.clone(site.config['sitemap']['repo'], 'build/clone.git')
+       end
+
+       @git = Git.open(root)
 
       urlset = REXML::Element.new "urlset"
       urlset.add_attribute("xmlns",
@@ -320,9 +326,10 @@ module Jekyll
     #
     # Returns date
     def get_modified_date(path)
-      log = @git.log(@branch, path, max_count: 1)[0]
-      if log.date
-        log.date
+      relative_path = path.gsub(/^.+src\//,'src/')
+      date = @git.log.object(relative_path).last.date
+      if date
+        date
       else
         File.mtime(path)
       end

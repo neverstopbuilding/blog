@@ -38,4 +38,5 @@ asset_pipeline:
   gzip: true
 
 sitemap:
-  branch: master
+  local: false
+  repo: git@heroku.com:neverstopbuilding.git

@@ -26,4 +26,4 @@ use Rack::TryStatic,
     ["/assets", {'Cache-Control' => 'public, max-age=31536000'}],
   ]
 
-run Rack::NotFound.new('404.html')
+run Rack::NotFound.new('build/deploy/404.html')

@@ -18,7 +18,7 @@ gem 'rack-rewrite'
 
 gem 'rubocop'
 
-gem 'grit'
+gem 'git'
 
 group :development  do
   gem 'guard-jekyll-plus', git: 'https://github.com/imathis/guard-jekyll-plus', branch: 'master'
