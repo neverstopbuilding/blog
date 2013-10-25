@@ -12,6 +12,7 @@ Bundler.require(:default)
 # Testing these rules
 use Rack::Rewrite do
   r301 %r{.*}, 'http://www.neverstopbuilding.com$&', :if => Proc.new { |rack_env| rack_env['SERVER_NAME'] != 'www.neverstopbuilding.com' }
+  r301 %{^(.*)/index\.html$}, '$1'
 end
 
 use Rack::TryStatic,
