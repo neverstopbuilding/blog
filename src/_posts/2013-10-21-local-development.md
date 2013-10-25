@@ -2,11 +2,13 @@
 layout: post
 title: "A Local Development Environment Worth Having"
 date: 2013-10-21 13:28
+image: https://lh3.googleusercontent.com/037Czg2woeaItuUuRvoMr3M8BLXQnDICbbLOrdg84j4=w1118-h372-no
 comments: true
 categories: [productivity, devops]
 twitter: [localdevelopment, devops, baseline]
 author: Dave Haeffner
 author_link: https://twitter.com/TourDeDave
+description: "My new philosophy for this machine was to not install any development dependencies locally. But rather, to use Vagrant and install everything on an image that it controlled -- ideally through automated provisioning."
 ---
 
 *Thanks goes out to [Dave Haeffner](https://twitter.com/TourDeDave) for contributing this post. He runs the top-notch consulting outfit, [Arrgyle](http://arrgyle.com/), and is quite active in the Selenium community. Be sure to check him out!*

@@ -5,4 +5,7 @@ asset_pipeline:
   display_path: nil
   gzip: false
 
+sitemap:
+  branch: develop
+
 url: http://localhost:4000

@@ -5,17 +5,10 @@ date: 2013-10-13 12:08
 comments: true
 categories: ["robo garden"]
 twitter: [RoboGarden, arduino, gardenhack]
+image: https://lh3.googleusercontent.com/hDKGvQ_Ujtb3MxkjE1PZtqAaTIckgsWYEXaa8K846JU=w1118-h549-no
+description: "The frame is completely assembled, and putting it together went rather well but there were a few minor issues to bring up that could be improved in future iterations."
 ---
-
-##RoboGarden Build Log: October 13, 2013
-
 I've been busy hacking on the electronics for the RoboGarden and though it was time to post an update lest I move further down the rabbit hole. The frame is completely assembled, and putting it together went rather well but there were a few minor issues to bring up that could be improved in future iterations. Here is a run down of the frame assembly:
-
-##Parts Discussed
-- Frame
-- Stepper Motor
-- Stepper Driver Circuit
-- Arduino Control
 
 ##Assembling the Frame
 

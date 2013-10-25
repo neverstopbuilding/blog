@@ -6,8 +6,9 @@ plugins: ./src/_plugins
 # Site Specific Settings
 timezone: America/New_York
 permalink: /:title
-url: http://neverstopbuilding.com
-default_post_image: https://lh5.googleusercontent.com/-N-zIzELpE4Q/Umngjlc4rLI/AAAAAAAAJCk/EnHYREZvgLI/w1117-h316-no/tattoo.png
+url: http://www.neverstopbuilding.com
+default_page_image: https://lh5.googleusercontent.com/-N-zIzELpE4Q/Umngjlc4rLI/AAAAAAAAJCk/EnHYREZvgLI/w1117-h316-no/tattoo.png
+default_home_image: https://lh5.googleusercontent.com/-75568V798uI/UhmjUBPD5uI/AAAAAAAAIWA/I-t9QxUhkdA/w1002-h668-no/2013-08-23-115546.jpg
 title: Never Stop Building
 description: "Learn about high quality software engineering, code craftsmanship, productivity, electronics and inventions. By Jason Fox, renaissance man and builder."
 
@@ -35,3 +36,6 @@ asset_pipeline:
   output_path: assets
   display_path: nil
   gzip: true
+
+sitemap:
+  branch: master
