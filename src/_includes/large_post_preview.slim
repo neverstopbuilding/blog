@@ -1,4 +1,7 @@
-article.row.preview-image style="background-image: url({% if post.image %}{{ post.image }}{% else %}{{ site.default_page_image }}{% endif %});"
+| {% capture background_image %}
+| {% if post.image %}{{ post.image }}{% else %}{{ site.default_page_image }}{% endif %}
+| {% endcapture %}
+article.row.preview-image style="background-image: url({{background_image}});"
   .large-12.columns.trans.dark.text-center
     h3
       a href="{{ post.url }}" {{ post.title }}
