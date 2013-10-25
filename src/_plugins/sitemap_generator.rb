@@ -38,6 +38,7 @@
 #
 require 'rexml/document'
 require 'fileutils'
+require 'grit'
 
 module Jekyll
 
@@ -113,6 +114,10 @@ module Jekyll
     def generate(site)
       sitemap = REXML::Document.new << REXML::XMLDecl.new("1.0", "UTF-8")
 
+      # The root path where the .git folder is located
+      root = File.expand_path(File.join(File.dirname(__FILE__), '..', '..'))
+      @git = Grit::Repo.new(root)
+
       urlset = REXML::Element.new "urlset"
       urlset.add_attribute("xmlns",
         "http://www.sitemaps.org/schemas/sitemap/0.9")
@@ -148,7 +153,8 @@ module Jekyll
         end
 
         path = post.full_path_to_source
-        date = File.mtime(path)
+        date = get_modified_date(path)
+
         last_modified_date = date if last_modified_date == nil or date > last_modified_date
       end
 
@@ -303,8 +309,21 @@ module Jekyll
         return true if priority_val >= 0.0 and priority_val <= 1.0
       rescue ArgumentError
       end
-
       false
     end
+
+    # Given a path will check to see if there is a git modified date for the path
+    # if not found uses the modified date
+    #
+    # Returns date
+    def get_modified_date(path)
+      log = @git.log('master', path, max_count: 1)[0]
+      if log
+        log.date
+      else
+        File.mtime(path)
+      end
+    end
+
   end
 end
