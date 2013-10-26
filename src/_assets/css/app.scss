@@ -88,9 +88,9 @@
 
 .post-grid {
     li {
-        padding-left: 2em;
-        padding-right: 2em;
-        padding-top: 1em;
+        // padding-left: 2em;
+        // padding-right: 2em;
+        // padding-top: 1em;
     }
 }
 
@@ -196,7 +196,7 @@
 }
 
 .massive {
-    font-size: 3em;
+    font-size: 2em;
     @media #{$small} {
         font-size: 4em;
     }
