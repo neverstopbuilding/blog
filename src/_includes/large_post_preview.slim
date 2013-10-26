@@ -5,9 +5,8 @@ article.row.preview-image style="background-image: url({{background_image}});"
   .large-12.columns.trans.dark.text-center
     h3
       a href="{{ post.url }}" {{ post.title }}
-    p
-      time.light pubdate="pubdate"
-        | {{ post.date | date: "%B %e, %Y" | upcase }}
+    p.light
+      | {% slim date.slim %}
     p
       | {% capture description %}
       | {% if post.description %}{{ post.description | strip_breaks | condense_spaces | truncate:200 }}

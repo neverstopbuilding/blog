@@ -22,7 +22,7 @@ module CustomLiquidFilters
 
   #Returns a cleaned array of keywords, free of duplicates and extraneous comma
   def clean_keywords(input)
-    keywords = input.split(',').map! { |i| i.chomp.strip.downcase }.compact.uniq.reject!{ |i| i.empty? }
+    keywords = input.split(',').map! { |i| i.chomp.strip.downcase }.compact.uniq.keep_if{ |i| i != "" }
     if keywords.empty?
       nil
     else

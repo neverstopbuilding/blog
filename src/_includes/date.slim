@@ -1,0 +1,7 @@
+| {% capture relevant_date %}
+| {% if post.date %}{{post.date}}{% else %}{{page.date}}{% endif %}
+| {% endcapture %}
+
+| {% capture datetime %}{{relevant_date | date: "%Y-%m-%d" }}{% endcapture %}
+time datetime="{{datetime}}"
+  | {{relevant_date | date: "%B %e, %Y" | upcase}}

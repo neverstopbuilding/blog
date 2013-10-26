@@ -9,5 +9,4 @@
   | {% endif %}
   a< href="{{ author_link }}" rel="author" {{ author_name | upcase }}
   |&nbsp;|&nbsp;
-  time pubdate="pubdate"
-    | {{ page.date | date: "%B %e, %Y" | upcase }}
+  | {% slim date.slim %}
