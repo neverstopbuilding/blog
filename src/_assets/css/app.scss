@@ -5,13 +5,13 @@
 @import "normalize";
 
 // Comment out this import if you are customizing you imports below
-@import "foundation";
+// @import "foundation";
 
 // Import specific parts of Foundation by commenting the import "foundation"
 // and uncommenting what you want below. You must uncomment the following if customizing
 
-// @import "foundation/components/global"; // *always required
-// @import "foundation/components/grid";
+@import "foundation/components/global"; // *always required
+@import "foundation/components/grid";
 
 //
 // Use this grid if you want to start using the new Foundation 5 grid early.
@@ -20,16 +20,16 @@
 // @import "foundation/components/grid-5";
 //
 
-// @import "foundation/components/visibility";
-// @import "foundation/components/block-grid";
-// @import "foundation/components/type";
+@import "foundation/components/visibility";
+@import "foundation/components/block-grid";
+@import "foundation/components/type";
 // @import "foundation/components/buttons";
 // @import "foundation/components/forms"; // *requires components/buttons
 // @import "foundation/components/custom-forms"; // *requires components/buttons, components/forms
 // @import "foundation/components/button-groups"; // *requires components/buttons
 // @import "foundation/components/dropdown-buttons"; // *requires components/buttons
 // @import "foundation/components/split-buttons"; // *requires components/buttons
-// @import "foundation/components/flex-video";
+@import "foundation/components/flex-video";
 // @import "foundation/components/section";
 // @import "foundation/components/top-bar";  // *requires components/grid
 // @import "foundation/components/orbit";
@@ -55,6 +55,11 @@
 // @import "foundation/components/dropdown";
 
 @import "compass/css3/background-size";
+
+//Wraps all the rendered content of the page
+.content-wrapper{
+    overflow-x: hidden;
+}
 
 .header-image {
     height: 20em;
@@ -88,9 +93,9 @@
 
 .post-grid {
     li {
-        // padding-left: 2em;
-        // padding-right: 2em;
-        // padding-top: 1em;
+        padding-left: 2em;
+        padding-right: 2em;
+        padding-top: 1em;
     }
 }
 
@@ -218,15 +223,4 @@
     background-color: #000022;
     padding-top: 2em;
     padding-bottom: 2em;
-}
-
-.bt-video-container {
-    iframe, object,embed {
-        position:absolute;
-        top:0;
-        left:0;
-        width:100%;
-        height:100%;
-        margin-top:0;
-    }
 }

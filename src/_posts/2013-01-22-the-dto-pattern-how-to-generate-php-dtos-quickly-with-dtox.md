@@ -93,7 +93,7 @@ How cool is that?
 
 Now something that could take not an unsubstantial amount of time can be accomplished in seconds! Just watch this screencast to see how fast:
 
-<iframe src="http://player.vimeo.com/video/57983345?title=0&amp;byline=0&amp;portrait=0" width="640" height="360" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+{% vimeo 57983345 %}
 
 ##Helping Out
 

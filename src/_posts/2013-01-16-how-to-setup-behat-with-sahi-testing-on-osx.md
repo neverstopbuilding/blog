@@ -169,7 +169,7 @@ NOW, when you run Behat you should see a browser be spawned and work through the
 ##OMG a Screencast!
 I got so excited by this project I made a screencast to walk you through it:
 
-<iframe src="http://player.vimeo.com/video/57569755?title=0&amp;byline=0&amp;portrait=0" width="640" height="360" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+{% vimeo 57569755 %}
 
 If you are interested in a source code for this tutorial, check it out [here](https://github.com/jasonrobertfox/blog-behat-sahi).
 

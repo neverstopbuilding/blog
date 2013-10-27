@@ -16,12 +16,12 @@ I gave a talk recently, entitled "Still Testing Your Software with Computers?" w
 ##The Presentation
 Here is a video of the presentation, one thing that I wanted to mention, after discussing with people afterwards, is that: "you can use SauceLabs with out BDD" and "you can use BDD without SauceLabs." This presentation was built with the intent of offering one unified solution to improve team engagement and better testing with BDD while also improving automated cross browser testing with Selenium and SauceLabs.
 
-<iframe src="http://player.vimeo.com/video/66874098?title=0&amp;byline=0&amp;portrait=0" width="100%" height="500" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+{% vimeo 66874098 %}
 
 ##Testing Demo
 There is a part of the presentation where I intently look into my computer, but on the screen you would see me walk through each of the tests and some of the code. Here is a better recording of that part of the presentation:
 
-<iframe src="http://player.vimeo.com/video/66747571?title=0&amp;byline=0&amp;portrait=0" width="100%" height="500" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+{% vimeo 66747571 %}
 
 ##The Code
 Finally you can find the source code for the presentation over at Github: [https://github.com/jasonrobertfox/demo-sauce-labs](https://github.com/jasonrobertfox/demo-sauce-labs)

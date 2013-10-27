@@ -100,4 +100,4 @@ Here is a picture of the completed circuit, much more cleaned up, replacing the 
 
 And a nice video of the operation:
 
-<iframe width="640" height="480" src="//www.youtube.com/embed/UE_E2tOH2CY" frameborder="0" allowfullscreen></iframe>
+{% youtube http//www.youtube.com/embed/UE_E2tOH2CY %}
