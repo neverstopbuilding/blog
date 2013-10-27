@@ -10,6 +10,7 @@ module JekyllAssetPipeline
   class SassConverter < JekyllAssetPipeline::Converter
 
     Compass.configuration.sass_dir = 'src/_assets/css'
+    Sass.load_paths << File.expand_path(File.join(File.dirname(__FILE__), '..', '_assets','css','font-awesome'))
 
     Compass.sass_engine_options[:load_paths].each do |path|
       Sass.load_paths << path
