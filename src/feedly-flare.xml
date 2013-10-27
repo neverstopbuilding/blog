@@ -1,0 +1,11 @@
+<FeedFlareUnit>
+<Catalog>
+    <Title>Add to Feedly</Title>
+    <Description>Adds a subscription to Feedly.</Description>
+</Catalog>
+<FeedFlare>
+    <Text>Follow with Feedly</Text>
+    <Image src="http://s3.feedly.com/img/follows/feedly-follow-rectangle-volume-medium_2x.png"/>
+    <Link href="http://cloud.feedly.com/#subscription/feed/${feedUrl}"/>
+</FeedFlare>
+</FeedFlareUnit>
