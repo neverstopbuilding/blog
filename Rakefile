@@ -24,7 +24,7 @@ end
 
 
 
-task deploy: do
+task :deploy do
   system "git push origin master"
   system "git push heroku master"
 end
