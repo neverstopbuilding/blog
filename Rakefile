@@ -22,6 +22,15 @@ task :prepare do
   FileUtils.mkdir_p('build')
 end
 
+
+
+task deploy: do
+  system "git push origin master"
+  system "git push heroku master"
+end
+
+
+
 Rubocop::RakeTask.new
 
 namespace :assets do
