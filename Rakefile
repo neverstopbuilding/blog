@@ -23,7 +23,7 @@ namespace :build do
   task :local do
     Rake::Task[:clean].invoke
     Rake::Task[:prepare].invoke
-    Rake::Task[:quality].invoke
+    Rake::Task[:test].invoke
     sh 'bundle exec jekyll build --config _config.yml,_development.yml'
   end
 end
@@ -70,7 +70,7 @@ namespace :posts do
         display_errors errors, :not_in_list, "The following have a unapproved category:"
         raise "There were #{errors[:total]} errors found!"
       else
-        puts "No errors found!"
+        puts "No category errors found!"
       end
     end
 
@@ -125,6 +125,8 @@ namespace :posts do
         display_errors errors, :few_tags, "The following posts don't have enough tags:"
         display_errors errors, :overlap, "The following posts have a tag that is the same as the category:"
         raise "There were #{errors[:total]} errors found!"
+      else
+        puts "No tag errors found!"
       end
     end
 
@@ -133,7 +135,7 @@ namespace :posts do
 end
 
 desc 'Runs quality checks.'
-task quality: [:rubocop]
+task test: [:rubocop, 'posts:tags:validate', 'posts:categories:validate']
 Rubocop::RakeTask.new
 
 desc 'Removes the build directory.'
@@ -147,7 +149,7 @@ task :prepare do
   FileUtils.mkdir_p('build')
 end
 
-task :deploy do
+task deploy: [:clean, :prepare, :test] do
   system "git push origin master"
   system "git push heroku master"
 end
