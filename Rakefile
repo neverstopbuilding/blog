@@ -1,6 +1,7 @@
 # Encoding: utf-8
 
 require 'rubocop/rake_task'
+require 'levenshtein'
 
 #Settings
 
@@ -78,20 +79,33 @@ namespace :posts do
 
   namespace :tags do
 
+    desc 'Lists all the used tags ordered by frequency with amount used.'
     task :list do
-      tags = Hash.new(0)
-      get_posts_data.each do |path, data|
-        if data['tags']
-          data['tags'].each do |tag|
-            tags[tag] +=1
-          end
-        end
-      end
-      tags.sort_by { |key, value| value }.reverse.each do | key, value|
+      get_unique_tags.sort_by { |key, value| value }.reverse.each do | key, value|
         puts "#{value} - #{key}\n"
       end
     end
 
+    desc 'Lists all the tags that are similar to other tags by letter match'
+    task :similar do
+      tags = get_unique_tags.keys
+      flagged = []
+      tags.each do |tag_a|
+        tags.each do |tag_b|
+          pair = [tag_a, tag_b].sort.join
+          unless tag_a == tag_b || flagged.include?(pair)
+            lnd = Levenshtein.normalized_distance(tag_a, tag_b, threshold=nil)
+            if lnd < 0.2
+              puts "#{tag_a} and #{tag_b}: #{(lnd *100).round(2)}%"
+              flagged << pair
+            end
+          end
+
+        end
+      end
+    end
+
+    desc 'Searches for the query tag and opens the post.'
     task :search, :query do |t, args|
       get_posts_data.each do |path, data|
         if data['tags'].include? args.query
@@ -180,4 +194,16 @@ def display_errors(errors, key, prompt)
     puts "\nERRORS: #{prompt}\n\n"
     puts errors[key].sort
   end
+end
+
+def get_unique_tags
+  tags = Hash.new(0)
+  get_posts_data.each do |path, data|
+    if data['tags']
+      data['tags'].each do |tag|
+        tags[tag] +=1
+      end
+    end
+  end
+  tags
 end

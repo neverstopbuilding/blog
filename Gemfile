@@ -15,10 +15,10 @@ gem 'yui-compressor', '~> 0.12.0'
 gem 'puma', '~> 2.6.0'
 gem 'rack-contrib', '~> 1.1.0'
 gem 'rack-rewrite', '~> 1.4.01'
-
-gem 'rubocop'
-
 gem 'git', '~> 1.2.6'
+
+gem 'levenshtein'
+gem 'rubocop'
 
 group :development  do
   gem 'guard-jekyll-plus', git: 'https://github.com/imathis/guard-jekyll-plus', branch: 'master'
