@@ -2,8 +2,8 @@
 layout: post
 title: "Using gQueues to Get Things Done and Manage your Life"
 date: 2012-09-20 18:41
-comments: true
-categories: [productivity]
+category: productivity
+tags:  [gqueues, todo, gtd, get things done, life management, todo lists]
 ---
 
 I'm a big fan of [gQueues](https://www.gqueues.com/) as a light way way to set up a todo list system that has just enough configurability, but not too much required to get started. Some things I like about it:

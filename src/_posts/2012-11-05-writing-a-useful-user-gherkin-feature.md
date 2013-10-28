@@ -2,8 +2,8 @@
 layout: post
 title: "Writing a Useful User Gherkin Feature"
 date: 2012-11-05 15:17
-comments: true
-categories: [behavior driven development]
+category: test driven development
+tags:  [behavior driven development, bdd, tdd, gherkin, acceptance criteria]
 ---
 
 I was in the middle of writing a user epic when the excellent talk on [behavior driven development](http://behaviour-driven.org/) by [@weaverryan](https://twitter.com/weaverryan) from the recent [ZendCon](http://www.zendcon.com/) bubbled to the top of my mind. One of the lessons that he shared is certainly worth repeating and that is: use your collaborative planning process to determine real business value. It is important that you don't over plan features that will never get implemented, or ones that will generate no substantive return on investment. Remember, this isn't a magical time of exploration and experimentation; some times that is justified, but at the end of the day engineers support a business. On the other hand it is important not to under plan features, you don't want to get into a sprint and find everyone asking, "who uses this?", "why are we doing this?", or "is this worth 20 engineering hours?"

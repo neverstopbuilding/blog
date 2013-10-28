@@ -10,7 +10,12 @@ SymbolName:
 Documentation:
   Enabled: false
 
+PerlBackrefs:
+  Enabled: false
+
 AllCops:
   Includes:
     - Rakefile
     - Gemfile
+    - config.ru
+    - Guardfile

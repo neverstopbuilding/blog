@@ -1,10 +1,9 @@
 ---
 layout: post
 title: "DTOx Update: Generate Code on the Web!"
-comments: true
 date: 2013-03-01 13:48
-categories: [dtox, design patterns]
-twitter: [php, dtox, dto, code, software]
+category: software engineering
+tags:  [dtox, dto, data transfer object, design patterns, code generation]
 ---
 A little while back I [wrote about]({{ site.url }}/the-dto-pattern-how-to-generate-php-dtos-quickly-with-dtox/) the project [DTOx](https://github.com/jasonrobertfox/DTOx) which you could use on the command line to rapidly generate both the class and the test for a "Data Transfer Object." With the latest release, you can now enter all your information via a web interface.
 

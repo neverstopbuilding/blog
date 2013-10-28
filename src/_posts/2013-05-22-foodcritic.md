@@ -1,10 +1,9 @@
 ---
 layout: post
 title: "Chef Cookbook Code Quality with Foodcritic"
-comments: true
 date: 2013-05-22 12:34
-categories: ['chef', 'chef broiler plate', 'devops']
-twitter: [chef, devops, chefsurvivalguide, foodcritic]
+category: devops
+tags: [opscode chef, chef broiler plate, foodcritic, test driven development, tdd, code quality]
 ---
 
 *This is the sixth section of a [series on the development of Chef Broiler Plate]({{ site.url }}/blog/categories/chef-broiler-plate/) in which we go over setting up a robust, TDD framework for Chef cookbook development.*

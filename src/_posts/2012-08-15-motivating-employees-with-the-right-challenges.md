@@ -2,8 +2,8 @@
 layout: post
 title: "Motivating Employees with the Right Challenges"
 date: 2012-08-15 18:51
-comments: true
-categories: [agile, productivity]
+category: management
+tags:  [agile, productivity, motivation, work, skills]
 ---
 
 One of the take-aways I have been raving about to people I meet at this [conference](http://agile2012.agilealliance.org/) is Kati Vilkki's Challenge vs. Skill diagram:

@@ -2,8 +2,8 @@
 layout: post
 title: "12 Things That Will Mess Up Your Agile Transformation"
 date: 2012-09-24 15:29
-comments: true
-categories: [agile]
+category: management
+tags:  [agile, team management, scrum master, time boxed development, product owner]
 ---
 
 I found a treasure trove of notes from my attendance at Agile2012 recently on a talk given by Angela Druckman called "The Dirty Dozen - 12 Practices That Can Kill Your Agile Transformation." Here is a recap, it has been a while, so its just some key points:

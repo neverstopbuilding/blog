@@ -2,8 +2,8 @@
 layout: post
 title: "Tips on How I Get Things Done"
 date: 2012-06-05 17:59
-comments: true
-categories: [quick tips, productivity]
+category: productivity
+tags:  [minimalism, email, life management, inbox zero, voice mail message]
 ---
 
 One thing that came up while on the Dominican Republic trip was my

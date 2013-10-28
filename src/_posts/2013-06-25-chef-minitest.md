@@ -1,10 +1,9 @@
 ---
 layout: post
 title: "Verify your Chef Infrastructure with Minitest"
-comments: true
 date: 2013-06-25 12:12
-categories: ['chef', 'chef broiler plate', 'devops']
-twitter: [opschef, devops, chefsurvivalguide, minitest]
+category: devops
+tags: [opscode chef, chef broiler plate, minitest, cookbook testing, test driven development]
 ---
 
 *This is the tenth and final post in a [series on the development of Chef Broiler Plate]({{ site.url }}/blog/categories/chef-broiler-plate/) in which we go over setting up a robust, ted framework for Chef cookbook development.*

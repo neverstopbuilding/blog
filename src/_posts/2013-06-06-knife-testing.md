@@ -1,10 +1,9 @@
 ---
 layout: post
 title: "Testing Chef Cookbooks with Knife"
-comments: true
 date: 2013-06-06 08:43
-categories: ['chef', 'chef broiler plate', 'devops']
-twitter: [chef, devops, chefsurvivalguide, knife]
+category: devops
+tags:  [opscode chef, chef broiler plate, knife, cookbook testing, build system]
 ---
 
 *After a brief hiatus into other topics, we return with the seventh installment in a [series on the development of Chef Broiler Plate]({{ site.url }}/blog/categories/chef-broiler-plate/) in which we go over setting up a robust, TDD framework for Chef cookbook development.*

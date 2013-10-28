@@ -2,8 +2,8 @@
 layout: post
 title: "Building a GQueues Dashboard Widget"
 date: 2012-07-16 17:22
-comments: true
-categories: [osx, gqueues, productivity]
+category: productivity
+tags:  [osx, gqueues, mac dashboard widget, utilities, xcode]
 ---
 
 Isn't it always the case that when you sit down to "get stuff done", often the first item on the list is "improve to-do list" or something to that effect. I can't tell you how many times I started out on my list of tasks only to have this dialog:

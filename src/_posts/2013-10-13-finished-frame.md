@@ -2,9 +2,8 @@
 layout: post
 title: "Assembling the RoboGarden Frame and Starting on the Electronics"
 date: 2013-10-13 12:08
-comments: true
-categories: ["robo garden"]
-twitter: [RoboGarden, arduino, gardenhack]
+category: robo garden
+tags:  [garden hacking, 3d printing, led heatsinks, stepper motor, arduino]
 image: https://lh3.googleusercontent.com/hDKGvQ_Ujtb3MxkjE1PZtqAaTIckgsWYEXaa8K846JU=w1118-h549-no
 description: "The frame is completely assembled, and putting it together went rather well but there were a few minor issues to bring up that could be improved in future iterations."
 ---

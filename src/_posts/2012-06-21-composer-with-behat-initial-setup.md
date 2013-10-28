@@ -2,8 +2,8 @@
 layout: post
 title: "Composer with Behat: Initial Setup"
 date: 2012-06-21 15:42
-comments: true
-categories: [behat, behavior driven development]
+category: test driven development
+tags:  [behat, behavior driven development, bdd, tdd, composer, php]
 ---
 
 As you might have noticed, I have been getting really into [Composer](http://getcomposer.org/) for php dependency management. This post details the set up for automated [BDD](http://en.wikipedia.org/wiki/Behavior_Driven_Development) testing using [Behat](http://behat.org/).

@@ -2,9 +2,8 @@
 layout: post
 title: "How to Create a Blog with Octopress on Heroku"
 date: 2013-04-16 10:39
-comments: true
-categories: [blogs, heroku]
-twitter: [heroku, octopress, deployment]
+category: web development
+tags:  [bloging, octopress, heroku, static blog, build system]
 ---
 
 Today I spent some time struggling with the first thing everyone should do when they are starting a new app or project: **the build/deploy system**. Huh? The reason this should be the first thing is that:

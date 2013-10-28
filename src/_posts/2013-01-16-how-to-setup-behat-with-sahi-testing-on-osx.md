@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "How to Setup Behat with Sahi Testing on OSX"
-comments: true
 date: 2013-01-16 22:54
-categories: [behat, sahi, behavior driven development]
+category: test driven development
+tags:  [behat, sahi, behavior driven development, php, cucumber]
 ---
 Behavior driven development (BDD) really takes the ideas of Test Driven Development (TDD) to the next level. By using popular libraries like [Cucumber](http://cukes.info/) or the PHP focused [Behat](http://behat.org/) you can expand your acceptance criteria into a set of executable acceptance scenarios. Using one of these libraries will let your run your integration tests automatically, which is good for everyone!
 

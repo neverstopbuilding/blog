@@ -2,8 +2,8 @@
 layout: post
 title: "How to Break Down Organizational Silos"
 date: 2012-08-13 18:53
-comments: true
-categories: [agile]
+category: management
+tags:  [agile, organizational silo, activity bingo, collaborative design, pirate map]
 ---
 
 Just got out of a presentation by Maria Matarelli and Dan Neumann on *making collaboration visible* with an eye toward breaking down silos on an agile team. Here are some highlights:

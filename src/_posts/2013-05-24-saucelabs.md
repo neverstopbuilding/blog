@@ -1,10 +1,9 @@
 ---
 layout: post
 title: "BDD and SauceLabs Integration: PHP and Ruby"
-comments: true
 date: 2013-05-24 10:05
-categories: [talks, bdd]
-twitter: [saucelabs, php, ruby, bdd, selenium]
+category: test driven development
+tags:  [presentations, bdd, tdd, behavior driven development, sauce labs, php, ruby]
 ---
 
 I gave a talk recently, entitled "Still Testing Your Software with Computers?" which focused on improving your end-to-end browser testing with BDD by integrating [Cucumber](http://cukes.info/) and [Behat](http://behat.org/) with [SauceLabs](https://saucelabs.com/). Here are the slides, video of the presentation and a testing walk through. Plus some additional notes.

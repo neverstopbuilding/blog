@@ -2,8 +2,8 @@
 layout: post
 title: "Simple Method for Checking for Order with Behat"
 date: 2013-02-05 10:06
-comments: true
-categories: [behat, behavior driven development]
+category: test driven development
+tags:  [behat, behavior driven development, bdd, tdd, context function]
 ---
 Today I'd like to share with you a little context function I wrote that is helpful for checking for the order of specific elements in your automated UI tests. Let's start with the business requirement:
 

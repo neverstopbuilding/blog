@@ -1,10 +1,9 @@
 ---
 layout: post
 title: "How to Control a Switched Accessory with Ramps and Marlin"
-comments: true
 date: 2013-06-27 22:13
-categories: [mendelmax, 3dprinting]
-twitter: [3dprinting, mendelmax, ramps, marlin]
+category: 3d printing
+tags:  [mendelmax, ramps, marlin firmware, bed lighting, gcode]
 ---
 While setting up my 3D Printer I had quite a tough time finding information on simply extending the Arduino Ramps board to support a simple switched accessory. **I just wanted to control my bed lighting with GCode!** There appears to be information about adding servos, controlling accessory boards, and of course controlling the printing cooling fan, but I really had to dig to find out how to rig up a switch to the bed lighting.
 

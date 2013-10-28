@@ -2,8 +2,8 @@
 layout: post
 title: "How to Check your Snail Mail Online"
 date: 2012-06-09 17:33
-comments: true
-categories: [automation, productivity]
+category: productivity
+tags:  [snail mail, letters, mailbox forwarding, automation, tools]
 ---
 
 I have raved about this before, but I think it’s worth formalizing it in
@@ -13,7 +13,7 @@ a dedicated post.
 
 The issue was forced when I moved to Romania for three months: *what am
 I going to do about my pesky mail? *I’d hate the idea of missing checks,
-or important correspondence, and I wouldn’t be able to sleep at night if
+or important correspondence, and I wouldn't be able to sleep at night if
 I missed a single ad! So I needed a way to check my mail from ideally
 any where in the world.
 
@@ -47,7 +47,7 @@ secure.
 Here are the steps I follow to manage my snail mail given this system:
 
 1.  Any email from them is auto-tagged with “Mail” in gMail and appears
-    in a separate folder. This let’s me know if I have a new message or
+    in a separate folder. This lets me know if I have a new message or
     a scan is complete.
 2.  I can then check my account manually and do one of the following:
     -   **It’s Junk** - Shred it and delete the image, maybe make a note

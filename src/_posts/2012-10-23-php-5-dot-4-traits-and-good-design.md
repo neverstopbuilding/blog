@@ -2,8 +2,8 @@
 layout: post
 title: "PHP 5.4 Traits and Good Design"
 date: 2012-10-23 15:21
-comments: true
-categories: [php, design patterns]
+category: software engineering
+tags:  [php, design patterns, traits, zendcon, liskov substitution principle]
 ---
 
 As a follow up to [my first](http://jasonrobertfox.com/post/34175643593/zendcon-2012-cool-little-features-of-php-5-4) post on the small improvements in php 5.4, this article will go deeper into one of the cooler features of the release: [traits](http://us3.php.net/traits). Much of this was inspired by a great talk I went to at [ZendCon](http://zendcon.com/) by [Ilia Alshanetsky](https://twitter.com/iliaa).

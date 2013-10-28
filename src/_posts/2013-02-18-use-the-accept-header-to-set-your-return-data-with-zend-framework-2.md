@@ -3,8 +3,8 @@ layout: post
 title: "Use the Accept Header to Set Your Return Data with Zend Framework 2"
 comments: true
 date: 2013-02-18 11:05
-twitter: [php, zend, zf2, json]
-categories: [zend framework 2, api]
+category: web development
+tags:  [zend framework 2, api, accept header, http headers, json]
 ---
 
 In this article I detail the process by which you can set up your controller actions in Zend Framework 2 to return either the default HTML, or JSON data depending on the "Accept Header" in the request. It incorporates changes related to a security update added since [this very helpful article](http://akrabat.com/zend-framework-2/returning-json-using-the-accept-header-in-zf2/) was written, and expands on some of the intricacies of making your web layer objects better "json providers."

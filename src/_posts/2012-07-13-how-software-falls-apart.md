@@ -2,8 +2,8 @@
 layout: post
 title: "How Software Falls Apart"
 date: 2012-07-13 15:37
-comments: true
-categories: [rants, craftsmanship]
+category: software engineering
+tags:  [rants, craftsmanship, quality, software design, design patterns, domain driven design]
 ---
 
 I recently attended an excellent lecture by [Dr. "Mac" Louthan](http://2011.nysc.org/presenters/maclouthan/) while I was a guest at the [National Youth Science Camp](http://www.nysf.com/w/programs/nysc/). It was entitled "How Things Fall Apart". It focuses on materials science but also conveyed great ethical messages and timeless wisdom. As the title of this post might indicate I was inspired by the themes of his lecture to relate them to my world of software engineering and product management. Here are the the six reasons, and my thoughts, as to why software falls apart:

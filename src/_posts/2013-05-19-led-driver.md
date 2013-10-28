@@ -1,10 +1,9 @@
 ---
 layout: post
 title: "Building an LED Driver Array"
-comments: true
 date: 2013-05-19 12:57
-categories: ["robo garden"]
-twitter: [RoboGarden, LED, growlight]
+category: robo garden
+tags:  [led driver, voltage regulator, lm317, super bright leds, circuit design]
 ---
 ##RoboGarden Build Log: May 18, 2013
 

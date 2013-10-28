@@ -2,8 +2,8 @@
 layout: post
 title: "AppleScript for Pasting the Current Date"
 date: 2012-01-05 15:51
-comments: true
-categories: [quick tips]
+category: productivity
+tags:  [apple script, copy and paste, apple automator, evernote, shortcuts]
 ---
 
 I'm a big fan of taking notes with [Evernote](http://evernote.com) and wanted a way to **paste the current date time** into the note, or for that matter into anything I was working on.

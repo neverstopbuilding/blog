@@ -2,8 +2,8 @@
 layout: post
 title: "5 Tips for Promoting your Tumblr Blog"
 date: 2012-09-26 18:43
-comments: true
-categories: [quick tips, blogs]
+category: web development
+tags:  [tumblr, bloging, post tagging, promotion, ifttt]
 ---
 
 I use tumblr for this blog that you are reading right now. Recently I was discussing with a friend (who runs this UX Blog: [http://www.uxr.me/](http://www.uxr.me/)) on strategies I used to promote this blog and manage it's content. Here are the tips, cleaned up, and in fact the examples are of this *very post*!

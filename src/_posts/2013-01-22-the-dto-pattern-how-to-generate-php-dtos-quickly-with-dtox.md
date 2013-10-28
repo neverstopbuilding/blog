@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "The DTO Pattern: How to Generate PHP DTOs Quickly with DTOx"
-comments: true
 date: 2013-01-22 20:15
 permalink: /data-transfer-object
-categories: [dtox, design patterns]
+category: software engineering
+tags:  [dtox, design patterns, dto, data transfer object, php, domain driven design]
 ---
 
 A DTO or Data Transfer Object can be defined as a lightweight and serializable container for data that lacks any business logic, used primarily for delivering data from a service layer.

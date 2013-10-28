@@ -1,10 +1,9 @@
 ---
 layout: post
 title: "Configuring Vagrant for Chef"
-comments: true
 date: 2013-05-16 17:31
-categories: ['chef', 'chef broiler plate', 'devops']
-twitter: [chef, devops, chefsurvivalguide, vagrant]
+category: devops
+tags: [opscode chef, chef broiler plate, vagrant, virtual machine, bentobox]
 ---
 
 *This is the fourth installment of a [series on the development of Chef Broiler Plate]({{ site.url }}/blog/categories/chef-broiler-plate/) in which we go over setting up a robust, TDD framework for Chef cookbook development.*

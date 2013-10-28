@@ -2,8 +2,8 @@
 layout: post
 title: "How to Give a Presentation on Behat and BDD"
 date: 2012-07-30 19:06
-comments: true
-categories: [behat, behavior driven development]
+category: test driven development
+tags:  [behat, behavior driven development, tdd, behat, php, prezi]
 ---
 
 I should have probably recoreded this presentation as the video would be more compelling then just posting the link: [http://prezi.com/xpzj3ca1vayl/behat-bdd/](http://prezi.com/xpzj3ca1vayl/behat-bdd/)
@@ -21,7 +21,7 @@ However, here it is, feel free to use for your own purposes!
 7. Give an over view of the gherkin language and how "given", "when", and "then" can be used to describe the business requirement.
 8. Explain the example of the feature file, isn't it cool how plain the language can be?
 9. But how does that work? ZoooOOOoooOOOm.
-10. Go into the nitty gritty of the context files, explaining how developers and QA folks work hand in hand in a magical colaboration that yeilds continuously tested working software.
-11. Drive that point home with this stew pot metephore, mentioning that it also requires PHP 5.3.
-12. How is it being used now? If it is somehwere on your project give a demo.
+10. Go into the nitty gritty of the context files, explaining how developers and QA folks work hand in hand in a magical collaboration that yields continuously tested working software.
+11. Drive that point home with this stew pot metaphor, mentioning that it also requires PHP 5.3.
+12. How is it being used now? If it is somewhere on your project give a demo.
 13. Q&A time.

@@ -2,8 +2,8 @@
 layout: post
 title: "Set Up Zend Framework 2 with Behat and Twig"
 date: 2012-10-04 15:26
-comments: true
-categories: [zend framework 2, behat, twig]
+category: test driven development
+tags:  [zend framework 2, behat, twig, tdd, bdd, behavior driven development]
 ---
 
 I'll be documenting some interesting set up of a robust ZendFramework 2 based web application, integrating some cool helper libraries and discussing best practices!

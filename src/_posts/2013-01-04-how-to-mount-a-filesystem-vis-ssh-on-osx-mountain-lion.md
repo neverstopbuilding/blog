@@ -2,9 +2,9 @@
 layout: post
 title: "How to Mount a Filesystem via SSH on OSX Mountain Lion"
 date: 2013-01-04 14:13
-comments: true
 permalink: /mount-ssh-on-osx
-categories: [quick tips, devops]
+category: devops
+tags:  [filesystem, osx mountain lion, osxfuse, sshfs, macfuse]
 ---
 
 If you find yourself with remote development environments, but prefer working on your local mac, you may find some joy with mounting the remote filesystem over ssh. This way you can access it as if it were a native set of files.

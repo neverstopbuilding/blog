@@ -2,9 +2,8 @@
 layout: post
 title: "Chef CI with Travis and Knife Configuration"
 date: 2013-05-14 19:43
-comments: true
-categories: ['chef', 'chef broiler plate', 'devops']
-twitter: [chef, devops, chefsurvivalguide, travis, knife]
+category: devops
+tags: [opscode chef, chef broiler plate, knife, travis, ci, continuous integration]
 ---
 *This is the third installment of a [series on the development of Chef Broiler Plate]({{ site.url }}/blog/categories/chef-broiler-plate/) in which we go over setting up a robust, TDD framework for Chef cookbook development.*
 

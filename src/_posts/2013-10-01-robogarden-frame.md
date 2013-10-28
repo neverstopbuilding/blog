@@ -1,23 +1,10 @@
 ---
 layout: post
 title: "Finishing the RoboGarden Frame"
-comments: true
 date: 2013-10-01 17:41
-categories: ["robo garden"]
-twitter: [RoboGarden, 3dprinting]
+category: robo garden
+tags:  [stepper motor, led mounts, carriage back, 3d printing, prototyping, garden hacking]
 ---
-
-##RoboGarden Build Log: October 1, 2013
-
-##Parts Discussed
-- Carriage Back
-- Carriage Front
-- LED Mounts
-- Motor Mount
-- Idler Mount
-- Upright Mounts
-- Feet
-
 ##Finishing the Carriage Back
 After experimenting with a first iteration of the carriage back I proceeded to trim down the design to improve print speed and simplicity.
 

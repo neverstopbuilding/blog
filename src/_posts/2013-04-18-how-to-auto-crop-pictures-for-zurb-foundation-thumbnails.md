@@ -2,9 +2,8 @@
 layout: post
 title: "How to Auto Crop Pictures for Zurb Foundation Thumbnails"
 date: 2013-04-18 16:57
-comments: true
-categories: [css]
-twitter: [zurb, css, thumbnail]
+category: web development
+tags:  [css, zurb foundation, auto crop, thumbnails, image gallery]
 ---
 One of the problems you may run across while building a website is dealing with galleries of unequally sized images. I think I would rather eat paint that manually resize all of them or make thumbnails. Especially because now with the great css framework [Zurb Foundation](http://foundation.zurb.com/) we can make a sweet looking image gallery really quick.
 

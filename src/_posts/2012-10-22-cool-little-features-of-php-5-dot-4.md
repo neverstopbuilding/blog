@@ -2,8 +2,8 @@
 layout: post
 title: "Cool Little Features of PHP 5.4"
 date: 2012-10-22 15:23
-comments: true
-categories: [php]
+category: web development
+tags:  [php, php5, zendcon, type hinting, json serializable interface, session handler interface]
 ---
 Just got out of a energetic talk by [Ilia Alshanetsky](https://twitter.com/iliaa) at [ZendCon](http://zendcon.com/) about the new features of the [PHP5.4](http://php.net/releases/5_4_0.php) release. Some of the "little ones" seemed most immediately applicable, here is a run down of some of my favorites!
 

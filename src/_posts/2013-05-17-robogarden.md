@@ -2,9 +2,8 @@
 layout: post
 title: "Watering Your Plants is so 2012!"
 date: 2013-05-17 14:10
-comments: true
-categories: ["robo garden", automation]
-twitter: [robogarden, arduino]
+category: robo garden
+tags:  [garden, plants, automation, garden hacking, stepper motor, h bridge]
 ---
 
 ##The Idea

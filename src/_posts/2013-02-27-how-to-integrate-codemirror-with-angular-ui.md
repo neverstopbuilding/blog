@@ -1,11 +1,10 @@
 ---
 layout: post
 title: "How to Integrate Codemirror with Angular UI"
-comments: true
 date: 2013-02-27 16:24
 permalink: /integrate-codemirror-with-angular
-categories: [javascript, angular]
-twitter: [javascript, angularjs, codemirror, syntax, js]
+category: web development
+tags:  [javascript, angular, codemirror, angularjs, css]
 ---
 Getting [AngularJS](http://angularjs.org/), [Codemirror](http://codemirror.net/), and [AngularUI](http://angular-ui.github.com/) to play nice with each other is certainly an exercise in patient google searching, poring over cryptic and inadequate documentation, and inspecting various demos. Fortunately I've finished all that so that you don't have to. Here I walk you through the basic set up of Codemirror using the AnuglarUI directives for PHP syntax highlighting.
 

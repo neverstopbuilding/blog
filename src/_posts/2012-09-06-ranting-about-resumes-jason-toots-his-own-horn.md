@@ -2,8 +2,8 @@
 layout: post
 title: "Ranting about Resumes: Jason Toots His Own Horn"
 date: 2012-09-06 18:48
-comments: true
-categories: [rants]
+category: management
+tags:  [rants, resume, jobs, autobiography, career]
 ---
 
 Recently I was in the process of updating my various profiles/branding and I had a bit of writers block. So I took some common advice and just started typing. It appears I had quite a lot to say. What follows is a cleaned up version.

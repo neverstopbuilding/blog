@@ -2,8 +2,8 @@
 layout: post
 title: "I Got the Bower! UI Dependency Management with Bower"
 date: 2012-11-28 23:18
-comments: true
-categories: [bower, dependency management]
+category: web development
+tags:  [bower, dependency management, ui assets, node, package management]
 ---
 
 I have been getting my learn on of late, recently reaching a milestone on a CRM tool for the Ovarian Cancer National Alliance, I now have all this free time to explore new and fascinating things. Enter [Research Bug](http://researchbug.tumblr.com/), a web app my buddy and I are working on to streamline the white hot UX research process.

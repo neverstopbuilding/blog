@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "Delete Half Your Projects: 3 Steps to Less Stress"
-comments: true
 date: 2013-01-08 11:12
-categories: [minimalism, productivity]
+category: productivity
+tags:  [minimalism, life management, stress, removing distractions, projects]
 ---
 I am the type of person that takes on way to much. I'll get an idea, start playing with something, buy some new things, try to take on another project. This is a sure fire way to get stressed out and feel overwhelmed. Better, in my opinion, to do less and do those things better, leaving time for necessary and healthy activities. Here are 3 simple steps to reduce your workload, and give you more freedom:
 

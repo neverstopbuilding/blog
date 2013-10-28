@@ -2,9 +2,8 @@
 layout: post
 title: "Quick Tip: Raising an Exception with Ruby's Enumerable Find"
 date: 2013-09-12 11:54
-comments: true
-categories: [quick-tips, ruby]
-twitter: [ruby, enumerable, coding]
+category: software engineering
+tags:  [ruby, enumerable, find, exceptions, lambda]
 ---
 I struggled with this a little today and thought it be worth a tip. Perhaps I was just trying to pound a square peg into a round hole, but eventually I got it and learned a little more about the Ruby language in the process.
 

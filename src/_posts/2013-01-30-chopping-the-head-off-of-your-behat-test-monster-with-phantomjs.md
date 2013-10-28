@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "Chopping the Head off of your Behat Test Monster with PhantomJS"
-comments: true
 date: 2013-01-30 11:09
-categories: [behat, sahi, phantomjs, behavior driven development]
+category: test driven development
+tags:  [behat, sahi, phantomjs, behavior driven development, bdd, tdd]
 ---
 
 Recently, I posted about [how to set up Behat with Sahi on OSX]({{ site.url }}/how-to-setup-behat-with-sahi-testing-on-osx/) to automate your web application testing including javascript. Today we will chop the head off this operation by swapping out a spawned browser instance with the open source, headless browser: [phantomjs](http://phantomjs.org/).

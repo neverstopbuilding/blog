@@ -2,8 +2,8 @@
 layout: post
 title: "7 Steps to Clear your Mind and Clean your Room"
 date: 2013-01-03 18:17
-comments: true
-categories: [minimalism]
+category: productivity
+tags:  [minimalism, cleaning, decluttering, simplicity, inbox zero]
 ---
 
 A new year, a new blog! Welcome to the new **{never stop building}** which will continue the trend of technical articles that were previously located in my personal blog: [jasonrobertfox.com](http://jasonrobertfox.com) which is now more focused on photos and travel.

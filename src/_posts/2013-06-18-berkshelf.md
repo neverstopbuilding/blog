@@ -1,10 +1,9 @@
 ---
 layout: post
 title: "Chef Dependency Management with Berkshelf"
-comments: true
 date: 2013-06-18 10:31
-categories: ['chef', 'chef broiler plate', 'devops']
-twitter: [opschef, devops, chefsurvivalguide, berkshelf]
+category: devops
+tags: [opscode chef, chef broiler plate, berkshelf, dependency management, cookbooks, minitest]
 ---
 
 *This is the ninth installment of a [series on the development of Chef Broiler Plate]({{ site.url }}/blog/categories/chef-broiler-plate/) in which we discuss setting up a robust, ted framework for Chef cookbook development.*

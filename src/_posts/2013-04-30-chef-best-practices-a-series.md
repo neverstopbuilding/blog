@@ -2,10 +2,9 @@
 layout: post
 title: "Chef Best Practices: Chef Broiler Plate"
 date: 2013-04-30 12:24
-comments: true
 permalink: /opscode-chef-best-practices
-categories: [devops, chef, 'chef broiler plate']
-twitter: [chef, devops, tdd]
+category: devops
+tags: [opscode chef, chef broiler plate, infrastructure management, test driven development, virtual machine]
 ---
 ##A Little Background
 For those unaware, [Chef](http://www.opscode.com/chef/) is "infrastructure as code." In essence, you specify your software infrastructure (servers, dependencies, configurations) in a declarative fashion and use the Chef software to provision your machines. Here are some possible usage scenarios to give you an idea of what Chef is capable of doing:

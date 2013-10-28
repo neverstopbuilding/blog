@@ -1,11 +1,10 @@
 ---
 layout: post
 title: "10 Crucial Sublime Text 2 Plugins for the PHP Craftsman"
-comments: true
 date: 2013-01-13 23:25
 permalink: /sublime-plugins-for-php
-tags: [php, sublime text 2, plugins, craftsmanship]
-categories: [software engineering]
+tags: [php, sublime text 2, plugins, craftsmanship, text editor, phpcs, package management]
+category: software engineering
 image: https://lh5.googleusercontent.com/-7kc4u8osMcg/UmsSz6ojpnI/AAAAAAAAJEM/CkWYJnjXGIQ/w1118-h630-no/plugs.jpg
 description: "Now allow me to step off my soapbox and offer you the 10 plugins that I use in my choice text editor, Sublime Text 2. Each will help improve your efficiency as a PHP code smith! I have ordered them by their usefulness should you feel inclined only to install a few."
 
@@ -48,7 +47,7 @@ As an added benefit it also does this for nearly all popular programing language
 
 Learn more about [SublimeLinter here](https://github.com/SublimeLinter/SublimeLinter).
 ##4. DocBlockr
-In addition to adhering to coding standards, a responsible programer should document their code to a basic level. We don't need novels here, but there are certainly things that can aid other developers and assist with automated documentation generation. PHP has a [great documentor library](http://www.phpdoc.org/) with lots of standard Java Doc style annotations.
+In addition to adhering to coding standards, a responsible programmer should document their code to a basic level. We don't need novels here, but there are certainly things that can aid other developers and assist with automated documentation generation. PHP has a [great documenter library](http://www.phpdoc.org/) with lots of standard Java Doc style annotations.
 
 I used to avoid documentation because of the tedium and I didn't see the point; after all, if I named my methods well, why document them?
 

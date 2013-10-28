@@ -2,8 +2,8 @@
 layout: post
 title: "Using Trello to Manage Your Life"
 date: 2012-10-02 17:07
-comments: true
-categories: [productivity, agile, trello]
+category: productivity
+tags:  [agile, trello, life management, todo lists, task management]
 ---
 
 This is a big deal. It used to be that I would switch todo list systems all the time. I'd spend hours configuring my lists, setting up my contexts, fiddling with workflows. I've been pretty happy with gQueues and have used it for a long time. I still think it is one of the best tools I have used. However, now I must say that lately I find [Trello](trello.com) to be even more useful. Not only from a technical perspective but also a philosophical one.

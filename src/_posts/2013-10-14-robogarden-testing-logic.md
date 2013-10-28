@@ -2,9 +2,8 @@
 layout: post
 title: "RoboGarden Manual Testing Circuit Development"
 date: 2013-10-14 19:54
-comments: true
-categories: ["robo garden"]
-twitter: [RoboGarden, Arduino, 7Segment]
+category: robo garden
+tags:  [seven segment led, shift register, arduino, circuit design, breadboard, latch decoder]
 image: https://lh5.googleusercontent.com/-wW-QuP61Z14/UmAuhyOIOjI/AAAAAAAAJAE/DIi571e1KC0/w949-h712-no/IMG_1707.JPG
 ---
 Now that I have the carriage moving a number of centimeters based on serial input, I want to add a testing circuit that will let me cycle to a specific position on the garden, or rather a "specific plant."

@@ -3,12 +3,13 @@ layout: post
 title: "How to Enhance your Octopress Draft and Heroku Deploy Process"
 comments: true
 date: 2013-01-06 17:56
-categories: [blogs, automation, productivity]
+category: software engineering
+tags: [blogs, automation, productivity, build system, deploy, ruby, octopress, heroku]
 ---
-One of the things I am enjoying about my recent switch to [Octopress](http://octopress.org/) is that it really is a "blogging framework for hackers." Specically, when I find things that are less than ideal, it is not too hard to whip up some rake tasks to fix them. Here were my requirements:
+One of the things I am enjoying about my recent switch to [Octopress](http://octopress.org/) is that it really is a "blogging framework for hackers." Specifically, when I find things that are less than ideal, it is not too hard to whip up some rake tasks to fix them. Here were my requirements:
 
-- I want to creat a draft separate from a post, so that I can compose when inspired and not worry about flooding the internet with many posts at once.
-- I want to quickly publish a draft so that I can release posts durring appropriate times.
+- I want to create a draft separate from a post, so that I can compose when inspired and not worry about flooding the internet with many posts at once.
+- I want to quickly publish a draft so that I can release posts during appropriate times.
 - I want to very quickly deploy to heroku to save time.
 
 To solve these problems I referenced the work on [this post](http://blog.yangmeyer.de/blog/2012/05/28/octopress-drafts) and [this gist](https://gist.github.com/3933525). The result are three new rake tasks:
@@ -40,9 +41,9 @@ task :new_draft, :title do |t, args|
     post.puts "---"
     post.puts "layout: post"
     post.puts "title: \"#{title.gsub(/&/,'&amp;')}\""
-    post.puts "comments: true"
-    post.puts "published: false"
-    post.puts "categories: "
+    post.puts "    post.puts "published: false"
+    post.puts "category: nil
+tags:  "
     post.puts "---"
   end
   system "open #{filename}"
@@ -118,4 +119,4 @@ task :deploy_heroku do
 end
 ```
 
-Now my writting and publishing process is much quicker and more organized. A next step might be to use an automatic job to publish drafts, or specifically tagged drafts, per a set cadence. This would be similar to the tumblr "queue."
+Now my writing and publishing process is much quicker and more organized. A next step might be to use an automatic job to publish drafts, or specifically tagged drafts, per a set cadence. This would be similar to the tumblr "queue."

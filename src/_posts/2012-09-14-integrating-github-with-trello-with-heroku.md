@@ -2,8 +2,8 @@
 layout: post
 title: "Integrating GitHub with Trello with Heroku"
 date: 2012-09-14 18:46
-comments: true
-categories: [github, trello]
+category: productivity
+tags:  [github, trello, heroku, todo lists, tool integration]
 ---
 
 I was pretty miffed at the lack of documentation and how-to on getting some sort of useful connection between [GitHub](https://github.com/) and [Trello](https://trello.com/). All I needed was something simple:

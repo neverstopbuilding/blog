@@ -1,10 +1,9 @@
 ---
 layout: post
 title: "Setting up a MendelMax1.5 for the First Time"
-comments: true
 date: 2013-06-26 10:51
-categories: [mendelmax, 3dprinting]
-twitter: [mendelmax, 3dprinting, 3dprinter, maker]
+category: 3d printing
+tags:  [mendelmax, marlin firmware, arduino, netfabb, slic3r]
 ---
 
 Recently I finished the construction and calibration of my first 3D printer. It's a MendelMax1.5 that I purchased from [3D Factory](http://store.makea3dfactory.com/) in kit form. Here is a pic of its "beta" state:
