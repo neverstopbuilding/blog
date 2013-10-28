@@ -5,10 +5,23 @@ image: https://lh5.googleusercontent.com/DbtSqCepE9H_Lvm6YwYwPScg1Wrx48ym_fqLBzN
 ---
 .row.spaced
     .large-9.large-offset-3.columns
-      h2 Darn. Something ain't right.
-      h3 The page you were looking for can't be found.
-      p
-          em
-            | For a full list of available articles, check out the
-            a< href="{{ site.url }}/archive" Archives
-            | .
+      .row
+        .large-12.columns
+          h2 Darn. Something ain't right.
+          h4 The page you were looking for can't be found.
+          p
+            em Perhaps you would like one of the recent articles below:
+        .row
+          .large-12.columns
+            ul.large-block-grid-2.small-block-grid-1.post-grid
+              | {% for post in site.posts limit:4 %}
+              li
+                | {% slim large_post_preview.slim %}
+              | {% endfor %}
+        .row.top-spaced
+          .large-12.columns
+            p
+              em
+                | For a full list of available articles, check out the
+                a< href="{{ site.url }}/archive" Archive
+                | .
