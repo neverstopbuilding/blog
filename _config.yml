@@ -40,3 +40,5 @@ asset_pipeline:
 sitemap:
   local: false
   repo: https://github.com/neverstopbuilding/blog.git
+
+category_dir: category

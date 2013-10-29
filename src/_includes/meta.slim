@@ -10,3 +10,5 @@
   a< href="{{ author_link }}" rel="author" {{ author_name | upcase }}
   |&nbsp;|&nbsp;
   | {% slim date.slim %}
+  |&nbsp;|&nbsp;
+  a href="{% category_url page.category %}" rel="author" {{page.category | upcase }}

@@ -1,0 +1,22 @@
+---
+layout: page
+---
+.row.page
+  .large-9.push-3.columns
+    header.row.top-spaced
+    | {% for post in site.categories[page.category] %}
+    | {% slim large_post_preview.slim %}
+    | {% endfor %}
+    | {% slim footer/page_footer.slim %}
+  aside.large-3.pull-9.columns
+    .row.top-spaced
+      .large-12.columns
+        h2 Categories
+        | {% for category in site.categories %}
+        | {% if category[0] != page.category %}
+        | {% capture display_category %}{{ category[0] | titlecase }}{% endcapture %}
+        p.category-title
+          a href="{% category_url category[0] %}" name="{{display_category}}"
+            | {{display_category}}
+        | {% endif %}
+        | {% endfor %}

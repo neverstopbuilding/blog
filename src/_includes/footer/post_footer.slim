@@ -1,0 +1,17 @@
+footer.row
+  .large-12.columns.text-center.bottom-spaced.top-spaced
+    p
+      em
+        | Enjoy this article? Read more like it in the
+        a< href="{% category_url | page.category %}"
+          | {{ page.category | titlecase }}
+        |&nbsp;category.
+    .row
+      .large-12.columns
+        | {% slim ads/article_footer.slim %}
+        | {% slim ads/mobile_footer.slim %}
+        .row.light.spaced
+          .small-6.columns.text-left
+            a href="{{ page.previous.url }}" rel="prev" &laquo; PREVIOUS
+          .small-6.columns.text-right
+            a href="{{ page.next.url }}" rel="next" NEXT &raquo;

@@ -1,17 +1,45 @@
 ---
-layout: list_page
-title: Archives
+layout: page
+title: Archive
 change_frequency: weekly
 image: https://lh6.googleusercontent.com/-X2O-APwAe5Y/Uml1w5ao5rI/AAAAAAAAJBg/KN18V_oW7eM/w1023-h668-no/archive.jpg
 ---
+.row.page
+  .large-9.push-3.columns
+    | {% assign first_year = true %}
+    | {% for post in site.posts reverse %}
+    | {% capture this_month %}{{ post.date | date: "%B" }}{% endcapture %}
+    | {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
+    | {% if year != this_year %}
+    | {% assign year = this_year %}
+    | {% assign first_month = true %}
+    | {% if first_year == true %}{% assign first_year = false %}{% else %}
+    | </div></section></div></section>
+    | {% endif %}
+    | <section class="row top-spaced" name="{{year}}"><div class="large-12 columns"><h2>{{year}}</h2>
+    | {% endif %}
+    | {% if month != this_month %}
+    | {% assign month = this_month %}
+    | {% if first_month == true %}{% assign first_month = false %}{% else %}
+    | </div></section>
+    | {% endif %}
+    | <section class="row" name="{{month}}"><div class="large-12 columns"><h3>{{month}}</h3>
 
-| {% for post in site.posts reverse %}
-| {% capture this_month_year %}{{ post.date | date: "%B | %Y" }}{% endcapture %}
-| {% unless month_year == this_month_year %}
-| {% assign month_year = this_month_year %}
-section.row.top-spaced
-  .large-12-columns
-    h2 {{ this_month_year | upcase }}
-| {% endunless %}
-| {% slim small_post_preview.slim %}
-{% endfor %}
+    | {% endif %}
+    article.row
+      .large-12.columns
+        p.post-title
+          a href="{{ post.url }}" {{ post.title }}
+    | {% endfor %}
+    | </div></section></div></section>
+    footer.bottom-spaced
+  aside.large-3.pull-9.columns
+    .row.top-spaced
+      .large-12.columns
+        h2 Categories
+        | {% for category in site.categories %}
+        | {% capture display_category %}{{ category[0] | titlecase }}{% endcapture %}
+        p.category-title
+          a href="{% category_url category[0] %}" name="{{display_category}}"
+            | {{display_category}}
+        | {% endfor %}

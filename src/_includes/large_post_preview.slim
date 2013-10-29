@@ -2,11 +2,15 @@
 | {% if post.image %}{{ post.image }}{% else %}{{ site.default_page_image }}{% endif %}
 | {% endcapture %}
 article.row.preview-image style="background-image: url({{background_image}});"
-  .large-12.columns.trans.dark.text-center
+  .large-12.columns.trans.dark
     h3
       a href="{{ post.url }}" {{ post.title }}
     p.light
       | {% slim date.slim %}
+      | {% unless post.category == page.category %}
+      |&nbsp;|&nbsp;
+      a href="{% category_url post.category %}" rel="author" {{post.category | upcase }}
+      | {% endunless %}
     p
       | {% capture description %}
       | {% if post.description %}{{ post.description | strip_breaks | condense_spaces | truncate:200 }}
@@ -15,3 +19,5 @@ article.row.preview-image style="background-image: url({{background_image}});"
       | {% endcapture %}
       | {{ description }}
       a< href="{{post.url}}" read more &raquo;
+
+

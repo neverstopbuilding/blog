@@ -9,22 +9,7 @@ layout: page
     .row
       .large-12.columns
         | {{ content }}
-    .row.top-spaced
-      .large-12.columns
-        p.end-of-article
-          em
-            | Enjoy this article? Read more like it in the
-            a< href="{{ site.url }}/archive" Archives
-            | .
-    footer.row
-      .large-12.columns
-        | {% slim ads/article_footer.slim %}
-        | {% slim ads/mobile_footer.slim %}
-        .row.light.spaced
-          .small-6.columns
-            a href="{{ page.previous.url }}" rel="prev" &laquo; PREVIOUS
-          .small-6.columns.text-right
-            a href="{{ page.next.url }}" rel="next" NEXT &raquo;
+    | {% slim footer/post_footer.slim %}
   aside.large-3.pull-9.columns
     .row.spaced
     | {% slim ads/article_left.slim %}

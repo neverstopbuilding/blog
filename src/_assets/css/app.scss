@@ -104,17 +104,35 @@ ul, ol {
 }
 
 .preview-image {
-    height: 27em;
     @include background-size(cover);
     position: relative;
+    height: 27em;
+    font-size: 1.2em;
+    @media #{$small} {
+        height: inherit;
+        padding-left: 25%;
+    }
+    &.row {
+        margin-bottom: 2em;
+    }
     & > .columns {
         position: absolute;
+        text-align: center;
         bottom: 0em;
+        @media #{$small} {
+            position: inherit;
+            text-align: left;
+        }
     }
-    font-size: 1em;
     .light {
         color: #777777;
         font-size: .8em;
+        font-weight: 200;
+        a {
+            font-weight: 200;
+            font-size: inherit;
+            color: #555;
+        }
     }
     p {
         a {
@@ -123,7 +141,13 @@ ul, ol {
     }
 }
 
-.post-title {
+.large-9{
+    .preview-image {
+        font-size: 1em;
+    }
+}
+
+.post-title, .category-title {
     font-size: 1em;
     line-height: 1.4em;
     margin-bottom: 1.2em;
@@ -177,6 +201,10 @@ ul, ol {
     padding-top: 3em;
 }
 
+.bottom-spaced{
+    padding-bottom: 2em;
+}
+
 .small-top-spaced {
     padding-top: 5em;
     @media #{$small} {
@@ -202,7 +230,7 @@ ul, ol {
     font-size: 2em;
     line-height: 1.2em;
     @media #{$small} {
-            font-size: 3em;
+        font-size: 3em;
     }
     a {
         font-weight: 200;
@@ -261,3 +289,9 @@ blockquote {
         padding-top: 2em;
     }
 }
+
+
+
+
+
+
