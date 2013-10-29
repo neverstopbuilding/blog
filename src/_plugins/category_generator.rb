@@ -1,7 +1,7 @@
 module Jekyll
   module Categories
     class CategoryPage < Page
-      def initialize(site, base, dir, category)
+      def initialize(site, base, dir, category, image = nil)
         @site = site
         @base = base
         @dir = dir
@@ -9,6 +9,7 @@ module Jekyll
 
         process(@name)
         read_yaml(File.join(base, '_layouts'), 'category_page.slim')
+        data['image'] = image if image
         data['category'] = category
         self.ext = 'slim'
         data['title'] = category.titlecase
@@ -36,7 +37,11 @@ module Jekyll
         if site.layouts.key? 'category_page'
           dir = site.config['category_dir'] || 'categories'
           site.categories.keys.each do |category|
-            write_category_page(site, File.join(dir, category.gsub(/\s/, '-').gsub(/[^\w-]/, '').downcase), category)
+            image = nil
+            site.categories[category].each do |post|
+              image = post.data['image'] if post.data['image']
+            end
+            write_category_page(site, File.join(dir, category.gsub(/\s/, '-').gsub(/[^\w-]/, '').downcase), category, image)
           end
         end
 
@@ -49,8 +54,8 @@ module Jekyll
 
       end
 
-      def write_category_page(site, dir, category)
-        index = CategoryPage.new(site, site.source, dir, category)
+      def write_category_page(site, dir, category, image)
+        index = CategoryPage.new(site, site.source, dir, category, image)
         index.render(site.layouts, site.site_payload)
         index.write(site.dest)
         site.static_files << index
