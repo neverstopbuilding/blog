@@ -1,5 +1,3 @@
-$(document).foundation();
-
 $('.end-of-article').waypoint(function(direction) {
     if (direction == 'down') {
         mixpanel.track("End of Article Reached", {
