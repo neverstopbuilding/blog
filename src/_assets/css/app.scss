@@ -56,6 +56,10 @@
 
 @import "compass/css3/background-size";
 
+ul {
+    font-weight: 200;
+}
+
 //Wraps all the rendered content of the page
 .content-wrapper{
     overflow-x: hidden;
@@ -110,12 +114,19 @@
     font-size: 1em;
     .light {
         color: #777777;
+        font-size: .8em;
     }
     p {
         a {
             font-size: .8em;
         }
     }
+}
+
+.post-title {
+    font-size: 1em;
+    line-height: 1.4em;
+    margin-bottom: 1.2em;
 }
 
 .trans {
@@ -128,6 +139,11 @@
     p, h1, h2, h3, h4, h5, h6 {
         font-weight: 100;
         color: #fff;
+    }
+    p {
+        font-size: 1em;
+        line-height: 1.6em;
+        margin-bottom: 1.5em;
     }
     a {
         color: #ccc;
@@ -230,4 +246,12 @@ p {
         background-color: #babdb6;
         padding: .2em;
     }
+}
+
+blockquote {
+    line-height: 2em;
+    font-size: 2em;
+    font-family: serif;
+    font-style: italic;
+    border: none;
 }
