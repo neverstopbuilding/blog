@@ -1,4 +1,13 @@
-.highlight  { background: #1e2426; color: #babdb6}
+.highlight {
+    background: #1e2426;
+    color: #babdb6;
+    padding-left: 1em;
+    padding-right: .3em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin-bottom: 3em;
+}
+
 .highlight .hll { background-color: #ffffcc }
 .highlight .c { color: #656763} /* Comment */
 .highlight .err { color: #babdb6} /* Error */

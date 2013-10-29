@@ -217,9 +217,9 @@ $default-float: left;
 
 // Style <code> tags
 
-// $code-color: darken($alert-color, 15%);
+$code-color: inherit;
 // $code-font-family: Consolas, 'Liberation Mono', Courier, monospace;
-// $code-font-weight: bold;
+$code-font-weight: inherit;
 
 // Style anchors
 
