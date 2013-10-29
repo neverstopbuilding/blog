@@ -30,7 +30,7 @@ layout: page
     | {% slim ads/article_left.slim %}
     .row
       .large-12.columns
-        h3 Related Articles
+        h3 Recent Articles
         | {% for post in site.related_posts limit: 6 %}
         p.post-title
           a href="{{ post.url }}" {{ post.title }}

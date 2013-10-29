@@ -7,13 +7,11 @@ tags: [php, sublime text 2, plugins, craftsmanship, text editor, phpcs, package 
 category: software engineering
 image: https://lh5.googleusercontent.com/-7kc4u8osMcg/UmsSz6ojpnI/AAAAAAAAJEM/CkWYJnjXGIQ/w1118-h630-no/plugs.jpg
 description: "Now allow me to step off my soapbox and offer you the 10 plugins that I use in my choice text editor, Sublime Text 2. Each will help improve your efficiency as a PHP code smith! I have ordered them by their usefulness should you feel inclined only to install a few."
-
 ---
 
-<blockquote>
-A determined soul will do more with a rusty monkey wrench than a loafer will accomplish with all the tools in a machine shop.
-<cite>Robert Hughes</cite>
-</blockquote>
+> A determined soul will do more with a rusty monkey wrench than a loafer will accomplish with all the tools in a machine shop.
+> <cite>Robert Hughes</cite>
+
 The above, indeed, captures my sentiments on the use of tools. Give Roger Federer a beat up, poorly strung, yard sale racket, and you can bet your shorts he'll crush you; no matter how many hundreds of dollars you spent on a carbon fiber object d'art.
 
 Thus it is with software engineering. Too often we can roll down the rabbit hole of tool optimization to the distraction of learning the ins and outs of our programming language, its standards, or best practices. And yet, we also must allow ourselves, having put in the necessary time to learn "why?", to implement tools that speed our development workflows and process. But make no mistake, your tools should be a natural result of improved skill, not as a means to acquire it.
