@@ -11,7 +11,7 @@ layout: page
         | {{ content }}
     .row.top-spaced
       .large-12.columns
-        p
+        p.end-of-article
           em
             | Enjoy this article? Read more like it in the
             a< href="{{ site.url }}/archive" Archives
@@ -29,9 +29,10 @@ layout: page
     .row.spaced
     | {% slim ads/article_left.slim %}
     .row
-      .large-12.columns
+      .large-12.columns.recent-posts
         h3 Recent Articles
         | {% for post in site.related_posts limit: 6 %}
         p.post-title
-          a href="{{ post.url }}" {{ post.title }}
+          a href="{{ post.url }}" name="{{post.title}}"
+            | {{ post.title }}
         | {% endfor %}
