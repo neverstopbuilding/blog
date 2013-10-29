@@ -1,3 +1,4 @@
+# Encoding: utf-8
 # Sitemap.xml Generator is a Jekyll plugin that generates a sitemap.xml file by
 # traversing all of the available posts and pages.
 #
@@ -44,20 +45,20 @@ module Jekyll
 
   # Change SITEMAP_FILE_NAME if you would like your sitemap file
   # to be called something else
-  SITEMAP_FILE_NAME = "sitemap.xml"
+  SITEMAP_FILE_NAME = 'sitemap.xml'
 
   # Any files to exclude from being included in the sitemap.xml
-  EXCLUDED_FILES = ["atom.xml", "404.slim"]
+  EXCLUDED_FILES = ['atom.xml', '404.slim']
 
   # Any files that include posts, so that when a new post is added, the last
   # modified date of these pages should take that into account
-  PAGES_INCLUDE_POSTS = ["index.slim"]
+  PAGES_INCLUDE_POSTS = ['index.slim']
 
   # Custom variable names for changefreq and priority elements
   # These names are used within the YAML Front Matter of pages or posts
   # for which you want to include these properties
-  CHANGE_FREQUENCY_CUSTOM_VARIABLE_NAME = "change_frequency"
-  PRIORITY_CUSTOM_VARIABLE_NAME = "priority"
+  CHANGE_FREQUENCY_CUSTOM_VARIABLE_NAME = 'change_frequency'
+  PRIORITY_CUSTOM_VARIABLE_NAME = 'priority'
 
   class Post
     attr_accessor :name
@@ -80,7 +81,7 @@ module Jekyll
 
     def location_on_server
       location = "#{site.config['url']}#{url}"
-      location.gsub(/\/index.html$/, "")
+      location.gsub(/\/index.html$/, '')
     end
   end
 
@@ -96,8 +97,8 @@ module Jekyll
       begin
         super(dest)
       rescue
+        false
       end
-
       true
     end
   end
@@ -105,29 +106,27 @@ module Jekyll
   class SitemapGenerator < Generator
 
     # Valid values allowed by sitemap.xml spec for change frequencies
-    VALID_CHANGE_FREQUENCY_VALUES = ["always", "hourly", "daily", "weekly",
-      "monthly", "yearly", "never"]
+    VALID_CHANGE_FREQUENCY_VALUES = %w[always hourly daily weekly monthly yearly never]
 
     # Goes through pages and posts and generates sitemap.xml file
     #
     # Returns nothing
     def generate(site)
-      sitemap = REXML::Document.new << REXML::XMLDecl.new("1.0", "UTF-8")
+      sitemap = REXML::Document.new << REXML::XMLDecl.new('1.0', 'UTF-8')
 
-      if (site.config['sitemap']['local'])
+      if site.config['sitemap']['local']
         puts 'Building sitemap from local repository.'
         root = File.expand_path(File.join(File.dirname(__FILE__), '..', '..'))
       else
         puts 'Building sitemap from fresh cloned repository.'
         root = File.expand_path(File.join(File.dirname(__FILE__), '..', '..', 'build', 'clone.git'))
-         Git.clone(site.config['sitemap']['repo'], 'build/clone.git')
-       end
+        Git.clone(site.config['sitemap']['repo'], 'build/clone.git')
+      end
 
        @git = Git.open(root)
 
-      urlset = REXML::Element.new "urlset"
-      urlset.add_attribute("xmlns",
-        "http://www.sitemaps.org/schemas/sitemap/0.9")
+      urlset = REXML::Element.new 'urlset'
+      urlset.add_attribute('xmlns', 'http://www.sitemaps.org/schemas/sitemap/0.9')
 
       @last_modified_post_date = fill_posts(site, urlset)
       fill_pages(site, urlset)
@@ -135,17 +134,15 @@ module Jekyll
       sitemap.add_element(urlset)
 
       # File I/O: create sitemap.xml file and write out pretty-printed XML
-      unless File.exists?(site.dest)
-        FileUtils.mkdir_p(site.dest)
-      end
-      file = File.new(File.join(site.dest, SITEMAP_FILE_NAME), "w")
+      FileUtils.mkdir_p(site.dest) unless File.exists?(site.dest)
+      file = File.new(File.join(site.dest, SITEMAP_FILE_NAME), 'w')
       formatter = REXML::Formatters::Pretty.new(4)
       formatter.compact = true
       formatter.write(sitemap, file)
       file.close
 
       # Keep the sitemap.xml file from being cleaned by Jekyll
-      site.static_files << Jekyll::SitemapFile.new(site, site.dest, "/", SITEMAP_FILE_NAME)
+      site.static_files << Jekyll::SitemapFile.new(site, site.dest, '/', SITEMAP_FILE_NAME)
     end
 
     # Create url elements for all the posts and find the date of the latest one
@@ -154,7 +151,7 @@ module Jekyll
     def fill_posts(site, urlset)
       last_modified_date = nil
       site.posts.each do |post|
-        if !excluded?(post.name)
+        unless excluded?(post.name)
           url = fill_url(site, post)
           urlset.add_element(url)
         end
@@ -162,7 +159,7 @@ module Jekyll
         path = post.full_path_to_source
         date = get_modified_date(path)
 
-        last_modified_date = date if last_modified_date == nil or date > last_modified_date
+        last_modified_date = date if last_modified_date.nil? || date > last_modified_date
       end
 
       last_modified_date
@@ -174,7 +171,7 @@ module Jekyll
     # Returns last_modified_date of index page
     def fill_pages(site, urlset)
       site.pages.each do |page|
-        if !excluded?(page.name)
+        unless excluded?(page.name)
           path = page.full_path_to_source
           if File.exists?(path)
             url = fill_url(site, page)
@@ -189,7 +186,7 @@ module Jekyll
     #
     # Returns url REXML::Element
     def fill_url(site, page_or_post)
-      url = REXML::Element.new "url"
+      url = REXML::Element.new 'url'
 
       loc = fill_location(page_or_post)
       url.add_element(loc)
@@ -197,12 +194,12 @@ module Jekyll
       lastmod = fill_last_modified(site, page_or_post)
       url.add_element(lastmod) if lastmod
 
-      if (page_or_post.data[CHANGE_FREQUENCY_CUSTOM_VARIABLE_NAME])
+      if page_or_post.data[CHANGE_FREQUENCY_CUSTOM_VARIABLE_NAME]
         change_frequency =
           page_or_post.data[CHANGE_FREQUENCY_CUSTOM_VARIABLE_NAME].downcase
 
-        if (valid_change_frequency?(change_frequency))
-          changefreq = REXML::Element.new "changefreq"
+        if valid_change_frequency?(change_frequency)
+          changefreq = REXML::Element.new 'changefreq'
           changefreq.text = change_frequency
           url.add_element(changefreq)
         else
@@ -210,10 +207,10 @@ module Jekyll
         end
       end
 
-      if (page_or_post.data[PRIORITY_CUSTOM_VARIABLE_NAME])
+      if page_or_post.data[PRIORITY_CUSTOM_VARIABLE_NAME]
         priority_value = page_or_post.data[PRIORITY_CUSTOM_VARIABLE_NAME]
         if valid_priority?(priority_value)
-          priority = REXML::Element.new "priority"
+          priority = REXML::Element.new 'priority'
           priority.text = page_or_post.data[PRIORITY_CUSTOM_VARIABLE_NAME]
           url.add_element(priority)
         else
@@ -228,7 +225,7 @@ module Jekyll
     #
     # Returns the location of the page or post
     def fill_location(page_or_post)
-      loc = REXML::Element.new "loc"
+      loc = REXML::Element.new 'loc'
       loc.text = page_or_post.location_on_server
       loc
     end
@@ -239,11 +236,11 @@ module Jekyll
     def fill_last_modified(site, page_or_post)
       path = page_or_post.full_path_to_source
 
-      lastmod = REXML::Element.new "lastmod"
+      lastmod = REXML::Element.new 'lastmod'
       date = get_modified_date(path)
       latest_date = find_latest_date(date, site, page_or_post)
 
-      if @last_modified_post_date == nil
+      if @last_modified_post_date.nil?
         # This is a post
         lastmod.text = latest_date.iso8601
       else
@@ -265,14 +262,12 @@ module Jekyll
     # Returns formatted output of latest date of page/post and any used layouts
     def find_latest_date(latest_date, site, page_or_post)
       layouts = site.layouts
-      layout = layouts[page_or_post.data["layout"]]
+      layout = layouts[page_or_post.data['layout']]
       while layout
         path = layout.full_path_to_source
         date = get_modified_date(path)
-
-        latest_date = date if (date > latest_date)
-
-        layout = layouts[layout.data["layout"]]
+        latest_date = date if date > latest_date
+        layout = layouts[layout.data['layout']]
       end
 
       latest_date
@@ -282,7 +277,7 @@ module Jekyll
     #
     # Returns latest of two dates
     def greater_date(date1, date2)
-      if (date1 >= date2)
+      if date1 >= date2
         date1
       else
         date2
@@ -313,8 +308,9 @@ module Jekyll
     def valid_priority?(priority)
       begin
         priority_val = Float(priority)
-        return true if priority_val >= 0.0 and priority_val <= 1.0
+        return true if priority_val >= 0.0 && priority_val <= 1.0
       rescue ArgumentError
+        false
       end
       false
     end
@@ -324,7 +320,7 @@ module Jekyll
     #
     # Returns date
     def get_modified_date(path)
-      relative_path = path.gsub(/^.+src\//,'src/')
+      relative_path = path.gsub(/^.+src\//, 'src/')
       date = @git.log.object(relative_path).last.date
       if date
         date

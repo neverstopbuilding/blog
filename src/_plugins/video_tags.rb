@@ -1,3 +1,4 @@
+# Encoding: utf-8
 # Title: Responsive YouTube embed tag for Jekyll
 # Author: Brett Terpstra <http://brettterpstra.com>
 # Description: Output a simple YouTube embed tag with code to make it responsive
@@ -17,20 +18,20 @@ module Jekyll
     @height = ''
 
     def initialize(tag_name, markup, tokens)
-      if markup =~ /(?:(?:https?:\/\/)?(?:www.youtube.com\/(?:embed\/|watch\?v=)|youtu.be\/)?(\S+)(?:\?rel=\d)?)(?:\s+(\d+)\s(\d+))?/i
+      if markup =~ %r{(?:(?:https?://)?(?:www.youtube.com/(?:embed/|watch\?v=)|youtu.be/)?(\S+)(?:\?rel=\d)?)(?:\s+(\d+)\s(\d+))?}i
         @videoid = $1
-        @width = $2 || "480"
-        @height = $3 || "360"
+        @width = $2 || '480'
+        @height = $3 || '360'
       end
       super
     end
 
     def render(context)
-      ouptut = super
+      super
       if @videoid
-        video = %Q{<div class="flex-video"><iframe width="#{@width}" height="#{@height}" src="http://www.youtube.com/embed/#{@videoid}?rel=0" frameborder="0" allowfullscreen></iframe></div>}
+        %Q{<div class="flex-video"><iframe width="#{@width}" height="#{@height}" src="http://www.youtube.com/embed/#{@videoid}?rel=0" frameborder="0" allowfullscreen></iframe></div>}
       else
-        "Error processing input, expected syntax: {% youtube video_id [width height] %}"
+        'Error processing input, expected syntax: {% youtube video_id [width height] %}'
       end
     end
   end
@@ -42,7 +43,7 @@ module Jekyll
     @height = ''
 
     def initialize(tag_name, markup, tokens)
-      if markup =~ /(?:(?:https?:\/\/)?vimeo.com(?:\/video)?\/)?(\w+)(?:\s+(\d+)\s(\d+))?/i
+      if markup =~ %r{(?:(?:https?://)?vimeo.com(?:/video)?/)?(\w+)(?:\s+(\d+)\s(\d+))?}i
         @videoid = $1
         @width = $2 || '640'
         @height = $3 || '480'
@@ -51,11 +52,11 @@ module Jekyll
     end
 
     def render(context)
-      ouptut = super
+      super
       if @videoid
-        video = %Q{<div class="flex-video vimeo"><iframe src="//player.vimeo.com/video/#{@videoid}?title=0&amp;byline=0&amp;portrait=0" width="#{@width}" height="#{@height}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>}
+        %Q{<div class="flex-video vimeo"><iframe src="//player.vimeo.com/video/#{@videoid}?title=0&amp;byline=0&amp;portrait=0" width="#{@width}" height="#{@height}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>}
       else
-        "Error processing input, expected syntax: {% vimeo video_id [width height] %}"
+        'Error processing input, expected syntax: {% vimeo video_id [width height] %}'
       end
     end
   end

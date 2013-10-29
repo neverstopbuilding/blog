@@ -1,12 +1,12 @@
 # Encoding: utf-8
 
-source "http://rubygems.org"
+source 'http://rubygems.org'
 ruby '2.0.0'
 
 gem 'rake', '~> 10.1.0'
 gem 'jekyll', '~> 1.2.1'
 gem 'jekyll-slim', '~> 0.8.2'
-gem 'jekyll-asset-pipeline'#, '~> 0.1.6'
+gem 'jekyll-asset-pipeline'
 gem 'compass', '~> 0.12.2'
 gem 'zurb-foundation', '~> 4.3.2'
 

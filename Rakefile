@@ -3,7 +3,7 @@
 require 'rubocop/rake_task'
 require 'levenshtein'
 
-#Settings
+# Settings
 
 valid_categories = [
   'robo garden',
@@ -43,7 +43,7 @@ namespace :posts do
 
     task :validate do
 
-      errors = { total: 0, no_category: [], categories_found: [], not_in_list: []}
+      errors = { total: 0, no_category: [], categories_found: [], not_in_list: [] }
       get_posts_data.each do |path, data|
         title = data['title']
 
@@ -66,12 +66,12 @@ namespace :posts do
       end
 
       if errors[:total] > 0
-        display_errors errors, :no_category, "The following posts lack a single category:"
-        display_errors errors, :categories_found, "The following posts have multiple categories listed:"
-        display_errors errors, :not_in_list, "The following have a unapproved category:"
-        raise "There were #{errors[:total]} errors found!"
+        display_errors errors, :no_category, 'The following posts lack a single category:'
+        display_errors errors, :categories_found, 'The following posts have multiple categories listed:'
+        display_errors errors, :not_in_list, 'The following have a unapproved category:'
+        fail "There were #{errors[:total]} errors found!"
       else
-        puts "No category errors found!"
+        puts 'No category errors found!'
       end
     end
 
@@ -94,9 +94,9 @@ namespace :posts do
         tags.each do |tag_b|
           pair = [tag_a, tag_b].sort.join
           unless tag_a == tag_b || flagged.include?(pair)
-            lnd = Levenshtein.normalized_distance(tag_a, tag_b, threshold=nil)
+            lnd = Levenshtein.normalized_distance(tag_a, tag_b, nil)
             if lnd < 0.2
-              puts "#{tag_a} and #{tag_b}: #{(lnd *100).round(2)}%"
+              puts "#{tag_a} and #{tag_b}: #{(lnd * 100).round(2)}%"
               flagged << pair
             end
           end
@@ -135,12 +135,12 @@ namespace :posts do
 
       end
       if errors[:total] > 0
-        display_errors errors, :no_tags, "The following posts are untagged:"
-        display_errors errors, :few_tags, "The following posts don't have enough tags:"
-        display_errors errors, :overlap, "The following posts have a tag that is the same as the category:"
-        raise "There were #{errors[:total]} errors found!"
+        display_errors errors, :no_tags, 'The following posts are untagged:'
+        display_errors errors, :few_tags, 'The following posts don\'t have enough tags:'
+        display_errors errors, :overlap, 'The following posts have a tag that is the same as the category:'
+        fail "There were #{errors[:total]} errors found!"
       else
-        puts "No tag errors found!"
+        puts 'No tag errors found!'
       end
     end
 
@@ -155,7 +155,7 @@ Rubocop::RakeTask.new
 desc 'Removes the build directory.'
 task :clean do
   FileUtils.rm_rf 'build'
-  FileUtils.rm_rf [".pygments-cache/**", ".sass-cache/**"]
+  FileUtils.rm_rf ['.pygments-cache/**', '.sass-cache/**']
 end
 
 desc 'Adds the build tmp directory for test kit creation.'
@@ -164,8 +164,8 @@ task :prepare do
 end
 
 task deploy: [:clean, :prepare, :test] do
-  system "git push origin master"
-  system "git push heroku master"
+  system 'git push origin master'
+  system 'git push heroku master'
 end
 
 namespace :assets do
@@ -201,7 +201,7 @@ def get_unique_tags
   get_posts_data.each do |path, data|
     if data['tags']
       data['tags'].each do |tag|
-        tags[tag] +=1
+        tags[tag] += 1
       end
     end
   end

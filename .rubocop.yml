@@ -4,6 +4,9 @@ LineLength:
 MethodLength:
   Max: 30
 
+ClassLength:
+  Enabled: false
+
 SymbolName:
   AllowCamelCase: false
 
@@ -17,5 +20,4 @@ AllCops:
   Includes:
     - Rakefile
     - Gemfile
-    - config.ru
     - Guardfile
