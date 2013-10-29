@@ -11,6 +11,14 @@ layout: page
   aside.large-3.pull-9.columns
     .row.top-spaced
       .large-12.columns
+        h2 Subscribe
+        p
+          | The
+          a<href="{% category_url page.category %}/atom.xml"
+            | {{ page.category | titlecase }} RSS Feed
+          |&nbsp;lets you subscribe to just the articles form this category!
+    .row
+      .large-12.columns
         h2 Categories
         | {% for category in site.categories %}
         | {% if category[0] != page.category %}

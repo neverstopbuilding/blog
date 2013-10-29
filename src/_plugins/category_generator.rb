@@ -29,20 +29,6 @@ module Jekyll
       end
     end
 
-    class CategoryList < Page
-      def initialize(site,  base, dir, categories)
-        @site = site
-        @base = base
-        @dir = dir
-        @name = 'index.html'
-
-        process(@name)
-        read_yaml(File.join(base, '_layouts'), 'category_list.slim')
-        data['categories'] = categories
-        self.ext = 'slim'
-      end
-    end
-
     class CategoryGenerator < Generator
       safe true
 
@@ -61,10 +47,6 @@ module Jekyll
           end
         end
 
-        if site.layouts.key? 'category_list'
-          dir = site.config['category_dir'] || 'categories'
-          write_category_list(site, dir, site.categories.keys.sort)
-        end
       end
 
       def write_category_page(site, dir, category)
@@ -81,12 +63,6 @@ module Jekyll
         site.static_files << index
       end
 
-      def write_category_list(site, dir, categories)
-        index = CategoryList.new(site, site.source, dir, categories)
-        index.render(site.layouts, site.site_payload)
-        index.write(site.dest)
-        site.static_files << index
-      end
     end
 
     # Returns a correctly formatted category url based on site configuration.
