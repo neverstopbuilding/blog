@@ -77,6 +77,10 @@ module CustomLiquidFilters
     input.gsub(/\s/, '-').gsub(/[^\w-]/, '').downcase
   end
 
+  def reverse_chrono(input)
+    input.select { |post| post.data['date'] }.sort_by { |post| post.data['date'] }.reverse
+  end
+
 end
 
 Liquid::Template.register_filter CustomLiquidFilters

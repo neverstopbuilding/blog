@@ -10,7 +10,8 @@ title: Projects
           | These are some of the projects that I have worked on or are currently in development.
   .large-9.columns
     header.row.top-spaced
-    | {% for post in site.pages %}
+    | {% assign sorted_pages = site.pages | reverse_chrono %}
+    | {% for post in sorted_pages %}
     | {% if post.project %}
     | {% slim project_preview.slim %}
     | {% endif %}
