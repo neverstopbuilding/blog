@@ -73,6 +73,10 @@ module CustomLiquidFilters
     input.titlecase
   end
 
+  def slugify(input)
+    input.gsub(/\s/, '-').gsub(/[^\w-]/, '').downcase
+  end
+
 end
 
 Liquid::Template.register_filter CustomLiquidFilters

@@ -3,6 +3,7 @@ layout: post
 title: "Setting up a Chef Build System with Rake"
 date: 2013-05-07 10:04
 category: devops
+project: chef broiler plate
 tags: [opscode chef, chef broiler plate, rake, build system, automation]
 ---
 *This is the second in a [series on the development of Chef Broiler Plate]({{ site.url }}/blog/categories/chef-broiler-plate/) in which we go over setting up a robust, TDD framework for Chef cookbook development.*

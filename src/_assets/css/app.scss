@@ -60,6 +60,18 @@ ul, ol {
     font-weight: 200;
 }
 
+aside.columns {
+    padding-right: inherit;
+    @media #{$small} {
+        padding-right: 2em;
+    }
+    font-size: .9em;
+}
+
+nav {
+    line-height: 1.4em;
+}
+
 //Wraps all the rendered content of the page
 .content-wrapper{
     overflow-x: hidden;
@@ -69,6 +81,12 @@ ul, ol {
     height: 20em;
     @include background-size(cover);
     margin-bottom: 3em;
+    .dark {
+        h1 {
+            font-size: 2.6em;
+            padding-top: .8em;
+        }
+    }
     & > .row {
         position: relative;
         height: 20em;
@@ -147,8 +165,7 @@ ul, ol {
     }
 }
 
-.post-title, .category-title {
-    font-size: 1em;
+.post-title, .category-title, .project-title {
     line-height: 1.4em;
     margin-bottom: 1.2em;
 }
@@ -200,7 +217,7 @@ ul, ol {
 }
 
 .top-spaced{
-    padding-top: 3em;
+    padding-top: 1em;
 }
 
 .bottom-spaced{
@@ -224,7 +241,7 @@ ul, ol {
     }
 
     .large-left-small-center {
-        text-align: right;
+        text-align: left;
     }
 }
 

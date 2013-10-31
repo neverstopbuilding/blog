@@ -2,7 +2,8 @@
 layout: post
 title: "RoboGarden Manual Testing Circuit Development"
 date: 2013-10-14 19:54
-category: robo garden
+category: hardware hacking
+project: robo garden
 tags:  [seven segment led, shift register, arduino, circuit design, breadboard, latch decoder]
 image: https://lh5.googleusercontent.com/-wW-QuP61Z14/UmAuhyOIOjI/AAAAAAAAJAE/DIi571e1KC0/w949-h712-no/IMG_1707.JPG
 ---

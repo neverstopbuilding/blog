@@ -155,7 +155,7 @@ Rubocop::RakeTask.new
 desc 'Removes the build directory.'
 task :clean do
   FileUtils.rm_rf 'build'
-  FileUtils.rm_rf ['.pygments-cache/**', '.sass-cache/**']
+  FileUtils.rm_rf ['.pygments-cache', '.sass-cache']
 end
 
 desc 'Adds the build tmp directory for test kit creation.'

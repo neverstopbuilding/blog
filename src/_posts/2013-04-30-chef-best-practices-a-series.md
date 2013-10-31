@@ -4,6 +4,7 @@ title: "Chef Best Practices: Chef Broiler Plate"
 date: 2013-04-30 12:24
 permalink: /opscode-chef-best-practices
 category: devops
+project: chef broiler plate
 tags: [opscode chef, chef broiler plate, infrastructure management, test driven development, virtual machine]
 ---
 ##A Little Background

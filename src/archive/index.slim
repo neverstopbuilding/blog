@@ -5,7 +5,30 @@ change_frequency: weekly
 image: https://lh6.googleusercontent.com/-X2O-APwAe5Y/Uml1w5ao5rI/AAAAAAAAJBg/KN18V_oW7eM/w1023-h668-no/archive.jpg
 ---
 .row.page
-  .large-9.push-3.columns
+  aside.large-3.columns
+    .row.top-spaced
+      .large-12.columns
+        h2 Projects
+        p.project-title
+            a href="{{ site.url }}/project" name="Projects Summary" Projects Summary
+        hr
+        | {% for a_page in site.pages %}
+        | {% if a_page.project %}
+        p.project-title
+          a href="{{ site.url}}/project/{{ a_page.project | slugify }}" name="{{ a_page.project | titlecase }}"
+            | {{ a_page.project | titlecase }}
+        | {% endif %}
+        | {% endfor %}
+    .row
+      .large-12.columns
+        h2 Categories
+        | {% for category in site.categories %}
+        | {% capture display_category %}{{ category[0] | titlecase }}{% endcapture %}
+        p.category-title
+          a href="{% category_url category[0] %}" name="{{display_category}}"
+            | {{display_category}}
+        | {% endfor %}
+  .large-9.columns
     | {% assign first_year = true %}
     | {% for post in site.posts reverse %}
     | {% capture this_month %}{{ post.date | date: "%B" }}{% endcapture %}
@@ -33,13 +56,4 @@ image: https://lh6.googleusercontent.com/-X2O-APwAe5Y/Uml1w5ao5rI/AAAAAAAAJBg/KN
     | {% endfor %}
     | </div></section></div></section>
     footer.bottom-spaced
-  aside.large-3.pull-9.columns
-    .row.top-spaced
-      .large-12.columns
-        h2 Categories
-        | {% for category in site.categories %}
-        | {% capture display_category %}{{ category[0] | titlecase }}{% endcapture %}
-        p.category-title
-          a href="{% category_url category[0] %}" name="{{display_category}}"
-            | {{display_category}}
-        | {% endfor %}
+

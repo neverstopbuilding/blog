@@ -3,6 +3,7 @@ layout: post
 title: "Chef Cookbook Code Quality with Foodcritic"
 date: 2013-05-22 12:34
 category: devops
+project: chef broiler plate
 tags: [opscode chef, chef broiler plate, foodcritic, test driven development, tdd, code quality]
 ---
 

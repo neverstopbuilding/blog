@@ -3,6 +3,7 @@ layout: post
 title: "Chef Dependency Management with Berkshelf"
 date: 2013-06-18 10:31
 category: devops
+project: chef broiler plate
 tags: [opscode chef, chef broiler plate, berkshelf, dependency management, cookbooks, minitest]
 ---
 

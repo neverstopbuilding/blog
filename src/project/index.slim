@@ -1,0 +1,19 @@
+---
+layout: page
+title: Projects
+---
+.row.page.top-spaced
+  aside.large-3.columns
+    .row.top-spaced
+      .large-12.columns.large-left-small-center
+        p
+          | These are some of the projects that I have worked on or are currently in development.
+  .large-9.columns
+    header.row.top-spaced
+    | {% for post in site.pages %}
+    | {% if post.project %}
+    | {% slim project_preview.slim %}
+    | {% endif %}
+    | {% endfor %}
+    | {% slim footer/page_footer.slim %}
+

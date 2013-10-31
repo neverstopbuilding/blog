@@ -321,13 +321,11 @@ module Jekyll
     # Returns date
     def get_modified_date(path)
       relative_path = path.gsub(/^.+src\//, 'src/')
-      date = @git.log.object(relative_path).last.date
-      if date
-        date
-      else
+      begin
+        @git.log.object(relative_path).last.date
+      rescue
         File.mtime(path)
       end
     end
-
   end
 end

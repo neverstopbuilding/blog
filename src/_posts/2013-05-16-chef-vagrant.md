@@ -3,6 +3,7 @@ layout: post
 title: "Configuring Vagrant for Chef"
 date: 2013-05-16 17:31
 category: devops
+project: chef broiler plate
 tags: [opscode chef, chef broiler plate, vagrant, virtual machine, bentobox]
 ---
 

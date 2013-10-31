@@ -2,7 +2,8 @@
 layout: post
 title: "Designing and Building the Micro Switch Mount"
 date: 2013-10-17 16:02
-category: robo garden
+category: hardware hacking
+project: robo garden
 tags: [micro switch, hardware debouncing, schmitt inverter, arduino, 3d printing]
 image: https://lh3.googleusercontent.com/-J-yEeuODKtU/UmAuh62wLpI/AAAAAAAAJAE/vtR87IvCbHc/w891-h668-no/IMG_1706.JPG
 description: The design and 3D printing of the micro switch mount as well as hardware debouncing using a Schmitt inverter chip connected to the Ardunio. This will prevent over travel of the carriage and allow it to be homed to a default position.

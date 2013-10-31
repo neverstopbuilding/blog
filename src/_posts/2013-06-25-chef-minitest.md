@@ -3,6 +3,7 @@ layout: post
 title: "Verify your Chef Infrastructure with Minitest"
 date: 2013-06-25 12:12
 category: devops
+project: chef broiler plate
 tags: [opscode chef, chef broiler plate, minitest, cookbook testing, test driven development]
 ---
 

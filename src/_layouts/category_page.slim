@@ -1,7 +1,7 @@
 ---
 layout: page
 ---
-.row.page
+.row.page.top-spaced
   .large-9.push-3.columns
     header.row.top-spaced
     | {% for post in site.categories[page.category] %}
@@ -10,7 +10,7 @@ layout: page
     | {% slim footer/page_footer.slim %}
   aside.large-3.pull-9.columns
     .row.top-spaced
-      .large-12.columns
+      .large-12.columns.large-left-small-center
         h2 Subscribe
         p
           | The
@@ -18,7 +18,7 @@ layout: page
             | {{ page.category | titlecase }} RSS Feed
           |&nbsp;lets you subscribe to just the articles form this category!
     .row
-      .large-12.columns
+      .large-12.columns.large-left-small-center
         h2 Categories
         | {% for category in site.categories %}
         | {% if category[0] != page.category %}
