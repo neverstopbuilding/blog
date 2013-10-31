@@ -4,21 +4,28 @@ layout: nil
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[{{ page.category | titlecase }}]]></title>
-  <link href="{{ site.url }}{% category_url page.category %}/atom.xml" rel="self"/>
-  <link href="{{ site.url }}{% category_url page.category %}"/>
+  <title><![CDATA[{{ page.source_project | titlecase }} Project Feed]]></title>
+  <link href="{{ site.url }}/project/{{page.source_project | slugify}}/atom.xml" rel="self"/>
+  <link href="{{ site.url }}/project/{{page.source_project | slugify}}"/>
     {% capture updated_on %}
-    {% for post in site.categories[page.category] limit: 1 %}
+    {% assign first = true %}
+    {% for post in site.posts %}
+    {% if post.project == page.source_project %}
+    {% if first == true %}
+    {% assign first = false %}
     {{ post.date | date_to_xmlschema}}
+    {% endif %}
+    {% endif %}
     {% endfor %}
     {% endcapture %}
-  <updated>{{updated_on}}</updated>
-  <id>{{ site.url }}{% category_url page.category %}</id>
+  <updated>{{ updated_on }}</updated>
+  <id>{{ site.url }}/project/{{page.source_project | slugify}}</id>
   <author>
     <name><![CDATA[{{ site.author | strip_html }}]]></name>
     {% if site.email %}<email><![CDATA[{{ site.email }}]]></email>{% endif %}
   </author>
-  {% for post in site.categories[page.category] limit: 10 %}
+  {% for post in site.posts %}
+  {% if post.project == page.source_project %}
   <entry>
     <title type="html"><![CDATA[{{ post.title | cdata_escape }}]]></title>
     <link href="{{ site.url }}{{ post.url }}"/>
@@ -31,5 +38,6 @@ layout: nil
     {% endcapture %}
     <content type="html"><![CDATA[{{rss_content | cddata_escape}}]]></content>
   </entry>
+  {% endif %}
   {% endfor %}
 </feed>

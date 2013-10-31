@@ -7,7 +7,12 @@ layout: nil
   <title><![CDATA[{{ site.title }}]]></title>
   <link href="{{ site.url }}/atom.xml" rel="self"/>
   <link href="{{ site.url }}"/>
-  <updated>{{ site.time | date_to_xmlschema }}</updated>
+    {% capture updated_on %}
+    {% for post in site.posts limit: 1 %}
+    {{ post.date | date_to_xmlschema}}
+    {% endfor %}
+    {% endcapture %}
+  <updated>{{updated_on}}</updated>
   <id>{{ site.url }}/</id>
   <author>
     <name><![CDATA[{{ site.author | strip_html }}]]></name>

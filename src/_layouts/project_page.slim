@@ -26,7 +26,7 @@ layout: page
         h2 Subscribe
         p
           | Use the
-          a<href="{{ site.url }}/atom.xml"
+          a<href="{{ site.url }}/project/{{page.project | slugify}}/atom.xml"
             | {{ page.project | titlecase }} RSS Feed
           |&nbsp;to subscribe updates about this project!
     .row.bottom-spaced

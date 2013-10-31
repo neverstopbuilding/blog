@@ -12,3 +12,7 @@
   | {% slim date.slim %}
   |&nbsp;|&nbsp;
   a href="{% category_url page.category %}" rel="author" {{page.category | upcase }}
+  | {% if page.project %}
+  |&nbsp;|&nbsp;
+  a href="{{site.url}}/project/{{page.project | slugify }}" rel="author" {{page.project | upcase }}
+  | {% endif %}
