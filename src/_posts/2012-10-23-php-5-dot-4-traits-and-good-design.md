@@ -6,7 +6,7 @@ category: software engineering
 tags:  [php, design patterns, traits, zendcon, liskov substitution principle]
 ---
 
-As a follow up to [my first]({{ site.url}}/cool-little-features-of-php-5-4) post on the small improvements in php 5.4, this article will go deeper into one of the cooler features of the release: [traits](http://us3.php.net/traits). Much of this was inspired by a great talk I went to at [ZendCon](http://zendcon.com/) by [Ilia Alshanetsky](https://twitter.com/iliaa).
+As a follow up to [my first]({{ site.url}}/cool-little-features-of-php-5-dot-4) post on the small improvements in php 5.4, this article will go deeper into one of the cooler features of the release: [traits](http://us3.php.net/traits). Much of this was inspired by a great talk I went to at [ZendCon](http://zendcon.com/) by [Ilia Alshanetsky](https://twitter.com/iliaa).
 
 ##What is a Trait?
 A trait is PHP 5.4's solution to the lack of multiple inheritance in the language and a way to avoid hierarchical inheritance chains. Another way to think of it is that including traits in your classes is a clean way to keep your code dry without breaking good design principles.

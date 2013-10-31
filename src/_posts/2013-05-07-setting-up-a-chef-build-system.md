@@ -12,7 +12,7 @@ A mentor of mine once said:
 
 > Always start with the build system.
 
-Having already set up or project in the [last post]({{ site.url }}/chef-best-practices-a-series/) we are ready to do exactly that. The build system is important as it allows us to collect commonly executed tasks which will save us time. Right now we are just fleshing out the task placeholders, in future posts we will implement these and add new ones. These are the steps I took.
+Having already set up or project in the [last post]({{ site.url }}/opscode-chef-best-practices) we are ready to do exactly that. The build system is important as it allows us to collect commonly executed tasks which will save us time. Right now we are just fleshing out the task placeholders, in future posts we will implement these and add new ones. These are the steps I took.
 
 ##Set Ruby Version
 Create a `.rvmrc` and `.rbenv-version` files to set the ruby version for the project.
