@@ -67,6 +67,6 @@ All of these causes of failure really can be boiled down to one: Software will f
 - [Martin Fowler's Design Patterns](http://martinfowler.com/eaaCatalog/)
 - [Agile Software Development](http://en.wikipedia.org/wiki/Agile_software_development)
 - [Lean Software Development ](http://en.wikipedia.org/wiki/Lean_software_development)
-- [Behavior Driven Development](http://behaviour-driven.org/)
+- [Behavior Driven Development](http://dannorth.net/introducing-bdd//)
 - [Behat](http://behat.org/) (BDD Framework for PHP)
 - [PHPDocumentor](http://www.phpdoc.org/) (Automated documentation for PHP)

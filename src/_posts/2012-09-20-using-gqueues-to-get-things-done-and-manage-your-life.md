@@ -12,8 +12,6 @@ I'm a big fan of [gQueues](https://www.gqueues.com/) as a light way way to set u
 - Integrates seamlessly with [google calendar](http://www.gqueues.com/help/calendarIntegration)
 - Has a nice [chrome extension](http://www.gqueues.com/help/chromeExtension) to clip websites
 
-I like it so much, that I built a simple dashboard widget for OSX which is detailed in [this post.](http://tmblr.co/Zwk6lwPT5YUc)
-
 ##A Simple GTD Setup
 The purpose of this post is to share how I have set it up, which I hope will help you explore what works best for your personal workflow. I tend to bounce around between to-do list apps trying new things. But the following configuration has lasted me quite a while.
 

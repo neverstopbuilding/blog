@@ -6,7 +6,7 @@ category: productivity
 tags:  [agile, trello, life management, todo lists, task management]
 ---
 
-This is a big deal. It used to be that I would switch todo list systems all the time. I'd spend hours configuring my lists, setting up my contexts, fiddling with workflows. I've been pretty happy with gQueues and have used it for a long time. I still think it is one of the best tools I have used. However, now I must say that lately I find [Trello](trello.com) to be even more useful. Not only from a technical perspective but also a philosophical one.
+This is a big deal. It used to be that I would switch todo list systems all the time. I'd spend hours configuring my lists, setting up my contexts, fiddling with workflows. I've been pretty happy with gQueues and have used it for a long time. I still think it is one of the best tools I have used. However, now I must say that lately I find [Trello](http://trello.com) to be even more useful. Not only from a technical perspective but also a philosophical one.
 
 I am suggesting that it is time to live an Agile life. And in living one, Trello is a huge help.
 
@@ -47,7 +47,7 @@ And this is actually the passage that gave me the final idea for this post, to c
 Get rid of the lists. So much of our todo lists are just endless goals, we keep list upon list and it always feels like we never get anything done. Lists get outdated, they get stale, they fill up with meaningless things that seem important at the time.
 
 ##How Does Trello Help?
-[Trello](trello.com), if you are not aware, is a really clean and slick [kanban](http://www.kanbanblog.com/explained/index.html) style list builder. It works perfect for projects where each "card" has to go through a process. It could be as simple as: "Todo", "Doing", "Done" or get much more complicated. It really serves agile software projects but it also can serve your life just as well.
+[Trello](http://trello.com), if you are not aware, is a really clean and slick [kanban](http://www.kanbanblog.com/explained/index.html) style list builder. It works perfect for projects where each "card" has to go through a process. It could be as simple as: "Todo", "Doing", "Done" or get much more complicated. It really serves agile software projects but it also can serve your life just as well.
 
 I have yet to do a full inventory of all things I might need to do, but this is pretty much it. I *do* have some other boards for more specific projects, but that is only on an as-needed basis, and typically work related. Here is the run down:
 

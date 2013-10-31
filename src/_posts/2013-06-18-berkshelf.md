@@ -7,7 +7,7 @@ project: chef broiler plate
 tags: [opscode chef, chef broiler plate, berkshelf, dependency management, cookbooks, minitest]
 ---
 
-*This is the ninth installment of a [series on the development of Chef Broiler Plate]({{ site.url }}/blog/categories/chef-broiler-plate/) in which we discuss setting up a robust, ted framework for Chef cookbook development.*
+*This is the ninth installment of a [series on the development of Chef Broiler Plate]({{ site.url }}/project/chef-broiler-plate) in which we discuss setting up a robust, ted framework for Chef cookbook development.*
 
 [Recently]({{ site.url }}/spork/) we discussed using spark to manage the workflow, versioning, and environments while developing cookbooks. In this article we will integrate the "[Berkshelf](http://berkshelf.com/)" utility. Berkshelf is basically a package manager for community cookbooks. We can leverage some of the great work of the Chef community by adding in cookbooks that already solve our problems. Specifically, we are going to add the [mini test handler](https://github.com/btm/minitest-handler-cookbook) community cookbook to our project for verification and testing purposes of the real provisioned server.
 

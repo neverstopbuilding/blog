@@ -46,4 +46,4 @@ Our product was behind schedule, we kept changing the vision of the product, and
 Overall, it was an incredible experience and I learned more than most of my paid internships. I would do it again in a heart beat, which is why I've caught the startup bug and am working on my own.
 
 ---
-*Sal current runs a [blog on crowd funding at www.crowdcrux.com](www.crowdcrux.com) as well as [Hireworx](Hireworx).*
+*Sal current runs a [blog on crowd funding](http://www.crowdcrux.com) as well as [Hireworx](http://welcome.hireworx.com/).*

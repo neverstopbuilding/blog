@@ -17,10 +17,6 @@ I wanted to do things like this:
 
 And have card 24 move from my "Ready for Development" list to my "Doing" list, adding the commit message to the card as a comment.
 
-I started with the work of [CodyClark](https://github.com/CodyClark/github-trello) and [zanker](https://github.com/zanker/github-trello) but modified / simplified it a great deal so that I could get it up an running on Heroku with my limited knowledge of that and Ruby.
-
-##This is the one you want: [jrobertfox/github-trello](https://github.com/jasonrobertfox/github-trello)
-
 This post will serve as a general set up guide for the whole *thang.*
 
 ##Set up Heroku
@@ -35,7 +31,7 @@ Go get a free account [here](http://www.heroku.com/). Follow the instructions to
 ##Deploy to Heroku
 Follow these steps replacing the flagged values with the ones you gathered above:
 
-- clone [this repo.](https://github.com/jasonrobertfox/github-trello)
+- clone [this repo.](https://github.com/zanker/github-trello)
 - `cd github-trello` - go into that directory
 - `heroku create` - create the Heroku app
 - `heroku config:add api_key=<API_KEY> oauth_token=<OATH_TOKEN> board_id=<BOARD_ID> start_list_target_id=<ID> finish_list_target_id=<ID>` - add all your details

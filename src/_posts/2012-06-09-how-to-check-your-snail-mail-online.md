@@ -19,7 +19,7 @@ any where in the world.
 
 ##The Solution
 
-A simple googling found me [mailboxforwarding.com](mailboxforwarding.com) a pretty cool
+A simple googling found me [mailboxforwarding.com](http://mailboxforwarding.com) a pretty cool
 service that will let you set up and address and they scan and process
 your mail for you, basically turning that offensive paper stuff from the
 1800s into email. From their site:

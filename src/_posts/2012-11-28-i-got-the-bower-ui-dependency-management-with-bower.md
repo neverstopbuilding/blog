@@ -8,7 +8,7 @@ tags:  [bower, dependency management, ui assets, node, package management]
 
 I have been getting my learn on of late, recently reaching a milestone on a CRM tool for the Ovarian Cancer National Alliance, I now have all this free time to explore new and fascinating things. Enter [Research Bug](http://researchbug.tumblr.com/), a web app my buddy and I are working on to streamline the white hot UX research process.
 
-Enough back story! This post is about using [Bower](http://twitter.github.com/bower/) to manage the dependencies of the UI assets. I may change this as I explore rapid deployment options, but for now it works well. Here is how you can use it in a clean way:
+Enough back story! This post is about using [Bower](https://github.com/bower/bower) to manage the dependencies of the UI assets. I may change this as I explore rapid deployment options, but for now it works well. Here is how you can use it in a clean way:
 
 ##Install Bower
 Make sure you have [node](http://nodejs.org/).

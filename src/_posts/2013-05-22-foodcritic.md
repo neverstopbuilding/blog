@@ -7,7 +7,7 @@ project: chef broiler plate
 tags: [opscode chef, chef broiler plate, foodcritic, test driven development, tdd, code quality]
 ---
 
-*This is the sixth section of a [series on the development of Chef Broiler Plate]({{ site.url }}/blog/categories/chef-broiler-plate/) in which we go over setting up a robust, TDD framework for Chef cookbook development.*
+*This is the sixth section of a [series on the development of Chef Broiler Plate]({{ site.url }}/project/chef-broiler-plate) in which we go over setting up a robust, TDD framework for Chef cookbook development.*
 
 [Last time]({{ site.url }}/chefspec/) we created a sample "Message of the Day" cookbook in a test driven way. In this short chapter we will add [Foodcritic](http://acrmp.github.io/foodcritic/) to test the code quality of our cookbooks. More subtle than outright functionally tests, Foodcritic will reference some leading best practice rules to ensure your cookbooks are squeaky clean.
 

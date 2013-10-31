@@ -4,6 +4,7 @@ title: "The DTO Pattern: How to Generate PHP DTOs Quickly with DTOx"
 date: 2013-01-22 20:15
 permalink: /data-transfer-object
 category: software engineering
+project: dtox
 tags:  [dtox, design patterns, dto, data transfer object, php, domain driven design]
 ---
 
@@ -54,7 +55,7 @@ The above class seems simple enough and you could pass that back to your control
 Now you can't just grab the name of the city, so you would have to update the presentation layer, and possibly violate the [law of Demeter](http://en.wikipedia.org/wiki/Law_of_Demeter) in the process. It would be better to simply create processes that consistently translates your domain objects into the correct DTO and remove the dependency of the presentation layer on the architecture of the underlying application.
 
 ##DTOx to the rescue!
-So perhaps now you think: "Ok, DTOs are useful, but it's still more code to write and test." This is where you can leverage [this little library](http://jrobertfox.github.com/DTOx/) I put together that will **generate both the DTO and the associated test for you!** All you need to do is install it for your project and supply some command line properties and you are on your way. Let's see how it works:
+So perhaps now you think: "Ok, DTOs are useful, but it's still more code to write and test." This is where you can leverage [this little library](https://github.com/jasonrobertfox/DTOx) I put together that will **generate both the DTO and the associated test for you!** All you need to do is install it for your project and supply some command line properties and you are on your way. Let's see how it works:
 
 ###1. Install with Composer
 Create a composer file:

@@ -7,7 +7,7 @@ project: chef broiler plate
 tags: [opscode chef, chef broiler plate, vagrant, virtual machine, bentobox]
 ---
 
-*This is the fourth installment of a [series on the development of Chef Broiler Plate]({{ site.url }}/blog/categories/chef-broiler-plate/) in which we go over setting up a robust, TDD framework for Chef cookbook development.*
+*This is the fourth installment of a [series on the development of Chef Broiler Plate]({{ site.url }}/project/chef-broiler-plate) in which we go over setting up a robust, TDD framework for Chef cookbook development.*
 
 Having prepared our CI system and configured our Knife tool in the [last post]({{ site.url }}/chef-travis-and-knife/) its now time to finish or basic setup procedures by setting up a virtual machine with [Vagrant](http://www.vagrantup.com/). This will give us a local server in which to develop and test our sample cookbook.
 

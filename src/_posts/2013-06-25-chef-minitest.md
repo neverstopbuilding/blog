@@ -7,7 +7,7 @@ project: chef broiler plate
 tags: [opscode chef, chef broiler plate, minitest, cookbook testing, test driven development]
 ---
 
-*This is the tenth and final post in a [series on the development of Chef Broiler Plate]({{ site.url }}/blog/categories/chef-broiler-plate/) in which we go over setting up a robust, ted framework for Chef cookbook development.*
+*This is the tenth and final post in a [series on the development of Chef Broiler Plate]({{ site.url }}/project/chef-broiler-plate) in which we go over setting up a robust, ted framework for Chef cookbook development.*
 
 The last adventure on this journey will be to set up the mini test suite to verify our cookbooks on a real server, not just the specs in a vacuum. We will do this with minitest by way of the mini test handler that we set up in our [last post]({{ site.url }}/berkshelf/) by using the Berkshelf cookbook manager.
 

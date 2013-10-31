@@ -26,6 +26,6 @@ There is a part of the presentation where I intently look into my computer, but 
 Finally you can find the source code for the presentation over at Github: [https://github.com/jasonrobertfox/demo-sauce-labs](https://github.com/jasonrobertfox/demo-sauce-labs)
 
 ##Thanks
-Thanks to all who came out an supported, and especially to [@TourDeDave](https://twitter.com/TourDeDave) and [@DCSelenium](https://twitter.com/DCSelenium) for holding the [meetup](http://www.meetup.com/DC-Selenium-Meetup-Group/). If anyone has any follow up questions, don't hesitate to contact me below!
+Thanks to all who came out an supported, and especially to [@TourDeDave](https://twitter.com/TourDeDave) and DCAST for holding the [meetup](http://www.meetup.com/D-CAST/). If anyone has any follow up questions, don't hesitate to contact me below!
 
 
