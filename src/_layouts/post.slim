@@ -2,10 +2,18 @@
 layout: page
 og_type: article
 ---
+| {% capture description %}
+| {% if page.description %}{{ page.description | strip_breaks | condense_spaces | truncate:150 }}
+| {% else %}{{ page.content | markdownify | strip_html | strip_breaks | decode | condense_spaces | truncate:150 }}
+| {% endif %}
+| {% endcapture %}
+| {% capture keywords %}{{page.categories | join: ', '}}, {{page.tags | join: ', '}}{% endcapture %}
 .row.post
   article.large-9.push-3.columns
     header.row.spaced
       .large-12.columns.large-right-small-center
+        meta itemprop="description" content="{{description}}"
+        meta itemprop="keywords" content="{{keywords | clean_keywords}}"
         | {% slim meta.slim %}
     .row
       .large-12.columns itemprop="articleBody"
