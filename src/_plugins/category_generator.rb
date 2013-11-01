@@ -11,6 +11,8 @@ module Jekyll
         read_yaml(File.join(base, '_layouts'), 'category_page.slim')
         data['image'] = image if image
         data['category'] = category
+        data['description'] = "Articles related to #{category.titlecase}, from Never Stop Building."
+        data['tags'] = [category]
         self.ext = 'slim'
         data['title'] = category.titlecase
       end
@@ -26,6 +28,7 @@ module Jekyll
         process(@name)
         read_yaml(File.join(base, '_layouts'), 'category_feed.xml')
         data['category'] = category
+        data['description'] = "A Feed of articles related to #{category.titlecase}, from Never Stop Building."
         data['title'] = category.titlecase
       end
     end

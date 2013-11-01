@@ -10,14 +10,6 @@ head
   title
     | {% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}
 
-  meta charset="utf-8"
-  meta name="author" content="{{ site.author }}"
-  meta name="viewport" content="width=device-width, initial-scale=1"
-  meta name="HandheldFriendly" content="True"
-  meta name="MobileOptimized" content="320"
-  meta name="google-site-verification" content="pbSGBfIzQE8RHV7p-VLLoate8pJ1P26EiUbSy_B1Os4"
-  meta name="alexaVerifyID" content="XfmiNGbk4cll3f_rgofOLGtW9Vc"
-
   | {% if page.index %}
   | {% capture description %}{{ site.description }}{% endcapture %}
   | {% else %}
@@ -27,19 +19,46 @@ head
   | {% endif %}
   | {% endcapture %}
   | {% endif %}
-  meta name="description" content="{{ description }}"
 
   | {% capture keywords %}{{page.categories | join: ', '}}, {{page.tags | join: ', '}}{% endcapture %}
+
+  | {% capture canonical %}{{ site.url }}{% if site.permalink contains '.html' %}{{ page.url }}{% else %}{{ page.url | remove:'/index.html' }}{% endif %}{% endcapture %}
+
+  | {% capture og_image %}
+  | {% if page.image %}{{ page.image }}{% else %}{{ site.default_page_image }}{% endif %}
+  | {% endcapture %}
+
+  | {% capture og_type %}{% if page.layout == "post" %}
+  | article
+  | {% else %}
+  | blog
+  | {% endif %}{% endcapture %}
+
+  meta charset="utf-8"
+  meta name="author" content="{{ site.author }}"
+  meta name="viewport" content="width=device-width, initial-scale=1"
+  meta name="HandheldFriendly" content="True"
+  meta name="MobileOptimized" content="320"
+  meta name="google-site-verification" content="pbSGBfIzQE8RHV7p-VLLoate8pJ1P26EiUbSy_B1Os4"
+  meta name="alexaVerifyID" content="XfmiNGbk4cll3f_rgofOLGtW9Vc"
+  meta name="description" content="{{ description }}"
   | {% if keywords %}
   meta name="keywords" content="{{ keywords | clean_keywords }}"
   | {% endif %}
+  meta property="og:image" content="{{og_image}}"
+  meta property="og:url" content="{{canonical}}"
+  meta property="og:title" content="{{page.title}}"
+  meta property="og:site_name" content="{{site.title}}"
+  meta property="og:type" content="{{og_type}}"
+  meta property="og:description" content="{{description}}"
 
   link rel="author" href="{{ site.google_plus }}?rel=author"
   link rel="author" href="{{ site.url}}/humans.txt"
   link rel="icon" href="{{ site.url }}/favicon.ico"
+  | {% if page.index == true %}
   link rel="alternate" href="{{ site.feed }}" title="{{site.title}}" type="application/atom+xml"
   link rel="alternate" href="{{ site.url }}/atom.xml" title="{{site.title}}" type="application/atom+xml"
-  | {% capture canonical %}{{ site.url }}{% if site.permalink contains '.html' %}{{ page.url }}{% else %}{{ page.url | remove:'index.html' }}{% endif %}{% endcapture %}
+  | {% endif %}
   link rel="canonical" href="{{ canonical }}"
 
   | {% css_asset_tag global_css %}
