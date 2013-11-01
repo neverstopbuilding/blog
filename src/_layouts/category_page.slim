@@ -24,7 +24,7 @@ layout: page
         | {% if category[0] != page.category %}
         | {% capture display_category %}{{ category[0] | titlecase }}{% endcapture %}
         p.category-title
-          a href="{% category_url category[0] %}" name="{{display_category}}"
+          a href="{% category_url category[0] %}" title="{{display_category}}"
             | {{display_category}}
         | {% endif %}
         | {% endfor %}

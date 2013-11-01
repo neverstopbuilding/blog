@@ -18,6 +18,6 @@ layout: page
         h3 Recent Articles
         | {% for post in site.related_posts limit: 6 %}
         p.post-title
-          a href="{{ post.url }}" name="{{post.title}}"
+          a href="{{ post.url }}" title="{{post.title}}"
             | {{ post.title }}
         | {% endfor %}

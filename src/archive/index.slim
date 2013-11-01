@@ -11,12 +11,12 @@ image: https://lh6.googleusercontent.com/-X2O-APwAe5Y/Uml1w5ao5rI/AAAAAAAAJBg/KN
       .large-12.columns
         h2 Projects
         p.project-title
-            a href="{{ site.url }}/project" name="Projects Summary" Projects Summary
+            a href="{{ site.url }}/project" title="Projects Summary" Projects Summary
         hr
         | {% for a_page in site.pages %}
         | {% if a_page.project %}
         p.project-title
-          a href="{{ site.url}}/project/{{ a_page.project | slugify }}" name="{{ a_page.project | titlecase }}"
+          a href="{{ site.url}}/project/{{ a_page.project | slugify }}" title="{{ a_page.project | titlecase }}"
             | {{ a_page.project | titlecase }}
         | {% endif %}
         | {% endfor %}
@@ -26,7 +26,7 @@ image: https://lh6.googleusercontent.com/-X2O-APwAe5Y/Uml1w5ao5rI/AAAAAAAAJBg/KN
         | {% for category in site.categories %}
         | {% capture display_category %}{{ category[0] | titlecase }}{% endcapture %}
         p.category-title
-          a href="{% category_url category[0] %}" name="{{display_category}}"
+          a href="{% category_url category[0] %}" title="{{display_category}}"
             | {{display_category}}
         | {% endfor %}
   .large-9.columns
@@ -40,14 +40,14 @@ image: https://lh6.googleusercontent.com/-X2O-APwAe5Y/Uml1w5ao5rI/AAAAAAAAJBg/KN
     | {% if first_year == true %}{% assign first_year = false %}{% else %}
     | </div></section></div></section>
     | {% endif %}
-    | <section class="row top-spaced" name="{{year}}"><div class="large-12 columns"><h2>{{year}}</h2>
+    | <section class="row top-spaced" title="{{year}}"><div class="large-12 columns"><h2>{{year}}</h2>
     | {% endif %}
     | {% if month != this_month %}
     | {% assign month = this_month %}
     | {% if first_month == true %}{% assign first_month = false %}{% else %}
     | </div></section>
     | {% endif %}
-    | <section class="row" name="{{month}}"><div class="large-12 columns"><h3>{{month}}</h3>
+    | <section class="row" title="{{month}}"><div class="large-12 columns"><h3>{{month}}</h3>
 
     | {% endif %}
     article.row

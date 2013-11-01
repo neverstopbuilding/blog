@@ -50,10 +50,9 @@ module CustomLiquidFilters
 
   # Improved version of Liquid's truncate, from Octopress
   # - Doesn't cut in the middle of a word.
-  # - Uses typographically correct ellipsis instead of '...'
   def truncate(input, length)
     if input.length > length && input[0..(length - 1)] =~ /(.+)\b.+$/im
-      $1.strip + '&hellip;'
+      $1.strip + '...'
     else
       input
     end

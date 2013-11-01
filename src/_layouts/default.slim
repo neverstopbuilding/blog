@@ -35,7 +35,7 @@ head
   | {% endif %}{% endcapture %}
 
   meta charset="utf-8"
-  meta name="author" content="{{ site.author }}"
+  meta name="author" content="{% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %}" property="og:author"
   meta name="viewport" content="width=device-width, initial-scale=1"
   meta name="HandheldFriendly" content="True"
   meta name="MobileOptimized" content="320"
@@ -47,7 +47,7 @@ head
   | {% endif %}
   meta property="og:image" content="{{og_image}}"
   meta property="og:url" content="{{canonical}}"
-  meta property="og:title" content="{{page.title}}"
+  meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}"
   meta property="og:site_name" content="{{site.title}}"
   meta property="og:type" content="{{og_type}}"
   meta property="og:description" content="{{description}}"

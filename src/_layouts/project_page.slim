@@ -36,7 +36,7 @@ layout: page
         | {% if a_page.project %}
         | {% unless a_page.project == page.project %}
         p.project-title
-          a href="{{ site.url}}/project/{{ a_page.project | slugify }}" name="{{ a_page.project | titlecase }}"
+          a href="{{ site.url}}/project/{{ a_page.project | slugify }}" title="{{ a_page.project | titlecase }}"
             | {{ a_page.project | titlecase }}
         | {% endunless %}
         | {% endif %}
