@@ -48,16 +48,18 @@ head
   meta name="MobileOptimized" content="320"
   meta name="google-site-verification" content="pbSGBfIzQE8RHV7p-VLLoate8pJ1P26EiUbSy_B1Os4"
   meta name="alexaVerifyID" content="XfmiNGbk4cll3f_rgofOLGtW9Vc"
-  meta name="description" content="{{ description }}"
+  meta name="description" content="{{ description }}" property="og:description" itemprop="description"
   | {% if keywords %}
-  meta name="keywords" content="{{ keywords | clean_keywords }}"
+  meta name="keywords" content="{{ keywords | clean_keywords }}" itemprop="keywords"
   | {% endif %}
   meta property="og:image" content="{{og_image}}"
   meta property="og:url" content="{{canonical}}"
   meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}"
   meta property="og:site_name" content="{{site.title}}"
   meta property="og:type" content="{% if page.og_type %}{{page.og_type}}{% else %}blog{% endif %}"
-  meta property="og:description" content="{{description}}"
+
+  meta content="{{ site.name }}" itemprop="sourceOrganization" name="source"
+
   link rel="author" href="{{ site.url}}/humans.txt"
   link rel="icon" href="{{ site.url }}/favicon.ico"
   | {% if page.index == true %}
