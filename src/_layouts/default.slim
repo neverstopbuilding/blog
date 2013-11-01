@@ -15,7 +15,7 @@ head
   | {% else %}
   | {% capture description %}
   | {% if page.description %}{{ page.description | strip_breaks | condense_spaces | truncate:150 }}
-  | {% else %}{{ page.content | markdownify | strip_html | strip_breaks | condense_spaces | truncate:150 }}
+  | {% else %}{{ page.content | markdownify | strip_html | strip_breaks | decode | condense_spaces | truncate:150 }}
   | {% endif %}
   | {% endcapture %}
   | {% endif %}

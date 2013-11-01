@@ -14,7 +14,7 @@ article.row.preview-image style="background-image: url({{background_image}});"
     p
       | {% capture description %}
       | {% if post.description %}{{ post.description | strip_breaks | condense_spaces | truncate:200 }}
-      | {% else %}{{ post.content | markdownify | strip_html | strip_breaks | condense_spaces | truncate:200 }}
+      | {% else %}{{ post.content | markdownify | strip_html | strip_breaks | condense_spaces | decode | truncate:200 }}
       | {% endif %}
       | {% endcapture %}
       | {{ description }}

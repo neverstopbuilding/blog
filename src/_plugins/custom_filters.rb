@@ -1,4 +1,5 @@
 # Encoding: utf-8
+require 'htmlentities'
 
 class String
   def titlecase
@@ -56,6 +57,10 @@ module CustomLiquidFilters
     else
       input
     end
+  end
+
+  def decode(input)
+    HTMLEntities.new.decode input
   end
 
   # Returns a cleaned array of keywords, free of duplicates and extraneous comma
