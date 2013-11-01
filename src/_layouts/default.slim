@@ -36,10 +36,10 @@ head
   | {% if page.og_type == "article" %}
   meta property="article:author" content="{% if page.author_facebook %}{{ page.author_facebook }}{% else %}{{ site.author_facebook }}{% endif %}"
   | {% if page.category %}
-  meta name="article:section" content="{{page.category}}"
+  meta property="article:section" content="{{page.category}}"
   | {% endif %}
   | {% if keywords %}
-  meta name="article:tag" content="{{ keywords | clean_keywords }}"
+  meta property="article:tag" content="{{ keywords | clean_keywords }}"
   | {% endif %}
   | {% endif %}
   meta name="author" content="{{ author }}"
@@ -94,7 +94,6 @@ head
 body
   .content-wrapper
     | {{ content }}
-    | {% slim footer.slim %}
 
   script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"
 

@@ -34,6 +34,6 @@ section.row.top-spaced
     | {% for post in site.posts limit:4 %}
     | {% slim large_post_preview.slim %}
     | {% endfor %}
-{% slim footer/page_footer.slim %}
-
+| {% slim footer/page_footer.slim %}
+| {% slim footer.slim %}
 
