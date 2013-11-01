@@ -35,7 +35,7 @@ head
   | {% endif %}{% endcapture %}
 
   meta charset="utf-8"
-  meta name="author" content="{% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %}" property="og:author"
+  meta name="author" content="{% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %}"
   meta name="viewport" content="width=device-width, initial-scale=1"
   meta name="HandheldFriendly" content="True"
   meta name="MobileOptimized" content="320"
@@ -51,6 +51,7 @@ head
   meta property="og:site_name" content="{{site.title}}"
   meta property="og:type" content="{{og_type}}"
   meta property="og:description" content="{{description}}"
+  meta property="og:author" content="{% if page.author_facebook %}{{ page.author_facebook }}{% else %}{{ site.author_facebook }}{% endif %}"
 
   link rel="author" href="{{ site.google_plus }}?rel=author"
   link rel="author" href="{{ site.url}}/humans.txt"
