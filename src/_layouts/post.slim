@@ -3,12 +3,12 @@ layout: page
 og_type: article
 ---
 .row.post
-  article.large-9.push-3.columns
+  article.large-9.push-3.columns(itemscope itemtype="http://schema.org/Article")
     header.row.spaced
       .large-12.columns.large-right-small-center
         | {% slim meta.slim %}
     .row
-      .large-12.columns
+      .large-12.columns itemprop="articleBody"
         | {{ content }}
     | {% slim footer/post_footer.slim %}
   aside.large-3.pull-9.columns

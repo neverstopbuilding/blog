@@ -8,7 +8,7 @@ header.header-image.page style="background-image: url({% if page.image %}{{ page
         .large-12.columns
           | {% slim nav.slim %}
       .row
-        .large-12.columns
-          h1
+        .large-12.columns (itemscope itemtype="http://schema.org/Article")
+          h1 itemprop="name"
             | {{ page.title }}
 | {{ content }}

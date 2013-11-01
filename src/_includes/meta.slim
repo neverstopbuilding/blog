@@ -7,7 +7,9 @@
   | {% capture author_name %}{{ site.author }}{% endcapture %}
   | {% capture author_link %}{{ site.twitter }}{% endcapture %}
   | {% endif %}
-  a< href="{{ author_link }}" rel="author" {{ author_name | upcase }}
+  a< href="{{ author_link }}" rel="author"
+    span (itemprop="author" itemscope itemtype="http://schema.org/Person")
+      | {{ author_name | upcase }}
   |&nbsp;|&nbsp;
   | {% slim date.slim %}
   |&nbsp;|&nbsp;

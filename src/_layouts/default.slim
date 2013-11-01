@@ -33,6 +33,7 @@ head
   meta charset="utf-8"
   | {% if page.og_type == "article" %}
   meta property="article:author" content="{% if page.author_facebook %}{{ page.author_facebook }}{% else %}{{ site.author_facebook }}{% endif %}"
+  meta property="twitter:creator" content="@{% if page.author_twitter %}{{ page.author_twitter}}{% else %}{{ site.twitter_username}}{% endif %}"
   | {% endif %}
   meta name="author" content="{% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %}"
   meta name="viewport" content="width=device-width, initial-scale=1"
@@ -50,7 +51,7 @@ head
   meta property="og:site_name" content="{{site.title}}"
   meta property="og:type" content="{% if page.og_type %}{{page.og_type}}{% else %}blog{% endif %}"
   meta property="og:description" content="{{description}}"
-  link rel="author" href="{{ site.google_plus }}?rel=author"
+  link rel="author" href="{% if page.author_google_plus %}{{ page.author_google_plus }}{% else %}{{ site.google_plus }}{% endif %}?rel=author"
   link rel="author" href="{{ site.url}}/humans.txt"
   link rel="icon" href="{{ site.url }}/favicon.ico"
   | {% if page.index == true %}
