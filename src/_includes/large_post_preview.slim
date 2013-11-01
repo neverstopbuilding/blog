@@ -9,7 +9,7 @@ article.row.preview-image style="background-image: url({{background_image}});"
       | {% slim date.slim %}
       | {% unless post.category == page.category %}
       |&nbsp;|&nbsp;
-      a href="{% category_url post.category %}" rel="author" {{post.category | upcase }}
+      a href="{% category_url post.category %}" {{post.category | upcase }}
       | {% endunless %}
     p
       | {% capture description %}
