@@ -1,6 +1,7 @@
 ---
 layout: project_page
 title: RoboGarden
+has_feed: true
 project: robo garden
 date: 2013-10-31
 image: https://lh5.googleusercontent.com/-mRv7b_ZcqMc/UlWIrUuWAoI/AAAAAAAAJD4/Rg-lHeKS_wQ/w1118-h549-no/IMG_1664.JPG

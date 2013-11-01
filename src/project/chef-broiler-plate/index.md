@@ -1,6 +1,7 @@
 ---
 layout: project_page
 title: Chef Broiler Plate
+has_feed: true
 project: chef broiler plate
 date: 2013-06-25
 image: https://lh5.googleusercontent.com/ZQV8JiA3MaGC5VqnE-w12H4eRAms2e70Qd9DRsOVJ50=w1024-h334-no
