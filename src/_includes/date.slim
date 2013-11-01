@@ -1,7 +1,7 @@
 | {% capture relevant_date %}
 | {% if post.date %}{{post.date}}{% else %}{{page.date}}{% endif %}
 | {% endcapture %}
-
+meta itemprop="datePublished" content="{{relevant_date | date_to_xmlschema}}"
 | {% capture datetime %}{{relevant_date | date: "%Y-%m-%d" }}{% endcapture %}
-time datetime="{{datetime}}" itemprop="datePublished"
+time datetime="{{relevant_date | date_to_xmlschema}}"
   | {{relevant_date | date: "%B %e, %Y" | upcase}}

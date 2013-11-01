@@ -57,9 +57,6 @@ head
   meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}"
   meta property="og:site_name" content="{{site.title}}"
   meta property="og:type" content="{% if page.og_type %}{{page.og_type}}{% else %}blog{% endif %}"
-
-  meta content="{{ site.name }}" itemprop="sourceOrganization" name="source"
-
   link rel="author" href="{{ site.url}}/humans.txt"
   link rel="icon" href="{{ site.url }}/favicon.ico"
   | {% if page.index == true %}
