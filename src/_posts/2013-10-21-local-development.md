@@ -8,8 +8,6 @@ tags: [baseline, puppet, chef, virtual machine, development environment]
 author: Dave Haeffner
 author_link: https://twitter.com/TourDeDave
 author_facebook: https://www.facebook.com/daveeych
-author_twitter: TourDeDave
-author_google_plus: nil
 description: "My new philosophy for this machine was to not install any development dependencies locally. But rather, to use Vagrant and install everything on an image that it controlled -- ideally through automated provisioning."
 ---
 
