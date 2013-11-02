@@ -29,6 +29,27 @@ namespace :build do
   end
 end
 
+desc 'Create a new article'
+task :new, :slug do |t, args|
+  fail 'Enter a slug for your post!' unless args.slug
+  slug = args.slug.gsub(/\s/, '-').gsub(/[^\w-]/, '').downcase
+  filename = File.join('src', '_posts', "#{Time.now.strftime('%Y-%m-%d')}-#{slug}.md")
+  fail "#{filename} already exists!" if File.exist?(filename)
+  puts "Creating new article: #{filename}"
+  open(filename, 'w') do |file|
+    file.puts '---'
+    file.puts 'layout: post'
+    file.puts 'title: '
+    file.puts 'image: '
+    file.puts "date: #{Time.now.strftime('%Y-%m-%d')}"
+    file.puts 'category: '
+    file.puts 'tags: []'
+    file.puts 'description: ""'
+    file.puts '---'
+  end
+  system "open #{filename}"
+end
+
 namespace :posts do
 
   namespace :categories do

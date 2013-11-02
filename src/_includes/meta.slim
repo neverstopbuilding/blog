@@ -8,8 +8,9 @@
   | {% capture author_link %}{{ site.google_plus }}?rel=author{% endcapture %}
   | {% endif %}
   span (itemprop="author" itemscope itemtype="http://schema.org/Person")
+    meta  itemprop="name" content="{{author_name}}"
     a< href="{{ author_link }}" rel="author" itemprop="url"
-      span itemprop="name"
+      span
         | {{ author_name | upcase }}
   |&nbsp;|&nbsp;
   | {% slim date.slim %}
