@@ -50,6 +50,26 @@ task :new, :slug do |t, args|
   system "open #{filename}"
 end
 
+task :social do
+  posts = Dir.glob(File.join('src', '_posts', '*.md')).sort.reverse
+  if posts[0] =~ /\d{4}-\d{2}-\d{2}-(.*)\.md/i
+    slug = $1
+    path = 'http://www.neverstopbuilding.com/' + slug
+  end
+  puts "\nThe title is:\n"
+  puts "#{data['title']}"
+
+  links = {
+    'Hacker News' => 'hacker_news',
+    'Buffer' => 'buffer',
+    'Google Plus' => 'google_plus',
+     }
+  links.each do |type, source|
+    puts "\n#{type}\n"
+    puts path + "?utm_source=#{source}&medium=share&utm_campaign=#{slug}"
+  end
+end
+
 namespace :posts do
 
   namespace :categories do
@@ -187,6 +207,7 @@ end
 task deploy: [:clean, :prepare, :test] do
   system 'git push origin master'
   system 'git push heroku master'
+  Rake::Task[:social].execute
 end
 
 namespace :assets do
