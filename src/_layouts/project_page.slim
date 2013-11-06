@@ -12,6 +12,12 @@ layout: page
         | {{ content }}
     .row
       .large-12.columns
+        div id="disqus_thread"
+        script
+          | var disqus_title = '{{ page.project | titlecase }} Project';
+          | var disqus_url = 'http://www.neverstopbuilding.com/project/{{page.project | slugify}}';
+    .row
+      .large-12.columns
         hr
         h2 All Articles Related to this Project
     | {% for post in site.posts %}

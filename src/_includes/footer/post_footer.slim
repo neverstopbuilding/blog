@@ -8,6 +8,13 @@ footer.row
         |&nbsp;category.
     .row
       .large-12.columns
+        hr.spaced
+        div id="disqus_thread"
+        script
+          | var disqus_title = '{{ page.title }}';
+          | var disqus_url = 'http://www.neverstopbuilding.com{{ page.url }}';
+    .row
+      .large-12.columns
         | {% slim ads/article_footer.slim %}
         | {% slim ads/mobile_footer.slim %}
         .row.light.spaced
