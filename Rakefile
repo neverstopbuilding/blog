@@ -68,6 +68,7 @@ task :social do
     'Hacker News' => 'hacker_news',
     'Buffer' => 'buffer',
     'Google Plus' => 'google_plus',
+    'Reddit' => 'reddit'
      }
   links.each do |type, source|
     puts "\n#{type}\n"
