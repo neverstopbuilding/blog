@@ -112,37 +112,39 @@ module Jekyll
     #
     # Returns nothing
     def generate(site)
-      sitemap = REXML::Document.new << REXML::XMLDecl.new('1.0', 'UTF-8')
+      unless site.config['sitemap']['disable']
+        sitemap = REXML::Document.new << REXML::XMLDecl.new('1.0', 'UTF-8')
 
-      if site.config['sitemap']['local']
-        puts 'Building sitemap from local repository.'
-        root = File.expand_path(File.join(File.dirname(__FILE__), '..', '..'))
-      else
-        puts 'Building sitemap from fresh cloned repository.'
-        root = File.expand_path(File.join(File.dirname(__FILE__), '..', '..', 'build', 'clone.git'))
-        Git.clone(site.config['sitemap']['repo'], 'build/clone.git')
+        if site.config['sitemap']['local']
+          puts 'Building sitemap from local repository.'
+          root = File.expand_path(File.join(File.dirname(__FILE__), '..', '..'))
+        else
+          puts 'Building sitemap from fresh cloned repository.'
+          root = File.expand_path(File.join(File.dirname(__FILE__), '..', '..', 'build', 'clone.git'))
+          Git.clone(site.config['sitemap']['repo'], 'build/clone.git')
+        end
+
+         @git = Git.open(root)
+
+        urlset = REXML::Element.new 'urlset'
+        urlset.add_attribute('xmlns', 'http://www.sitemaps.org/schemas/sitemap/0.9')
+
+        @last_modified_post_date = fill_posts(site, urlset)
+        fill_pages(site, urlset)
+
+        sitemap.add_element(urlset)
+
+        # File I/O: create sitemap.xml file and write out pretty-printed XML
+        FileUtils.mkdir_p(site.dest) unless File.exists?(site.dest)
+        file = File.new(File.join(site.dest, SITEMAP_FILE_NAME), 'w')
+        formatter = REXML::Formatters::Pretty.new(4)
+        formatter.compact = true
+        formatter.write(sitemap, file)
+        file.close
+
+        # Keep the sitemap.xml file from being cleaned by Jekyll
+        site.static_files << Jekyll::SitemapFile.new(site, site.dest, '/', SITEMAP_FILE_NAME)
       end
-
-       @git = Git.open(root)
-
-      urlset = REXML::Element.new 'urlset'
-      urlset.add_attribute('xmlns', 'http://www.sitemaps.org/schemas/sitemap/0.9')
-
-      @last_modified_post_date = fill_posts(site, urlset)
-      fill_pages(site, urlset)
-
-      sitemap.add_element(urlset)
-
-      # File I/O: create sitemap.xml file and write out pretty-printed XML
-      FileUtils.mkdir_p(site.dest) unless File.exists?(site.dest)
-      file = File.new(File.join(site.dest, SITEMAP_FILE_NAME), 'w')
-      formatter = REXML::Formatters::Pretty.new(4)
-      formatter.compact = true
-      formatter.write(sitemap, file)
-      file.close
-
-      # Keep the sitemap.xml file from being cleaned by Jekyll
-      site.static_files << Jekyll::SitemapFile.new(site, site.dest, '/', SITEMAP_FILE_NAME)
     end
 
     # Create url elements for all the posts and find the date of the latest one

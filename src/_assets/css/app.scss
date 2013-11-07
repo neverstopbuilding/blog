@@ -32,7 +32,7 @@
 @import "foundation/components/flex-video";
 // @import "foundation/components/section";
 // @import "foundation/components/top-bar";  // *requires components/grid
-// @import "foundation/components/orbit";
+@import "foundation/components/orbit";
 // @import "foundation/components/reveal";
 // @import "foundation/components/joyride";
 // @import "foundation/components/clearing";
@@ -309,7 +309,17 @@ blockquote {
     }
 }
 
-
+.slideshow-wrapper {
+    padding-bottom: 2em;
+    .orbit-container{
+        li {
+            .orbit-caption {
+                font-size: 0.75em;
+                color: #ddd;
+            }
+        }
+    }
+}
 
 
 

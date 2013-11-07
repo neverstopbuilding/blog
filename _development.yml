@@ -1,5 +1,5 @@
 asset_pipeline:
-  bundle: true
+  bundle: false
   compress: false
   output_path: assets
   display_path: nil
@@ -7,6 +7,7 @@ asset_pipeline:
 
 sitemap:
   local: true
+  disable: true
 
 url: http://localhost:4000
 

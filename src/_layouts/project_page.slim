@@ -28,6 +28,7 @@ layout: page
     | {% slim footer/page_footer.slim %}
   aside.large-3.pull-9.columns
     .row.top-spaced
+      | {% if page.has_feed %}
       .large-12.columns.large-left-small-center
         h2 Subscribe
         p
@@ -35,6 +36,7 @@ layout: page
           a<href="{{ site.url }}/project/{{page.project | slugify}}/atom.xml"
             | {{ page.project | titlecase }} RSS Feed
           |&nbsp;to subscribe updates about this project!
+      | {% endif %}
     .row.bottom-spaced
       .large-12.columns.large-left-small-center
         h2 Other Projects

@@ -1,3 +1,11 @@
+$(document).foundation('orbit', {
+    animation: 'fade',
+    timer_speed: 6000,
+    bullets: false,
+    resume_on_mouseout: true,
+
+});
+
 var disqus_shortname = 'neverstopbuilding';
 
 (function() {
