@@ -12,7 +12,9 @@ Bundler.require(:default)
 # Testing these rules
 use Rack::Rewrite do
   r301 /(.*)\/index\.html$/i, 'http://www.neverstopbuilding.com$1'
+  r301 /building-a-gqueues-dashboard-widget/i, 'http://www.neverstopbuilding.com'
   r301 /.*/, 'http://www.neverstopbuilding.com$&', if: proc { |rack_env| rack_env['SERVER_NAME'] != 'www.neverstopbuilding.com' }
+  r301 /category\/robo-garden/i, 'http://www.neverstopbuilding.com/project/robo-garden'
   r301 /category\/?$/i, 'http://www.neverstopbuilding.com/archive'
 end
 
