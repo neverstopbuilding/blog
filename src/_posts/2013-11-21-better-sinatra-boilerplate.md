@@ -2,7 +2,7 @@
 layout: post
 title: A Better Sinatra Boilerplate
 image: https://lh5.googleusercontent.com/-vSYPmiqKFhg/Uo4WM_hO9OI/AAAAAAAAJo8/ww1kmNF4pxg/w1118-h322-no/sinatra.png
-date: 2013-11-20
+date: 2013-11-21
 category: web development
 tags: [sinatra, slim, boilerplate, zurb foundation, compass, guard, ruby, rspec, capybarra, test driven development, tdd, rubocop, craftsmanship]
 description: "How can the desire to start a restaurant result in an improved Sinatra boilerplate application? It just takes the right mix of obsessiveness and the desire to do things right to whip up this Sinatra Zurb Rspec Slim Compass boilerplate!"
