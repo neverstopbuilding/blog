@@ -57,9 +57,7 @@ task :social do
     path = 'http://www.neverstopbuilding.com/' + slug
   end
   content = File.read(posts[0])
-  if content =~ /\A(---\s*\n.*?\n?)^(---\s*$\n?)/m
-    data = YAML.load($1)
-  end
+  data = YAML.load($1) if content =~ /\A(---\s*\n.*?\n?)^(---\s*$\n?)/m
 
   puts "\nThe title is:\n"
   puts "#{data['title']}"
