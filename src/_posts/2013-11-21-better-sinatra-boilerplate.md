@@ -8,6 +8,8 @@ tags: [sinatra, slim, boilerplate, zurb foundation, compass, guard, ruby, rspec,
 description: "How can the desire to start a restaurant result in an improved Sinatra boilerplate application? It just takes the right mix of obsessiveness and the desire to do things right to whip up this Sinatra Zurb Rspec Slim Compass boilerplate!"
 ---
 
+TLDR? You can find the [code for Sinatra Boilerplate here](https://github.com/neverstopbuilding/sinatra-boilerplate)!
+
 How can the desire to start a restaurant result in an improved Sinatra boilerplate application? It just takes the right mix of obsessiveness and the desire to do things right.
 
 The long and the short of the story is that I wanted to build a simple website for a [small "closed door" restaurant](https://www.facebook.com/casaraposa) some friends and I are starting down here in Buenos Aires. And because I want to cater to both English and Spanish speakers, the website should be easily support internationalization. I toyed with the idea of adapting a static site generator, given that I had [just built a robust Jekyll foundation]({{site.url}}/jekyll-slim-compass-blog) for this very blog, but that seemed like it could be limiting to future dynamic functionality. Enter Sinatra.
