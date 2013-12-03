@@ -55,7 +55,6 @@ module Jekyll
             write_category_feed(site, File.join(dir, category.gsub(/\s/, '-').gsub(/[^\w-]/, '').downcase), category)
           end
         end
-
       end
 
       def write_category_page(site, dir, category, image)
@@ -71,7 +70,6 @@ module Jekyll
         index.write(site.dest)
         site.static_files << index
       end
-
     end
 
     # Returns a correctly formatted category url based on site configuration.

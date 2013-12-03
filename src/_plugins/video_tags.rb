@@ -37,7 +37,6 @@ module Jekyll
   end
 
   class VimeoTag < Liquid::Tag
-
     @videoid = nil
     @width = ''
     @height = ''

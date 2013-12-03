@@ -42,7 +42,6 @@ require 'fileutils'
 require 'git'
 
 module Jekyll
-
   # Change SITEMAP_FILE_NAME if you would like your sitemap file
   # to be called something else
   SITEMAP_FILE_NAME = 'sitemap.xml'
@@ -104,7 +103,6 @@ module Jekyll
   end
 
   class SitemapGenerator < Generator
-
     # Valid values allowed by sitemap.xml spec for change frequencies
     VALID_CHANGE_FREQUENCY_VALUES = %w[always hourly daily weekly monthly yearly never]
 
