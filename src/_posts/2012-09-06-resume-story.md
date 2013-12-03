@@ -4,7 +4,7 @@ title: "Ranting about Resumes: Jason Toots His Own Horn"
 date: 2012-09-06 18:48
 category: management
 tags:  [rants, resume, jobs, autobiography, career]
-permalink: resume-story
+permalink: /resume-story
 ---
 
 *Updated December 3, 2013*
