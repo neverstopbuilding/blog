@@ -8,17 +8,15 @@ footer.row
         |&nbsp;category.
     .row
       .large-12.columns
-        hr.spaced
-        div id="disqus_thread"
-        script
-          | var disqus_title = '{{ page.title }}';
-          | var disqus_url = 'http://www.neverstopbuilding.com{{ page.url }}';
-    .row
-      .large-12.columns
-        | {% slim ads/article_footer.slim %}
-        | {% slim ads/mobile_footer.slim %}
         .row.light.spaced
           .small-6.columns.text-left
             a href="{{ page.previous.url }}" rel="prev" &laquo; PREVIOUS
           .small-6.columns.text-right
             a href="{{ page.next.url }}" rel="next" NEXT &raquo;
+    .row
+      .large-12.columns
+        / hr.spaced
+        div id="disqus_thread"
+        script
+          | var disqus_title = '{{ page.title }}';
+          | var disqus_url = 'http://www.neverstopbuilding.com{{ page.url }}';

@@ -21,8 +21,6 @@ og_type: article
     | {% slim footer/post_footer.slim %}
   aside.large-3.pull-9.columns
     .row.spaced
-    | {% slim ads/article_left.slim %}
-    .row
       .large-12.columns.recent-posts
         h3 Recent Articles
         | {% for post in site.related_posts limit: 6 %}
