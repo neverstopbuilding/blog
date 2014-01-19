@@ -17,25 +17,64 @@ var disqus_shortname = 'neverstopbuilding';
   (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
 })();
 
-// $('.end-of-article').waypoint(function(direction) {
-//   if (direction == 'down') {
-//     mixpanel.track("End of Article Reached", {
-//       "title": $('.page').attr('title')
-//     });
-//   }
-// }, {
-//   offset: '25%'
-// });
+function trackArticleProgress(progress) {
+  mixpanel.track("Reading Progress", {
+    amount: progress,
+    title: $('.page').attr('title'),
+    category: $('.mp-category').attr('title')
+  });
+}
 
-// mixpanel.track_links("a.twitter", "Twitter Link Clicked", {
-//   'title': $('.page').attr('title')
-// });
+$('.mp-article').waypoint(function(direction) {
+  if (direction == 'down') {
+    trackArticleProgress('started article');
+  }
+});
 
-// mixpanel.track_links(".nav a", "Nav Item Clicked", function(link) {
-//   return {
-//     nav_item: $(link).attr('title')
-//   }
-// });
+$('.mp-article').waypoint(function(direction) {
+  if (direction == 'down') {
+    trackArticleProgress('read 1/3');
+  }
+}, {
+  offset: function() {
+    return -$(this).height() * 0.33;
+  }
+});
+
+$('.mp-article').waypoint(function(direction) {
+  if (direction == 'down') {
+    trackArticleProgress('read 2/3');
+  }
+}, {
+  offset: function() {
+    return -$(this).height() * 0.66;
+  }
+});
+
+$('.mp-article').waypoint(function(direction) {
+  if (direction == 'down') {
+    trackArticleProgress('finished');
+  }
+}, {
+  offset: function() {
+    return -$(this).height() + screen.availHeight;
+  }
+});
+
+
+mixpanel.track_links("a.mp-footer-link", "Footer Link Clicked", function(link) {
+  return {
+    title: $('.page').attr('title'),
+    footer_link: $(link).attr('title')
+  };
+});
+
+mixpanel.track_links("a.mp-nav-link", "Nav Link Clicked", function(link) {
+  return {
+    title: $('.page').attr('title'),
+    nav_link: $(link).attr('title')
+  };
+});
 
 pageTitleResize = function() {
   if ($("#page-title").length > 0) {
@@ -49,19 +88,19 @@ pageTitleResize = function() {
       titleWidth = $("#page-title h1 span").width();
       bottom = (maxHeight - titleHeight) / 2;
       $("#page-title").css('bottom', bottom + "px");
-    } while (titleHeight > maxHeight || titleWidth > maxWidth)
+    } while (titleHeight > maxHeight || titleWidth > maxWidth);
   }
-}
+};
 siteTitleResize = function() {
   if ($("#site-title").length > 0) {
     var maxWidth = $(document).width();
     fontSize = 0.13 * maxWidth;
-    padding = 0.5 * fontSize
+    padding = 0.5 * fontSize;
     $("#site-title h1").css('font-size', fontSize + "px");
     $("#site-title").css('padding-top', padding + "px");
     $("#site-title").css('padding-bottom', padding + "px");
   }
-}
+};
 
 $(window).resize(pageTitleResize);
 $(document).ready(pageTitleResize);

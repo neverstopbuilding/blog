@@ -3,7 +3,7 @@ nav.top-bar data-topbar=""
     li.name
       | {% unless page.url == '/index.html' %}
       h1
-        a href="{{ site.url }}"
+        a.mp-nav-link title="home" href="{{ site.url }}"
           i.fa.fa-square
           |&nbsp;Never Stop Building
       | {% endunless %}
@@ -11,4 +11,10 @@ nav.top-bar data-topbar=""
       a href=""
   section.top-bar-section
     ul.right
-      | {% slim nav_links.slim %}
+      li
+        a.mp-nav-link href="{{ site.url }}/project" title="projects" PROJECTS
+      li
+        a.mp-nav-link href="{{ site.url }}/archive" title="archive" ARCHIVE
+      li
+        a.mp-nav-link href="{{ site.feed }}" title="subscribe" SUBSCRIBE
+

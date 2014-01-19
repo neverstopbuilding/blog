@@ -3,7 +3,26 @@ footer.default-footer
     .large-12.columns.text-center.dark.epic
       h4.epic
         | Get the latest updates from Never Stop Building by following me on twitter
-        a.twitter< href="{{ site.twitter }}" @jasonrobertfox
+        a.mp-footer-link< href="{{ site.twitter }}" title="text twitter" @jasonrobertfox
         | .
   .row.dark.text-center.top-spaced
-    | {% slim social.slim %}
+    ul.large-block-grid-6.medium-block-grid-3.small-block-grid-2.red
+      li
+        a.mp-footer-link title="twitter" href="{{ site.twitter }}"
+          i.fa.fa-twitter.fa-4x
+      li
+        a.mp-footer-link title="github" href="{{ site.github }}"
+          i.fa.fa-github-alt.fa-4x
+      li
+        a.mp-footer-link title="youtube" href="{{ site.youtube }}"
+          i.fa.fa-youtube.fa-4x
+      li
+        a.mp-footer-link title="email" href="mailto:{{ site.email }}"
+          i.fa.fa-envelope.fa-4x
+      li
+        a.mp-footer-link title="instagram" href="{{ site.instagram }}"
+          i.fa.fa-instagram.fa-4x
+      li
+        a.mp-footer-link title="google plus" href="{{ site.google_plus }}{% unless page.author %}?rel=author{% endunless %}"
+          i.fa.fa-google-plus.fa-4x
+

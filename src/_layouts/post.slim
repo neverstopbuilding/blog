@@ -16,6 +16,6 @@ og_type: article
         meta itemprop="keywords" content="{{keywords | clean_keywords}}"
         | {% slim meta.slim %}
     .row
-      .large-12.columns.article-content itemprop="articleBody"
+      .large-12.columns.article-content.mp-article itemprop="articleBody"
         | {{ content }}
     | {% slim footer/post_footer.slim %}
