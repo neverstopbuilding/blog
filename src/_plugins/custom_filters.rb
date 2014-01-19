@@ -44,6 +44,11 @@ module CustomLiquidFilters
     input.gsub(/\s{2,}/, ' ')
   end
 
+  # Escapes double quotes for meta tags and the like
+  def quote_transform(input)
+    input.gsub(/"/, '&quot;')
+  end
+
   # Replaces newlines with spaces
   def strip_breaks(input)
     input.gsub(/\n/, ' ')
