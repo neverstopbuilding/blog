@@ -2,7 +2,6 @@
 
 require 'rubocop/rake_task'
 require 'levenshtein'
-require 'YAML'
 
 # Settings
 
