@@ -6,14 +6,14 @@ article.row.preview-image style="background-image: url({{background_image}});"
     h3
       a href="{{ site.url }}/project/{{post.project | slugify}}" {{ post.title }}
     p.light
-      | LAST UPDATED ON {% slim date.slim %}
-    p
+      | Last updated on {% slim date.slim %}
+    p.content
       | {% capture description %}
       | {% if post.description %}{{ post.description | strip_breaks | condense_spaces | truncate:200 }}
       | {% else %}{{ post.content | markdownify | strip_html | strip_breaks | condense_spaces | truncate:200 }}
       | {% endif %}
       | {% endcapture %}
       | {{ description }}
-      a< href="{{ site.url }}/project/{{post.project | slugify}}" read more &raquo;
+      a< href="{{ site.url }}/project/{{post.project | slugify}}" read more <i class="fa fa-caret-right"></i>
 
 

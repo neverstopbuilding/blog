@@ -17,14 +17,11 @@ tags:
   - inventing
 ---
 header.home-image style="background-image: url({{ site.default_home_image }});"
-  .row
-    .large-9.large-offset-3.columns.large-right-small-center.trans.dark
-      .row
-        .large-12.columns
-          | {% slim nav.slim %}
-      .row
-        .large-12.columns.massive
-          h1 Never Stop Building.
+  | {% slim nav.slim %}
+  .row.title-container
+    .large-12.columns.text-center.title-text id="site-title"
+      h1
+        span Never Stop <br/> Building.
 section.intro
   .row
     .large-12.columns.text-center.dark.epic
@@ -36,4 +33,3 @@ section.row.top-spaced
     | {% endfor %}
 | {% slim footer/page_footer.slim %}
 | {% slim footer.slim %}
-

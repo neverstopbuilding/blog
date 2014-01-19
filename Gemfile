@@ -10,7 +10,6 @@ gem 'htmlentities'
 gem 'jekyll-slim', '~> 0.8.2'
 gem 'jekyll-asset-pipeline'
 gem 'compass', '~> 0.12.2'
-gem 'zurb-foundation', '~> 4.3.2'
 gem 'yui-compressor', '~> 0.12.0'
 
 gem 'puma', '~> 2.6.0'

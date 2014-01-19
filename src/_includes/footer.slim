@@ -1,14 +1,9 @@
 footer.default-footer
-  .row.dark
-    .large-9.push-3.columns.large-right-small-center
-      .row
-        .large-12.columns
-          h4.epic
-            | Get the latest updates from Never Stop Building by following me on twitter
-            a.twitter< href="{{ site.twitter }}" @jasonrobertfox
-            | .
-      .row
-        .large-12.columns
-          | {% slim nav.slim %}
-    .large-3.pull-9.columns.large-left-small-center
-      | {% slim social.slim %}
+  .row.bottom-spaced
+    .large-12.columns.text-center.dark.epic
+      h4.epic
+        | Get the latest updates from Never Stop Building by following me on twitter
+        a.twitter< href="{{ site.twitter }}" @jasonrobertfox
+        | .
+  .row.dark.text-center.top-spaced
+    | {% slim social.slim %}

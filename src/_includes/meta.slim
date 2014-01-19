@@ -1,22 +1,25 @@
-.light
-  | BY
-  | {% if page.author %}
-  | {% capture author_name %}{{ page.author }}{% endcapture %}
-  | {% capture author_link %}{{ page.author_link }}{% endcapture %}
-  | {% else %}
-  | {% capture author_name %}{{ site.author }}{% endcapture %}
-  | {% capture author_link %}{{ site.google_plus }}?rel=author{% endcapture %}
-  | {% endif %}
-  span (itemprop="author" itemscope itemtype="http://schema.org/Person")
-    meta  itemprop="name" content="{{author_name}}"
-    a< href="{{ author_link }}" rel="author" itemprop="url"
-      span
-        | {{ author_name | upcase }}
-  |&nbsp;|&nbsp;
-  | {% slim date.slim %}
-  |&nbsp;|&nbsp;
-  a href="{% category_url page.category %}" {{page.category | upcase }}
-  | {% if page.project %}
-  |&nbsp;|&nbsp;
-  a href="{{site.url}}/project/{{page.project | slugify }}" {{page.project | upcase }}
-  | {% endif %}
+p.by-line
+  em
+    |Published on
+    |  {% slim date.slim %}
+    |  by
+    | {% if page.author %}
+    | {% capture author_name %}{{ page.author }}{% endcapture %}
+    | {% capture author_link %}{{ page.author_link }}{% endcapture %}
+    | {% else %}
+    | {% capture author_name %}{{ site.author }}{% endcapture %}
+    | {% capture author_link %}{{ site.google_plus }}?rel=author{% endcapture %}
+    | {% endif %}
+    span (itemprop="author" itemscope itemtype="http://schema.org/Person")
+      meta  itemprop="name" content="{{author_name}}"
+      a< href="{{ author_link }}" rel="author" itemprop="url"
+        span
+          | {{ author_name }}
+    |  in
+    a< href="{% category_url page.category %}" {{page.category | titlecase }}
+    | {% if page.project %}
+    |, for the
+    a< href="{{site.url}}/project/{{page.project | slugify }}" {{page.project | titlecase }}
+    |  project
+    | {% endif %}
+    |.

@@ -2,14 +2,11 @@
 layout: default
 ---
 header.header-image.page style="background-image: url({% if page.image %}{{ page.image }}{% else %}{{ site.default_page_image }}{% endif %});" title="{{page.title}}"
-  .row
-    .large-9.large-offset-3.columns.large-right-small-center.trans.dark
-      .row
-        .large-12.columns
-          | {% slim nav.slim %}
-      .row
-        .large-12.columns
-          h1 itemprop="name"
-            | {{ page.title }}
+  | {% slim nav.slim %}
+  .row.title-container id="page-title-container"
+    .large-12.columns.text-center.title-text id="page-title"
+      h1 itemprop="name"
+        span
+          | {{ page.title }}
 | {{ content }}
 | {% slim footer.slim %}

@@ -12,7 +12,7 @@ a dedicated post.
 ##Backstory
 
 The issue was forced when I moved to Romania for three months: *what am
-I going to do about my pesky mail? *I’d hate the idea of missing checks,
+I going to do about my pesky mail? I’d hate the idea of missing checks,
 or important correspondence, and I wouldn't be able to sleep at night if
 I missed a single ad! So I needed a way to check my mail from ideally
 any where in the world.
@@ -34,7 +34,7 @@ your mail for you, basically turning that offensive paper stuff from the
 Pretty cool right? I really like the feature where I can have them
 deposit a check (for a small fee) right to my bank account. Another
 great thing is the satisfying “Shred” button, asking them to destroy the
-worldly item while it’s contents live on in digital form.
+worldly item while its contents live on in digital form.
 
 I pay around \$20 a month for this service which includes some
 extra scanning and forwarding fees. It’s perhaps more expensive then a
@@ -56,11 +56,8 @@ Here are the steps I follow to manage my snail mail given this system:
         internals.
     -   **It’s clearly important** - Click forward to send to my
         physical address.
-
 3.  Once the items are scanned there are a few more decisions to make:
-
-    -   **Worth Saving?** - Then I download the pdf and put it in the right
-    place in Evernote.
+    -   **Worth Saving?** - Then I download the pdf and put it in the right place in Evernote.
     -   **A Check!** - Mark it to be deposited in my bank account!
     -   **Not that interesting after all** - Shred it and archive the image.
 
@@ -74,7 +71,7 @@ I think this company is offering a great service but obviously I have
 a laundry list of improvements. If they happen to read this post, then
 I’d love if they would consider these:
 
--   Allow for saving of default bank account info - My bank isn’t in
+-   Allow for saving of default bank account info - My bank isn't in
     their default list, so I have to enter it each time. Saving it and
     pressing “Deposit to default bank” would save time.
 -   Email the scans with the notifications - this could improve workflow

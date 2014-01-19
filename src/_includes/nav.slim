@@ -1,8 +1,14 @@
-nav.top-spaced.nav
-  a href="{{ site.url }}" rel="home" title="home" NEVER STOP BUILDING
-  |&nbsp;|&nbsp;
-  a href="{{ site.url }}/project" title="archive" PROJECTS
-  |&nbsp;|&nbsp;
-  a href="{{ site.url }}/archive" title="archive" ARCHIVE
-  |&nbsp;|&nbsp;
-  a href="{{ site.feed }}" title="subscribe" SUBSCRIBE
+nav.top-bar
+  ul.title-area
+    li.name
+      | {% unless page.url == '/index.html' %}
+      h1
+        a href="{{ site.url }}"
+          i.fa.fa-square
+          |&nbsp;Never Stop Building
+      | {% endunless %}
+    li.toggle-topbar.menu-icon
+      a href="#"
+  section.top-bar-section
+    ul.right
+      | {% slim nav_links.slim %}

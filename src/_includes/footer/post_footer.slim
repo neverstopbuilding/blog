@@ -1,19 +1,29 @@
 footer.row
-  .large-12.columns.text-center.bottom-spaced.top-spaced
-    p
-      em
-        | Enjoy this article? Read more like it in the
-        a< href="{% category_url | page.category %}"
-          | {{ page.category | titlecase }}
-        |&nbsp;category.
-    .row
-      .large-12.columns
-        .row.light.spaced
-          .small-6.columns.text-left
-            a href="{{ page.previous.url }}" rel="prev" &laquo; PREVIOUS
-          .small-6.columns.text-right
-            a href="{{ page.next.url }}" rel="next" NEXT &raquo;
-    .row
+  .large-12.columns
+    .row.bottom-spaced.top-spaced
+      .small-2.columns.text-left
+        p
+          |{% if page.previous.url %}
+          a href="{{ page.previous.url }}" rel="prev"
+            i.fa.fa-caret-left
+            |&nbsp;PREV
+          |{% endif %}
+          |&nbsp;
+      .small-8.columns.text-center
+        p
+          em
+            | Enjoy this article? Read more like it in the
+            a< href="{% category_url | page.category %}"
+              | {{ page.category | titlecase }}
+            |&nbsp;category.
+      .small-2.columns.text-right
+        p
+          |{% if page.next.url %}
+          a href="{{ page.next.url }}" rel="next"
+            |NEXT&nbsp;
+            i.fa.fa-caret-right
+          |{% endif %}
+    .row.bottom-spaced
       .large-12.columns
         / hr.spaced
         div id="disqus_thread"

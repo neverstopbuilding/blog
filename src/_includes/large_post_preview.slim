@@ -8,16 +8,16 @@ article.row.preview-image style="background-image: url({{background_image}});"
     p.light
       | {% slim date.slim %}
       | {% unless post.category == page.category %}
-      |&nbsp;|&nbsp;
-      a href="{% category_url post.category %}" {{post.category | upcase }}
+      |  in
+      a< href="{% category_url post.category %}" {{post.category | titlecase }}
       | {% endunless %}
-    p
+    p.content
       | {% capture description %}
       | {% if post.description %}{{ post.description | strip_breaks | condense_spaces | truncate:200 }}
       | {% else %}{{ post.content | markdownify | strip_html | strip_breaks | condense_spaces | decode | truncate:200 }}
       | {% endif %}
       | {% endcapture %}
       | {{ description }}
-      a< href="{{post.url}}" read more &raquo;
+      a< href="{{post.url}}" read more <i class="fa fa-caret-right"></i>
 
 

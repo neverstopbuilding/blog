@@ -1,51 +1,26 @@
 ---
 layout: page
 ---
-.row.page
-  .large-9.push-3.columns
-    header.row.spaced
-      .large-12.columns.large-right-small-center
-        .light
-          | LAST UPDATED ON {% slim date.slim %}
-    .row
-      .large-12.columns
-        | {{ content }}
-    .row
-      .large-12.columns
-        div id="disqus_thread"
-        script
-          | var disqus_title = '{{ page.project | titlecase }} Project';
-          | var disqus_url = 'http://www.neverstopbuilding.com/project/{{page.project | slugify}}';
-    .row
-      .large-12.columns
-        hr
-        h2 All Articles Related to this Project
-    | {% for post in site.posts %}
-    | {% if post.project == page.project %}
+.row
+  .large-12.columns.article-content
+    | {{ content }}
+
+| {% assign project_posts = site.posts | project_articles:page.project %}
+| {% if project_posts %}
+.row.bottom-spaced
+  .large-12.columns.text-center
+    hr
+    h2 All Articles Related to this Project
+.row
+  .large-12.columns
+    | {% for post in project_posts %}
     | {% slim large_post_preview.slim %}
-    | {% endif %}
     | {% endfor %}
-    | {% slim footer/page_footer.slim %}
-  aside.large-3.pull-9.columns
-    .row.top-spaced
-      | {% if page.has_feed %}
-      .large-12.columns.large-left-small-center
-        h2 Subscribe
-        p
-          | Use the
-          a<href="{{ site.url }}/project/{{page.project | slugify}}/atom.xml"
-            | {{ page.project | titlecase }} RSS Feed
-          |&nbsp;to subscribe updates about this project!
-      | {% endif %}
-    .row.bottom-spaced
-      .large-12.columns.large-left-small-center
-        h2 Other Projects
-        | {% for a_page in site.pages %}
-        | {% if a_page.project %}
-        | {% unless a_page.project == page.project %}
-        p.project-title
-          a href="{{ site.url}}/project/{{ a_page.project | slugify }}" title="{{ a_page.project | titlecase }}"
-            | {{ a_page.project | titlecase }}
-        | {% endunless %}
-        | {% endif %}
-        | {% endfor %}
+| {% endif %}
+| {% slim footer/page_footer.slim %}
+.row
+  .large-12.columns
+    div id="disqus_thread"
+    script
+      | var disqus_title = '{{ page.project | titlecase }} Project';
+      | var disqus_url = 'http://www.neverstopbuilding.com/project/{{page.project | slugify}}';

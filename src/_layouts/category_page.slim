@@ -1,30 +1,17 @@
 ---
 layout: page
 ---
-.row.page.top-spaced
-  .large-9.push-3.columns
-    header.row.top-spaced
-    | {% for post in site.categories[page.category] %}
-    | {% slim large_post_preview.slim %}
-    | {% endfor %}
-    | {% slim footer/page_footer.slim %}
-  aside.large-3.pull-9.columns
-    .row.top-spaced
-      .large-12.columns.large-left-small-center
-        h2 Subscribe
-        p
-          | The
-          a<href="{% category_url page.category %}/atom.xml"
-            | {{ page.category | titlecase }} RSS Feed
-          |&nbsp;lets you subscribe to just the articles form this category!
-    .row
-      .large-12.columns.large-left-small-center
-        h2 Categories
-        | {% for category in site.categories %}
-        | {% if category[0] != page.category %}
-        | {% capture display_category %}{{ category[0] | titlecase }}{% endcapture %}
-        p.category-title
-          a href="{% category_url category[0] %}" title="{{display_category}}"
-            | {{display_category}}
-        | {% endif %}
+.row.page
+  .large-12.columns
+    header.row.top-spaced.bottom-spaced.text-center
+      .large-12.columns
+        .by-line
+          p
+            em
+              a<href="{% category_url page.category %}/atom.xml" Subscribe to this category.
+    .row.page.top-spaced
+      .large-12.colums
+        | {% for post in site.categories[page.category] %}
+        | {% slim large_post_preview.slim %}
         | {% endfor %}
+        | {% slim footer/page_footer.slim %}

@@ -1,60 +1,112 @@
-// Global Foundation Settings
-@import "settings";
-
-// Comment out this import if you don't want to use normalize
-@import "normalize";
-
-// Comment out this import if you are customizing you imports below
-// @import "foundation";
-
-// Import specific parts of Foundation by commenting the import "foundation"
-// and uncommenting what you want below. You must uncomment the following if customizing
-
-@import "foundation/components/global"; // *always required
-@import "foundation/components/grid";
-
-//
-// Use this grid if you want to start using the new Foundation 5 grid early.
-// It will change breakpoints to min-width: 640px and 1024px.
-//
-// @import "foundation/components/grid-5";
-//
-
-@import "foundation/components/visibility";
-@import "foundation/components/block-grid";
-@import "foundation/components/type";
-// @import "foundation/components/buttons";
-// @import "foundation/components/forms"; // *requires components/buttons
-// @import "foundation/components/custom-forms"; // *requires components/buttons, components/forms
-// @import "foundation/components/button-groups"; // *requires components/buttons
-// @import "foundation/components/dropdown-buttons"; // *requires components/buttons
-// @import "foundation/components/split-buttons"; // *requires components/buttons
-@import "foundation/components/flex-video";
-// @import "foundation/components/section";
-// @import "foundation/components/top-bar";  // *requires components/grid
-@import "foundation/components/orbit";
-// @import "foundation/components/reveal";
-// @import "foundation/components/joyride";
-// @import "foundation/components/clearing";
-// @import "foundation/components/alert-boxes";
-// @import "foundation/components/breadcrumbs";
-// @import "foundation/components/keystrokes";
-// @import "foundation/components/labels";
-// @import "foundation/components/inline-lists";
-// @import "foundation/components/pagination";
-// @import "foundation/components/panels";
-// @import "foundation/components/pricing-tables";
-// @import "foundation/components/progress-bars";
-// @import "foundation/components/side-nav";
-// @import "foundation/components/sub-nav";
-// @import "foundation/components/switch";
-// @import "foundation/components/magellan";
-// @import "foundation/components/tables";
-// @import "foundation/components/thumbs";
-// @import "foundation/components/tooltips";
-// @import "foundation/components/dropdown";
+@import "foundation/settings";
+@import "foundation/normalize";
+@import "foundation/foundation";
 
 @import "compass/css3/background-size";
+@import "compass/css3/transition";
+@import "compass/css3/text-shadow";
+
+
+// Site Update Mods
+
+// Modifications of Top Bar
+.top-bar-section li:not(.has-form) a:not(.button) {
+    background: none;
+    @include single-transition(all .5s ease 0s);
+
+    &:hover{
+        background: #111111;
+        color: #ffffff;
+    }
+}
+
+.top-bar .name h1 a {
+    @include single-transition(all .5s ease 0s);
+    &:hover{
+        color: #ffffff;
+    }
+}
+
+// Wraps all the rendered content of the page
+.content-wrapper{
+    overflow-x: hidden;
+}
+
+// Sets up the header image
+.header-image {
+    height: 22em;
+    @include background-size(cover);
+    margin-bottom: 3em;
+    & > .row {
+        position: relative;
+        height: 19em;
+        & > .columns {
+            position: absolute;
+            bottom: 2em;
+            padding-bottom: 0em;
+            h1{
+                font-size: 3em;
+            }
+        }
+    }
+}
+
+// Sets up the home image
+.home-image {
+    // & > .row {
+    //     padding-top: 10em;
+    //     @media #{$small} {
+    //         padding-top: 0em;
+    //         padding-bottom: 5em;
+    //     }
+    // }
+    background: {
+      repeat: no-repeat;
+      position: top left
+    }
+    @include background-size(cover);
+}
+
+// All text over images for main title and page titles
+.title-text {
+    h1, h2, h3, h4, h5, h6{
+        font-weight: 500;
+        color: #ffffff;
+        @include text-shadow(0px 0px 25px #000000, 0px 0px 8px #000000);
+    }
+}
+
+.by-line {
+    &, time{
+        color: #BBB;
+    }
+
+}
+
+.article-content {
+    img {
+        text-align: center;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        font-weight: 500;
+    }
+    p, li{
+    font-family: "Merriweather", sans-serif;
+    font-weight: 300;
+    }
+    p {
+        font-size: 1.5em;
+    }
+    li{
+        font-size: 1.3em;
+    }
+}
+
+
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+// Old settings
 
 ul, ol {
     font-weight: 200;
@@ -72,46 +124,12 @@ nav {
     line-height: 1.4em;
 }
 
-//Wraps all the rendered content of the page
-.content-wrapper{
-    overflow-x: hidden;
-}
 
-.header-image {
-    height: 20em;
-    @include background-size(cover);
-    margin-bottom: 3em;
-    .dark {
-        h1 {
-            font-size: 2.6em;
-            padding-top: .8em;
-        }
-    }
-    & > .row {
-        position: relative;
-        height: 20em;
-        & > .columns {
-            position: absolute;
-            bottom: -3em;
-            padding-bottom: 2em;
-        }
-    }
-}
 
-.home-image {
-    & > .row {
-        padding-top: 10em;
-        @media #{$small} {
-            padding-top: 0em;
-            padding-bottom: 5em;
-        }
-    }
-    background: {
-      repeat: no-repeat;
-      position: top left
-    }
-    @include background-size(cover);
-}
+
+
+
+
 
 .post-grid {
     li {
@@ -159,17 +177,6 @@ nav {
     }
 }
 
-.large-9{
-    .preview-image {
-        font-size: 1em;
-    }
-}
-
-.post-title, .category-title, .project-title {
-    line-height: 1.4em;
-    margin-bottom: 1.2em;
-}
-
 .trans {
     background-color: rgba(0,0,0,.85);
 }
@@ -202,6 +209,9 @@ nav {
                 color: #7E2A2A;
             }
         }
+    }
+    p.content{
+        font-family: "Merriweather", sans-serif;
     }
 }
 
@@ -254,7 +264,7 @@ nav {
     a {
         font-weight: 200;
     }
-    h2 {
+    h2,h4 {
         font-size: .7em;
         line-height: 1.2em;
         @media #{$small} {
@@ -263,18 +273,6 @@ nav {
     }
 }
 
-.massive {
-    font-size: 2em;
-    @media #{$small} {
-        font-size: 4em;
-    }
-    padding-right: 0.2em;
-    padding-left: 0.2em;
-    h1 {
-        font-weight: 400;
-        line-height: 1em;
-    }
-}
 
 .default-footer {
     background-color: #440000;
@@ -286,6 +284,7 @@ nav {
     background-color: #000022;
     padding-top: 2em;
     padding-bottom: 2em;
+    margin-bottom: 1.4em;
 }
 
 p, li {
@@ -320,6 +319,7 @@ blockquote {
         }
     }
 }
+
 
 
 

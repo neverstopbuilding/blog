@@ -7,9 +7,6 @@ MethodLength:
 ClassLength:
   Enabled: false
 
-SymbolName:
-  AllowCamelCase: false
-
 Documentation:
   Enabled: false
 
