@@ -8,7 +8,7 @@ layout: page
         .by-line
           p
             em
-              a<href="{% category_url page.category %}/atom.xml" Subscribe to this category.
+              a<href="{% category_url page.category %}/atom.xml" Subscribe to articles from just this category.
     .row.page.top-spaced
       .large-12.colums
         | {% for post in site.categories[page.category] %}

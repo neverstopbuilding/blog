@@ -53,13 +53,6 @@
 
 // Sets up the home image
 .home-image {
-    // & > .row {
-    //     padding-top: 10em;
-    //     @media #{$small} {
-    //         padding-top: 0em;
-    //         padding-bottom: 5em;
-    //     }
-    // }
     background: {
       repeat: no-repeat;
       position: top left
@@ -99,43 +92,6 @@
     }
     li{
         font-size: 1.3em;
-    }
-}
-
-
-////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-// Old settings
-
-ul, ol {
-    font-weight: 200;
-}
-
-aside.columns {
-    padding-right: inherit;
-    @media #{$small} {
-        padding-right: 2em;
-    }
-    font-size: .9em;
-}
-
-nav {
-    line-height: 1.4em;
-}
-
-
-
-
-
-
-
-
-.post-grid {
-    li {
-        padding-left: 2em;
-        padding-right: 2em;
-        padding-top: 1em;
     }
 }
 
@@ -197,14 +153,15 @@ nav {
     }
     a {
         color: #ccc;
+        @include single-transition(all .5s ease 0s);
         &:hover {
             color: #fff;
-            @include single-transition;
         }
     }
     .red {
         a {
             color: #2E0606;
+            @include single-transition(all .5s ease 0s);
             &:hover {
                 color: #7E2A2A;
             }
@@ -232,27 +189,6 @@ nav {
 
 .bottom-spaced{
     padding-bottom: 2em;
-}
-
-.small-top-spaced {
-    padding-top: 5em;
-    @media #{$small} {
-        padding-top: 0em;
-    }
-}
-
-.large-right-small-center, .large-left-small-center {
-    text-align: center;
-}
-
-@media #{$small} {
-    .large-right-small-center {
-        text-align: right;
-    }
-
-    .large-left-small-center {
-        text-align: left;
-    }
 }
 
 .epic {
