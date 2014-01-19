@@ -80,7 +80,7 @@ namespace :posts do
   namespace :categories do
     task :list do
       categories = []
-      get_posts_data.each do |path, data|
+      posts_data.each do |path, data|
         categories += data['categories'] if data['categories']
         categories += [data['category']] if data['category']
       end
@@ -90,7 +90,7 @@ namespace :posts do
     task :validate do
 
       errors = { total: 0, no_category: [], categories_found: [], not_in_list: [] }
-      get_posts_data.each do |path, data|
+      posts_data.each do |path, data|
         title = data['title']
 
         unless data['category']
@@ -127,14 +127,14 @@ namespace :posts do
 
     desc 'Lists all the used tags ordered by frequency with amount used.'
     task :list do
-      get_unique_tags.sort_by { |key, value| value }.reverse.each do | key, value|
+      unique_tags.sort_by { |key, value| value }.reverse.each do | key, value|
         puts "#{value} - #{key}\n"
       end
     end
 
     desc 'Lists all the tags that are similar to other tags by letter match'
     task :similar do
-      tags = get_unique_tags.keys
+      tags = unique_tags.keys
       flagged = []
       tags.each do |tag_a|
         tags.each do |tag_b|
@@ -153,7 +153,7 @@ namespace :posts do
 
     desc 'Searches for the query tag and opens the post.'
     task :search, :query do |t, args|
-      get_posts_data.each do |path, data|
+      posts_data.each do |path, data|
         if data['tags'].include? args.query
           system "subl #{File.join(Dir.pwd, path)}"
         end
@@ -162,7 +162,7 @@ namespace :posts do
 
     task :validate do
       errors = { total: 0, no_tags: [], few_tags: [], overlap: [] }
-      get_posts_data.each do |path, data|
+      posts_data.each do |path, data|
         title = data['title']
         unless data['tags']
           errors[:no_tags] << title
@@ -224,16 +224,16 @@ end
 
 # Helper functions
 
-def get_posts_data
+def posts_data
   posts = Dir.glob(File.join('src', '_posts', '*.md'))
-    data = {}
-    posts.each do |path|
-      content = File.read(path)
-      if content =~ /\A(---\s*\n.*?\n?)^(---\s*$\n?)/m
-        data["#{path}"] = YAML.load($1)
-      end
+  data = {}
+  posts.each do |path|
+    content = File.read(path)
+    if content =~ /\A(---\s*\n.*?\n?)^(---\s*$\n?)/m
+      data["#{path}"] = YAML.load($1)
     end
-    data
+  end
+  data
 end
 
 def display_errors(errors, key, prompt)
@@ -243,9 +243,9 @@ def display_errors(errors, key, prompt)
   end
 end
 
-def get_unique_tags
+def unique_tags
   tags = Hash.new(0)
-  get_posts_data.each do |path, data|
+  posts_data.each do |path, data|
     if data['tags']
       data['tags'].each do |tag|
         tags[tag] += 1

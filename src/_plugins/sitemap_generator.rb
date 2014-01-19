@@ -122,7 +122,7 @@ module Jekyll
           Git.clone(site.config['sitemap']['repo'], 'build/clone.git')
         end
 
-         @git = Git.open(root)
+        @git = Git.open(root)
 
         urlset = REXML::Element.new 'urlset'
         urlset.add_attribute('xmlns', 'http://www.sitemaps.org/schemas/sitemap/0.9')
