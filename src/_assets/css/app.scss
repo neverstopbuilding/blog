@@ -6,29 +6,31 @@
 @import "compass/css3/transition";
 @import "compass/css3/text-shadow";
 
-
-// Site Update Mods
-
 // Modifications of Top Bar
 .top-bar-section li:not(.has-form) a:not(.button) {
     background: none;
-    @include single-transition(all .5s ease 0s);
-
-    &:hover{
-        background: #111111;
+    @include single-transition(all 0.5s ease 0s);
+    &:hover {
+        background: rgba(0, 0, 0, 0.8);
         color: #ffffff;
     }
 }
 
+.top-bar.expanded ul.right li {
+    background-color: rgba(0, 0, 0, 0.65);
+}
+
 .top-bar .name h1 a {
-    @include single-transition(all .5s ease 0s);
-    &:hover{
+    width: 100%;
+    //Show on small devices
+    @include single-transition(all 0.5s ease 0s);
+    &:hover {
         color: #ffffff;
     }
 }
 
 // Wraps all the rendered content of the page
-.content-wrapper{
+.content-wrapper {
     overflow-x: hidden;
 }
 
@@ -44,7 +46,7 @@
             position: absolute;
             bottom: 2em;
             padding-bottom: 0em;
-            h1{
+            h1 {
                 font-size: 3em;
             }
         }
@@ -54,26 +56,25 @@
 // Sets up the home image
 .home-image {
     background: {
-      repeat: no-repeat;
-      position: top left
-    }
+        repeat: no-repeat;
+        position: top left;
+    };
     @include background-size(cover);
 }
 
 // All text over images for main title and page titles
 .title-text {
-    h1, h2, h3, h4, h5, h6{
+    h1, h2, h3, h4, h5, h6 {
         font-weight: 500;
         color: #ffffff;
-        @include text-shadow(0px 0px 25px #000000, 0px 0px 8px #000000);
+        @include text-shadow(0px 0px 25px black, 0px 0px 8px black);
     }
 }
 
 .by-line {
-    &, time{
+    &, time {
         color: #BBB;
     }
-
 }
 
 .article-content {
@@ -83,14 +84,14 @@
     h1, h2, h3, h4, h5, h6 {
         font-weight: 500;
     }
-    p, li{
-    font-family: "Merriweather", sans-serif;
-    font-weight: 300;
+    p, li {
+        font-family: "Merriweather", sans-serif;
+        font-weight: 300;
     }
     p {
         font-size: 1.5em;
     }
-    li{
+    li {
         font-size: 1.3em;
     }
 }
@@ -134,7 +135,7 @@
 }
 
 .trans {
-    background-color: rgba(0,0,0,.85);
+    background-color: rgba(0, 0, 0, 0.85);
 }
 
 .dark {
@@ -153,7 +154,7 @@
     }
     a {
         color: #ccc;
-        @include single-transition(all .5s ease 0s);
+        @include single-transition(all 0.5s ease 0s);
         &:hover {
             color: #fff;
         }
@@ -161,13 +162,13 @@
     .red {
         a {
             color: #2E0606;
-            @include single-transition(all .5s ease 0s);
+            @include single-transition(all 0.5s ease 0s);
             &:hover {
                 color: #7E2A2A;
             }
         }
     }
-    p.content{
+    p.content {
         font-family: "Merriweather", sans-serif;
     }
 }
@@ -183,11 +184,11 @@
     padding-bottom: 4em;
 }
 
-.top-spaced{
+.top-spaced {
     padding-top: 1em;
 }
 
-.bottom-spaced{
+.bottom-spaced {
     padding-bottom: 2em;
 }
 
@@ -208,7 +209,6 @@
         }
     }
 }
-
 
 .default-footer {
     background-color: #440000;
@@ -246,7 +246,7 @@ blockquote {
 
 .slideshow-wrapper {
     padding-bottom: 2em;
-    .orbit-container{
+    .orbit-container {
         li {
             .orbit-caption {
                 font-size: 0.75em;
@@ -255,8 +255,3 @@ blockquote {
         }
     }
 }
-
-
-
-
-
