@@ -77,4 +77,5 @@ Having killed the ads and the various side bars, I had all this new, clean room 
 ##Final Thoughts
 If you have a website, please, I'm begging you, make the Internet a place of beauty and quality and not the equivalent of a bunch of hooker fliers and pizza delivery coupons tacked on to news bites. If you consume content, install [ad block](https://chrome.google.com/webstore/detail/adblock/gighmmpiobklfepjocnamgkkbiglidom?hl=en), use Readability or similar, and support sites that are doing it right.
 
+
 Thanks for letting me get this off my chest, what do you think of the changes?
