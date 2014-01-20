@@ -53,7 +53,7 @@ The psychology works, Hell, I'd click that link. What, in the world, _are_ peopl
 ###Taking My Own Medicine
 As you can see there are no longer ads on this site. I'm sorry about it. If you remember clicking on one of them, and contact me, I'll send you some Bitcoin or personally research alternatives to the product on which you clicked. So there.
 
-##Three: Remember That Screens Are Wider Than a Role of Toilet Paper.
+##Three: Remember That Screens Are Wider Than a Roll of Toilet Paper.
 
 And with all the excrement cluttering up my screen, I'll need that roll to clean it up. How many blogs have you visited that have a 2/3 or 1/2 column of text, with a bunch of ads and click-bait links to one side, notes scattered about, and that whole mess centered in a 900px center column?
 
