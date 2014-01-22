@@ -83,13 +83,27 @@
     }
     h1, h2, h3, h4, h5, h6 {
         font-weight: 500;
+        margin-bottom: rem-calc(38);
+    }
+    h2 {
+        font-size: rem-calc(42);
+    }
+    h3 {
+        font-size: rem-calc(33);
     }
     p, li {
         font-family: "Merriweather", sans-serif;
         font-weight: 300;
     }
     p {
-        font-size: 1.5em;
+        font-size: rem-calc(26);
+        line-height: rem-calc(38);
+        margin-bottom: rem-calc(38);
+    }
+    ul {
+        list-style: square;
+        margin-bottom: rem-calc(38);
+        margin-left: rem-calc(38);
     }
     li {
         font-size: 1.3em;
