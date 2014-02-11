@@ -6,7 +6,7 @@ tags:  [startups, lean, minimum viable product, mvp, hireworx, crowdcrux]
 author: Sal Briggman
 ---
 
-*Last year I was involved as the technical lead of a startup called LoyalCurve which has since folded. It was a very educational and fun experience, and some of the lessons learned are worth sharing. Our then intern, Sal Briggman, had these thoughts on the subject (the bolds are mine):*
+*Last year I was involved as the technical lead of a startup called LoyalCurve which has since folded. It was a very educational and fun experience, and some of the lessons learned are worth sharing. Our then intern, Sal Briggman, had these thoughts on the subject (the bolds are mine). -JF*
 
 ---
 
@@ -46,4 +46,4 @@ Our product was behind schedule, we kept changing the vision of the product, and
 Overall, it was an incredible experience and I learned more than most of my paid internships. I would do it again in a heart beat, which is why I've caught the startup bug and am working on my own.
 
 ---
-*Sal current runs a [blog on crowd funding](http://www.crowdcrux.com) as well as [Hireworx](http://welcome.hireworx.com/).*
+*Sal currently runs a [blog on crowd funding](http://www.crowdcrux.com) as well as [Hireworx](http://welcome.hireworx.com/).*
