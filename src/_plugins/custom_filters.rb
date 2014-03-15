@@ -65,7 +65,7 @@ module CustomLiquidFilters
   end
 
   def read_time(input)
-    words = condense_spaces(decode(strip_breaks(strip_html(markdownify(input))))).split(" ").count
+    words = condense_spaces(decode(strip_breaks(strip_html(markdownify(input))))).split(' ').count
     words / 155
   end
 
