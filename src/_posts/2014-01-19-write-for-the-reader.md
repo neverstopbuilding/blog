@@ -24,8 +24,6 @@ Readers care about the content they are reading, or finding an answer to a probl
 
 The proof is in the pudding. Let's look at my own stats. Recent figures gathered through [MixPanel](https://mixpanel.com) show that out of 4,000 people who read about halfway through my posts, less than 1% clicked on one of my recently written articles, and essentially zero people clicked on my Twitter handle.
 
-![Funnel of Article Reads and Other Articles Clicked](https://www.evernote.com/shard/s5/sh/6c6e20b0-e7d1-4432-a57c-c3a4c0cb3b66/41499a5736f98946f378ef63b34403a6/deep/0/Never-Stop-Building---Funnels---Mixpanel---Mobile-Analytics.png)
-
 Readers only care about your content. Did you solve a problem they have? Have you enlightened them to some nuance of a current event? Did you teach them something?
 
 No?
@@ -46,7 +44,7 @@ It is simply sinister and appalling to drive traffic to your site with some catc
 
 Gosh, the number of absurd Huffington Post, Buzz Feed, Gawker, and similarly vile, pointless trash with titles like "10 Things You Can Use to Clean Your Ears" I have seen popping up on Facebook recently makes me so sad about the state of society and intellectual discourse. Look at this insanity:
 
-![Lots of articles with no real value.](https://www.evernote.com/shard/s5/sh/e2422f5b-c54a-4cba-b51f-a6ae6134f633/27456358e1d63230039c93c850c1bedd/deep/0/BuzzFeed.png)
+![Lots of articles with no real value.](https://www.evernote.com/shard/s5/sh/0102f95c-5fdd-4fb7-9468-52abab4b7647/48a1cef3828ecb7cc4450bb9cc3cfa92/deep/0/BuzzFeed.png)
 
 The psychology works, Hell, I'd click that link. What, in the world, _are_ people cleaning their ears with? Yet it is empty, there is no real value there. Such sites turn us into piles of mindless flesh, constantly regurgitating the feed to the benefit of the advertisers. Be strong and don't be a part of it.
 
@@ -59,15 +57,15 @@ And with all the excrement cluttering up my screen, I'll need that roll to clean
 
 Here is an example that is not uncommon, you will note I placed green boxes around content readers care about and red boxes around content no one cares about:
 
-![A picture of lots of stuff that no one cares about.](https://www.evernote.com/shard/s5/sh/c74628c8-4a9d-4b1c-b361-707874ab766c/49b643918e9461c6f4e53b57b9c5f338/deep/0/Rosetta-comet-chaser-set-to-wake-up-on-Monday-after-three-years'-sleep---Science---The-Guardian.png)
+![A picture of lots of stuff that no one cares about.](https://www.evernote.com/shard/s5/sh/fe0149c6-3aa3-4b75-913f-f9a35214cd7f/17f825eb5893d2bc404253bd58ef9782/deep/0/11-Unsettling-Facts-You-Should-Know-About-McDonald's-Happy-Meals.png)
 
-What is this nonsense? It looks like more than half of the screen is dedicated to garbage that will distract a reader. I have 20/15 vision and yet on my 15" Air I still zoom in and expand the article to fill the screen so that I may read it in peace.
+What is this nonsense? It looks like more than half of the screen is dedicated to garbage that will distract a reader. I have 20/15 vision and yet on my 15" Air I still zoom in and expand the article to fill the screen so that I may read it in peace. And to make the graphic above, I had to zoom out two times because at the top of the page there was no words of the article visible.
 
 Your number one concern should be about delivering high quality content in an easy-to-consume format to the end user.
 
 [Medium](https://medium.com/) does a fantastic job of this, [Zen Habits](http://zenhabits.net/) is similarly quite clean and Leo (the author) writes often about [his web design decisions](http://mnmlist.com/w). Finally, the [Readability](https://readability.com/) browser extension lets you reload the article with all of this cruft removed. Look, 100% stuff readers care about:
 
-![Readability applied to the same article from above.](https://www.evernote.com/shard/s5/sh/bc47b128-5a42-4fc1-a6c5-18fa4bc324c6/0cb0914f935786e797d2e820d1c97d65/deep/0/Rosetta-comet-chaser-set-to-wake-up-on-Monday-after-three-years'-sleep---www.theguardian.com.png)
+![Readability applied to the same article from above.](https://www.evernote.com/shard/s5/sh/0aa53f91-3053-476f-9980-34bab3277276/525f73c2c3781206dc62883aa1e95751/deep/0/11-Unsettling-Facts-You-Should-Know-About-McDonald's-Happy-Meals---www.huffingtonpost.com.png)
 
 I find it very enjoyable to happen upon an article that does not require me to reload the page, or zoom in, or click close on a "Sign up now!" box. Your readers will too. Your homework: Expand your articles to fill the screen and use clean, legible, and larger type.
 
