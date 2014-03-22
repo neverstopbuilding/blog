@@ -2,9 +2,9 @@
 
 require 'rubocop/rake_task'
 require 'levenshtein'
+require 'YAML'
 
 # Settings
-
 valid_categories = [
   'robo garden',
   'web development',
@@ -17,6 +17,7 @@ valid_categories = [
   'hardware hacking'
 ]
 minimum_tags = 5
+posting_weekeday = 'Tuesday'
 
 task default: 'assets:precompile'
 
@@ -32,8 +33,9 @@ end
 desc 'Create a new article'
 task :new, :slug do |t, args|
   fail 'Enter a slug for your post!' unless args.slug
+  post_date = calculate_next_post_date(posting_weekeday)
   slug = args.slug.gsub(/\s/, '-').gsub(/[^\w-]/, '').downcase
-  filename = File.join('src', '_posts', "#{Time.now.strftime('%Y-%m-%d')}-#{slug}.md")
+  filename = File.join('src', '_posts', "#{post_date}-#{slug}.md")
   fail "#{filename} already exists!" if File.exist?(filename)
   puts "Creating new article: #{filename}"
   open(filename, 'w') do |file|
@@ -41,13 +43,35 @@ task :new, :slug do |t, args|
     file.puts 'layout: post'
     file.puts 'title: '
     file.puts 'image: '
-    file.puts "date: #{Time.now.strftime('%Y-%m-%d')}"
+    file.puts "date: #{post_date}"
     file.puts 'category: '
     file.puts 'tags: []'
     file.puts 'description: ""'
+    file.puts 'promotion: ""'
     file.puts '---'
   end
-  system "open #{filename}"
+end
+
+def calculate_next_post_date(posting_weekeday)
+  latest_post_date = posts_data.to_a.last[1]['date']
+  today = Date.today
+  if latest_post_date > today
+    return latest_post_date + 7
+  else
+    date  = Date.parse(posting_weekeday)
+    delta = date > Date.today ? 0 : 7
+    return date + delta
+  end
+end
+
+task :queue do
+  posts_data.each do |path, data|
+    # puts data.inspect
+    post_date =  Date.parse(data['date'].to_s) if data['date']
+    if post_date && post_date > Date.today
+      puts "#{data['date']} - #{data['title'] || 'No Title'}"
+    end
+  end
 end
 
 task :social do
@@ -67,7 +91,7 @@ task :social do
     'Buffer' => 'buffer',
     'Google Plus' => 'google_plus',
     'Reddit' => 'reddit'
-     }
+  }
   links.each do |type, source|
     puts "\n#{type}\n"
     puts path + "?utm_source=#{source}&medium=share&utm_campaign=#{slug}"
