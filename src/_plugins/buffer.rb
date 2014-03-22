@@ -13,7 +13,6 @@ class Buffer < Jekyll::Generator
     else
       log 'Not sending latest promotion because older than today...'
     end
-
   end
 
   private

@@ -2,7 +2,7 @@
 
 require 'rubocop/rake_task'
 require 'levenshtein'
-require 'YAML'
+require 'yaml'
 
 # Settings
 valid_categories = [
