@@ -12,4 +12,4 @@ The RoboGarden is a self contained, Arduino powered, indoor garden system that w
 The project is open source and [all the files can be found on Github](https://github.com/neverstopbuilding/robo-garden).
 
 ##Latest Operational Video
-{% youtube n8XD46BQcEk %}
+{% youtube SgQ_eDym6fA %}
