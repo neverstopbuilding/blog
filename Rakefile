@@ -28,6 +28,13 @@ namespace :build do
     Rake::Task[:test].invoke
     sh 'bundle exec jekyll build --config _config.yml,_development.yml'
   end
+
+  task :staging do
+    Rake::Task[:clean].invoke
+    Rake::Task[:prepare].invoke
+    Rake::Task[:test].invoke
+    sh 'bundle exec jekyll build --config _config.yml,_staging.yml'
+  end
 end
 
 desc 'Create a new article'

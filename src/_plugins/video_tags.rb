@@ -29,7 +29,7 @@ module Jekyll
     def render(context)
       super
       if @videoid
-        %Q{<div class="flex-video"><iframe width="#{@width}" height="#{@height}" src="http://www.youtube.com/embed/#{@videoid}?rel=0" allowfullscreen></iframe></div>}
+        %Q(<div class="flex-video"><iframe width="#{@width}" height="#{@height}" src="http://www.youtube.com/embed/#{@videoid}?rel=0" allowfullscreen></iframe></div>)
       else
         'Error processing input, expected syntax: {% youtube video_id [width height] %}'
       end
@@ -53,7 +53,7 @@ module Jekyll
     def render(context)
       super
       if @videoid
-        %Q{<div class="flex-video vimeo"><iframe src="//player.vimeo.com/video/#{@videoid}?title=0&amp;byline=0&amp;portrait=0" width="#{@width}" height="#{@height}" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>}
+        %Q(<div class="flex-video vimeo"><iframe src="//player.vimeo.com/video/#{@videoid}?title=0&amp;byline=0&amp;portrait=0" width="#{@width}" height="#{@height}" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>)
       else
         'Error processing input, expected syntax: {% vimeo video_id [width height] %}'
       end

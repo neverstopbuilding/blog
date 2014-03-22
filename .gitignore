@@ -3,3 +3,4 @@ build
 TODO.md
 .DS_Store
 .bundle
+_staging.yml

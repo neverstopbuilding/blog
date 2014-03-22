@@ -104,7 +104,7 @@ module Jekyll
 
   class SitemapGenerator < Generator
     # Valid values allowed by sitemap.xml spec for change frequencies
-    VALID_CHANGE_FREQUENCY_VALUES = %w[always hourly daily weekly monthly yearly never]
+    VALID_CHANGE_FREQUENCY_VALUES = %w(always hourly daily weekly monthly yearly never)
 
     # Goes through pages and posts and generates sitemap.xml file
     #
@@ -133,7 +133,7 @@ module Jekyll
         sitemap.add_element(urlset)
 
         # File I/O: create sitemap.xml file and write out pretty-printed XML
-        FileUtils.mkdir_p(site.dest) unless File.exists?(site.dest)
+        FileUtils.mkdir_p(site.dest) unless File.exist?(site.dest)
         file = File.new(File.join(site.dest, SITEMAP_FILE_NAME), 'w')
         formatter = REXML::Formatters::Pretty.new(4)
         formatter.compact = true
@@ -173,7 +173,7 @@ module Jekyll
       site.pages.each do |page|
         unless excluded?(page.name)
           path = page.full_path_to_source
-          if File.exists?(path)
+          if File.exist?(path)
             url = fill_url(site, page)
             urlset.add_element(url)
           end
