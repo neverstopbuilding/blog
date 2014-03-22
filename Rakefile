@@ -107,6 +107,18 @@ end
 
 namespace :posts do
 
+  namespace :promotion do
+    task :validate do
+      posts_data.each do |path, data|
+        promotion = data['promotion']
+        if promotion && promotion.length > 115
+          fail ArgumentError, "ERROR: Promotion for \"#{data['title']}\" is too long! Keep under 115 characters."
+        end
+      end
+      puts 'No promotion errors found!'
+    end
+  end
+
   namespace :categories do
     task :list do
       categories = []
@@ -225,7 +237,7 @@ namespace :posts do
 end
 
 desc 'Runs quality checks.'
-task test: [:rubocop, 'posts:tags:validate', 'posts:categories:validate']
+task test: [:rubocop, 'posts:tags:validate', 'posts:categories:validate', 'posts:promotion:validate']
 Rubocop::RakeTask.new
 
 desc 'Removes the build directory.'
