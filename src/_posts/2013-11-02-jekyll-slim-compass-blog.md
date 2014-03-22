@@ -194,9 +194,7 @@ require 'bundler/setup'
 Bundler.require(:default)
 ```
 
-If you don't have any slim templating errors, running the site locally (remember: `bundle exec jekyll server`) should result in something that looks like this:
-
-![The default jekyll site after slim is installed](https://www.evernote.com/shard/s5/sh/fe3a4281-5d35-4cbd-bbac-5387d53db784/c094cc8598b039e285311f9609a42ebe/deep/0/localhost-4000.png)
+If you don't have any slim templating errors, running the site locally (remember: `bundle exec jekyll server`) should result in a working preview.
 
 Awesome! Slim templates are installed.
 
@@ -309,9 +307,7 @@ Asset Pipeline: Saved 'global_css-b1d5a3073ad08d4d302e82b7e3900a46.css' to '/pat
 done.
 ```
 
-And when you preview it in the browser, it should look marginaly better:
-
-![Improved style preview thanks to the asset pipeline integration](https://www.evernote.com/shard/s5/sh/03b8578e-7af5-40b3-9def-f01b54da6da9/b3765d8ace8ee7a540b18869303a4516/deep/0/localhost-4000.png)
+And when you preview it in the browser, it should look marginally better.
 
 ###6. Adding Zurb Foundation and Compass Support
 Our site may look a little better, but it's nothing to write your mom about. To take it to the next level we will integrate the sweet [Zurb Foundation css framework](http://foundation.zurb.com/) and support for the great [Compass framework](http://compass-style.org/). This is a rather straight forward modification to our existing plugin and templates.
@@ -513,9 +509,7 @@ Now, at last, we can deploy our site by committing, creating a Heroku site and p
 
 Now watch the magic happen. You'll notice after the Gems are installed the message `Running: rake assets:precompile`, here we see the standard build process building your site. Then you should also notice the asset pipeline doing its work. And eventually, the deploy process will be complete and you can see your new, fresh blog live and in production.
 
-Running YSlow, reveals a nicely performing site:
-
-![The finished blog showing a 100 score on YSlow](https://www.evernote.com/shard/s5/sh/e218b6e7-5e1d-4466-9acf-e6700e1519ed/c87b59831c8d6db1504f8f408430ed49/deep/0/chrome-extension---ninejjcohidippngpapiilnmkgllmakh-yslow.html-1-and-Your-New-Jekyll-Site.png)
+When I ran YSlow, the site scored a perfect 100.
 
 Although, obviously, there is not much here to slow the site down, at least we have a clean and fast foundation upon which to quickly iterate a Jekyll blog.
 
