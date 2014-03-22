@@ -5,7 +5,6 @@ class Buffer < Jekyll::Generator
     post = most_recent_post(site)
     post_date = post.date.strftime('%Y-%m-%d')
     today_date = Date.today.strftime('%Y-%m-%d')
-    puts "#{post_date} #{today_date}"
     if post_date == today_date
       message = generate_message(post)
       log "Buffer message: \"#{message}\""
@@ -16,10 +15,6 @@ class Buffer < Jekyll::Generator
   end
 
   private
-
-  def log(message)
-    puts "\n\n#{message}\n\n"
-  end
 
   def generate_message(post)
     promotion_message = post.data['promotion'] || ''
@@ -44,5 +39,9 @@ class Buffer < Jekyll::Generator
     else
       log 'Not sending latest post promotion to Buffer...'
     end
+  end
+
+  def log(message)
+    puts "\n\n#{message}\n\n"
   end
 end
