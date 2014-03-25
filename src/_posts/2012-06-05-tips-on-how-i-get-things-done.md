@@ -51,7 +51,7 @@ reached by phone at the office. If people want to reach me, they email
 me, and then I get back to them when I see fit.
 
 
-**Managing Email: **Because I have to use Outlook (barf) I developed a
+*Managing Email:* Because I have to use Outlook (barf) I developed a
 process to deal with it like out look, which I detail in [this post][].
 
 -   Most mail is caught by a rule, and sent right to
@@ -70,7 +70,7 @@ process to deal with it like out look, which I detail in [this post][].
     time considering the responses and replying or doing something.
     Usually the email that makes it to this level is worth my time.
 
-**Tasks: **We use Jira for development tasks which keeps things pretty
+*Tasks:* We use Jira for development tasks which keeps things pretty
 straight forward, anything else I throw into gQueues, detailed below.
 
 **Calendar: **I hate meetings, avoid them at all costs, I know I have a
@@ -82,7 +82,7 @@ anyone else remind me if I am not at a meeting.)
 
 I follow a similar process with all the other email I get:
 
-**gMail: **I take serious advantage of gmail filters and use the
+*gMail:* I take serious advantage of gmail filters and use the
 unsubscribe feature quite a bit. Each email I get is a chance to not get
 it. Most email is auto archived and tagged with things like “Finance” or
 “Amazon” and much is auto read and archived so I don’t even have to
@@ -91,7 +91,7 @@ rest. I try to keep zero items in my inbox (see [Inbox Zero](http://inboxzero.co
 as possible. Again every few days I clean out the stared email
 with replies or actions.
 
-**Snail Mail:** I absolutely love [https://www.mailboxforwarding.com](https://www.mailboxforwarding.com)
+*Snail Mail:* I absolutely love [https://www.mailboxforwarding.com](https://www.mailboxforwarding.com)
 which let’s you set up an address and they scan all your mail for you. I
 shred what I don’t want, forward things I need in hard copy (almost
 nothing) and save the rest. They even deposit checks I might receive.
