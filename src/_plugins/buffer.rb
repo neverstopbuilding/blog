@@ -28,12 +28,12 @@ class Buffer < Jekyll::Generator
   end
 
   def buffer(message, site)
-    access_token = ENV['BUFFER_ACCESS_TOKEN'] || site.config['buffer_access_token']
-    fail ArgumentError, 'No Buffer access token!' unless access_token
-    client = Buff::Client.new(access_token)
-    content = { body: { text: message, top: true, shorten: true,
-                        profile_ids: site.config['buffer_profiles'] } }
     if site.config['send_to_buffer']
+      access_token = ENV['BUFFER_ACCESS_TOKEN'] || site.config['buffer_access_token']
+      fail ArgumentError, 'No Buffer access token!' unless access_token
+      client = Buff::Client.new(access_token)
+      content = { body: { text: message, top: true, shorten: true,
+                          profile_ids: site.config['buffer_profiles'] } }
       response = client.create_update(content)
       log("Buffer API Response: #{response.inspect}")
     else
