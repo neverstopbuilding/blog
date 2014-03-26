@@ -14,7 +14,7 @@ This post might also be titled:
 #How to Have Heroku push to Heroku
 Oh the trials and tribulations of getting a static Jekyll blog to automatically redeploy and in doing so release an article from a queue...
 
-Originally, I had naively assumed that I could simply call a rake task from a scheduled process to regenerate the Jekyll blog on Heroku. Note, you **can't do this!** Once the code is deployed you can't have rake tasks modify it on the Heroku filesystem. You have to redeploy the blog. [The Code Whisperer's article](http://blog.thecodewhisperer.com/2012/12/06/publish-posts-later-with-jekyll-slash-octopress/) helped me along to finally cracking the problem, which required one little Heroku app pushing code to another.
+Originally, I had naively assumed that I could simply call a Rake task from a scheduled process to regenerate the Jekyll blog on Heroku. Note, you **can't do this!** Once the code is deployed you can't have Rake tasks modify it on the Heroku filesystem. You have to redeploy the blog. [The Code Whisperer's article](http://blog.thecodewhisperer.com/2012/12/06/publish-posts-later-with-jekyll-slash-octopress/) helped me along to finally cracking the problem, which required one little Heroku app pushing code to another.
 
 ##A Problem of Inspiration
 Something which I missed, ever since converting this site from Tumblr to Jekyll, was the little scheduling feature that [I raved about in a previous post]({{site.url}}/how-to-promote-and-publish-your-blog-with-tumblr). Often I would get inspired and write a couple of articles, and then with this scheduling feature they would be published regularly, and automatically. Ah, those were the days.
@@ -92,12 +92,12 @@ The tricky part is that in order to rebuild the site I need to push updated sour
 The process is as follows:
 
 1. I manage the site normally, using the previously discussed tasks and simply push my updates to Github where the code is hosted.
-2. Everyday at 8am a rake task on **nsb-deploy** is run that will start by checking if it is Tuesday, if it is then it will:
+2. Everyday at 8am a Rake task on **nsb-deployer** is run that will start by checking if it is Tuesday, if it is then it will:
 3. Clone the latest copy of the source from Github
 4. Add an "update commit" so that when the code is pushed a re-deploy will be triggered.
 5. Finally, pushing the code to the production Heroku site to re-deploy.
 
-The nuance of this set up is that the **nsb-deploy** app must have a way to securely push to an Heroku repository (lemme tell you that was a pain to figure out.) Let's it up.
+The nuance of this set up is that the **nsb-deployer** app must have a way to securely push to an Heroku repository (lemme tell you that was a pain to figure out.) Let's it up.
 
 ###The Deployer App
 To implement this solution you will need to create a second Heroku app, I called mine **nsb-deployer** which contains:
@@ -162,14 +162,14 @@ end
 
 This is the task that will be scheduled, cloning the code and pushing it to the Heroku remote. Note the `git commit --allow-empty -m 'Force rebuild'` command. This is required because in general, all that will change between queued post releases is the time, not source code will change so Heroku won't rebuild. This commit ensures a rebuild occurs.
 
-Also you will note reference to a `heroku_private.pem` file. This file contains an SSH private key specifically created for this deployment process. It's probably a security sin to have committed it and pushed it to the nab-deploy remote, alternatively I could have stored it as a config parameter and written it out to a file.
+Also you will note reference to a `heroku_private.pem` file. This file contains an SSH private key specifically created for this deployment process. It's probably a security sin to have committed it and pushed it to the nsb-deployer remote, alternatively I could have stored it as a Heroku config parameter and written it out to a file.
 
-I generated the key pair and added the private key to this app, and then added the public key to the actually production Heroku remote (in this case neverstopbuilding) here is an example:
+I generated the key pair and added the private key to this app (nsb-deployer), and then added the public key to the actually production Heroku remote (in this case neverstopbuilding) here is an example:
 
     % cd neverstopbuilding/blog
     % heroku keys:add ../nsb-deployer/heroku_public.pem
 
-Finally, I added the [Heroku Scheduler Add-on](https://devcenter.heroku.com/articles/scheduler) to the nab-deployer app and scheduled the `refresh:weekly` Rake task to run once a day at 8AM (12PM UTC). I can also run a `refresh:manual` task to force a redeploy for manual posting or updating purposes.
+Finally, I added the [Heroku Scheduler Add-on](https://devcenter.heroku.com/articles/scheduler) to the nsb-deployer app and scheduled the `refresh:weekly` Rake task to run once a day at 8AM (12PM UTC). I can also run a `refresh:manual` task to force a redeploy for manual posting or updating purposes.
 
 ##Automate Your Way to Freedom
 It's rather amazing how something like a post queue can make you feel more free with your time. I can keep content flowing regularly even if I'd likely not get the chance to write weekly. With a little adjustment I could have the posts publish more or less frequently, or leverage this technique to build some fun CI/CD solutions.
