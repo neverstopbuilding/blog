@@ -265,15 +265,7 @@ namespace :assets do
   end
 end
 
-desc 'Rebuilds the site during the publish window.'
-task :refresh do
-  if Date.today.wday == Date.parse(posting_weekeday).wday && Time.now.hour == post_window_start_hour
-    puts "It's Tuesday around 8AM, let's rebuild the site!"
-    sh 'bundle exec jekyll build'
-  end
-end
 # Helper functions
-
 def posts_data
   posts = Dir.glob(File.join('src', '_posts', '*.md'))
   data = {}

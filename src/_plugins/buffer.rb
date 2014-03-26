@@ -4,7 +4,9 @@ class Buffer < Jekyll::Generator
   def generate(site)
     post = most_recent_post(site)
     post_date = post.date.strftime('%Y-%m-%d')
+    puts post_date
     today_date = Date.today.strftime('%Y-%m-%d')
+    puts today_date
     if post_date == today_date
       message = generate_message(post)
       log "Buffer message: \"#{message}\""

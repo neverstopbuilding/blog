@@ -12,7 +12,7 @@ default_home_image: https://lh5.googleusercontent.com/-75568V798uI/UhmjUBPD5uI/A
 title: Never Stop Building
 description: "Learn about high quality software engineering, code craftsmanship, productivity, electronics and inventions. By Jason Fox, renaissance man and builder."
 future: false
-send_to_buffer: false
+send_to_buffer: true
 buffer_profiles:
     - 50fea0bd0a19002365000002
     - 527456636f9adad8670000a0
