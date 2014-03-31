@@ -18,7 +18,6 @@ valid_categories = [
 ]
 minimum_tags = 5
 posting_weekeday = 'Tuesday'
-post_window_start_hour = 8
 
 task default: 'assets:precompile'
 
