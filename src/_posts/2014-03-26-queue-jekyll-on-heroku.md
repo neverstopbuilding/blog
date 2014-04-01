@@ -140,6 +140,8 @@ This script by [Alvin Abad](http://alvinabad.wordpress.com/2013/03/23/how-to-spe
 ####Rakefile
 
 ```ruby
+require 'date'
+
 namespace :refresh do
   task :weekly do
     if Date.today.tuesday?
