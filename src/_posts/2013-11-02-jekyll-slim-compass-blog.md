@@ -53,7 +53,7 @@ Update your `Gemfile` to look like this:
 source 'http://rubygems.org'
 ruby '2.0.0'
 
-gem 'jekyll'
+gem 'jekyll', '~> 1.3.0'
 gem 'jekyll-slim'
 gem 'jekyll-asset-pipeline'
 gem 'compass'
@@ -127,7 +127,7 @@ doctype html
 html
   head
     title
-      | {{ page.title } }
+      | {{ page.title }}
   body
     .site
       .header
@@ -399,7 +399,7 @@ guard 'livereload' do
 end
 ```
 
-Next ensure you have the [Chrome Livereload extension)(https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei) installed. (I believe there is also one for Firefox.)
+Next ensure you have the [Chrome Livereload extension](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei) installed. (I believe there is also one for Firefox.)
 
 Now, rather than starting up the server the old fashioned way, let's do it the *new fangled* way:
 
