@@ -446,7 +446,7 @@ end
 
 An interesting thing about Heroku, is that by default, it will attempt to run the `assets:precompile` Rake task in its standard Ruby build process. All we are doing here is asking that when it runs this task, it should build our Jekyll site. There's no need to install any custom build process.
 
-The `Profile` is rather straight forward and configures the Puma server for our site:
+The `Procfile` is rather straight forward and configures the Puma server for our site:
 
 ```ruby
 web:     bundle exec puma -p $PORT config.ru
