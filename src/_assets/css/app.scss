@@ -85,8 +85,9 @@
 // All text over images for main title and page titles
 .title-text {
     h1, h2, h3, h4, h5, h6 {
-        font-weight: 500;
+        font-weight: 200;
         color: #ffffff;
+        letter-spacing: 3px;
         @include text-shadow(0px 0px 25px black, 0px 0px 8px black);
     }
 }
@@ -266,6 +267,17 @@ $content-spacing: 36;
     padding-top: 2em;
     padding-bottom: 2em;
     margin-bottom: 1.4em;
+    &.page {
+        margin-top: -3em;
+        padding-top: 3em;
+        .dark p{
+            font-size: 1.5em;
+            line-height: 1.6em;
+            font-weight: 100;
+            color: #ddd;
+            letter-spacing: 2px;
+        }
+    }
 }
 
 p, li {
