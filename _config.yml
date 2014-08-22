@@ -8,9 +8,9 @@ timezone: America/New_York
 permalink: /:title
 url: http://www.neverstopbuilding.com
 default_page_image: https://lh5.googleusercontent.com/-N-zIzELpE4Q/Umngjlc4rLI/AAAAAAAAJCk/EnHYREZvgLI/w1117-h316-no/tattoo.png
-default_home_image: https://lh5.googleusercontent.com/-75568V798uI/UhmjUBPD5uI/AAAAAAAAIWA/I-t9QxUhkdA/w1002-h668-no/2013-08-23-115546.jpg
+default_home_image: /images/bike-background.jpg
 title: Never Stop Building
-description: "Learn about high quality software engineering, code craftsmanship, productivity, electronics and inventions. By Jason Fox, renaissance man and builder."
+description: "We build custom motorcycles and complete fabrication projects in Baltimore, Maryland. Learn about building techniques, motorcycles, high quality software engineering, code craftsmanship, productivity, electronics and inventions. By Jason Fox, renaissance man and builder."
 future: false
 send_to_buffer: true
 buffer_profiles:
@@ -28,11 +28,15 @@ email: jasonrobertfox@gmail.com
 twitter: //twitter.com/jasonrobertfox
 twitter_username: jasonrobertfox
 youtube: //www.youtube.com/user/neverstopbuildingtv
+facebook: //www.facebook.com/NeverStopBuildingOnline
 github: //github.com/jasonrobertfox
 google_plus: //plus.google.com/109774408645971700391
-instagram: //instagram.com/jasonrobertfox
-from: "Washington, DC, USA"
+instagram: //instagram.com/neverstopbuilding
 author_facebook: https://www.facebook.com/profile.php?id=100007507692940
+address: '3720 Hickory Avenue, Rear Alley'
+city: Balimore
+state: Maryland
+zip: 21211
 
 # Plugin Settings
 markdown: redcarpet

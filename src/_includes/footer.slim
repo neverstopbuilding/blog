@@ -1,12 +1,20 @@
 footer.default-footer
   .row.bottom-spaced
-    .large-12.columns.text-center.dark.epic
-      h4.epic
-        | Get the latest updates from Never Stop Building by following me on twitter
-        a.mp-footer-link< href="{{ site.twitter }}" title="text twitter" @jasonrobertfox
-        | .
+    .large-12.columns.text-center.dark
+      ul.vcard.address
+        li.fn
+          img src="/images/white-logo.png" alt="Never Stop Building"
+        li.street-address
+          | {{ site.address }}
+        li
+          span.locality
+            | {{ site.city }},
+          span.state
+            |  {{ site.state }}
+          span.zip
+            |  {{ site.zip }}
   .row.dark.text-center.top-spaced
-    ul.large-block-grid-6.medium-block-grid-3.small-block-grid-2.red
+    ul.large-block-grid-7.medium-block-grid-3.small-block-grid-2.red
       li
         a.mp-footer-link title="twitter" href="{{ site.twitter }}"
           i.fa.fa-twitter.fa-4x
@@ -16,6 +24,9 @@ footer.default-footer
       li
         a.mp-footer-link title="youtube" href="{{ site.youtube }}"
           i.fa.fa-youtube.fa-4x
+      li
+        a.mp-footer-link title="facebook" href="{{ site.facebook }}"
+          i.fa.fa-facebook-square.fa-4x
       li
         a.mp-footer-link title="email" href="mailto:{{ site.email }}"
           i.fa.fa-envelope.fa-4x

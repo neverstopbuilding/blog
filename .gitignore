@@ -1,6 +1,6 @@
 build
 .sass-cache
 TODO.md
-.DS_Store
+*.DS_Store
 .bundle
 _staging.yml

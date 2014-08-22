@@ -92,18 +92,6 @@ pageTitleResize = function () {
     } while (titleHeight > maxHeight || titleWidth > maxWidth);
   }
 };
-siteTitleResize = function () {
-  if ($("#site-title").length > 0) {
-    var maxWidth = $(document).width();
-    fontSize = 0.13 * maxWidth;
-    padding = 0.5 * fontSize;
-    $("#site-title h1").css('font-size', fontSize + "px");
-    $("#site-title").css('padding-top', padding + "px");
-    $("#site-title").css('padding-bottom', padding + "px");
-  }
-};
 
 $(window).resize(pageTitleResize);
 $(document).ready(pageTitleResize);
-$(window).resize(siteTitleResize);
-$(document).ready(siteTitleResize);

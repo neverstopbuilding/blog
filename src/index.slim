@@ -15,17 +15,28 @@ tags:
   - 3d printing
   - hardware prototyping
   - inventing
+  - motorcycles
+  - custom fabrication
+  - vintage motorcycles
+  - hampden
+  - baltimore
+  - motorcycle shop
 ---
 header.home-image style="background-image: url({{ site.default_home_image }});"
   | {% slim nav.slim %}
   .row.title-container
     .large-12.columns.text-center.title-text id="site-title"
       h1
-        span Never Stop <br/> Building.
+        img src="/images/white-on-black-shadow.png" alt="Never Stop Building"
 section.intro
   .row
     .large-12.columns.text-center.dark.epic
-      h2 My name is Jason Fox and I love building. I'm a software engineer, designer, maker, and inventor. Check out my latest articles below.
+      h2 Bespoke motorcycles. Vintage restoration. Custom fabrication. Built in Baltimore.
+section.about
+  .row
+    .large-12.columns.text-center
+      p id="about-first" Never stop building is a custom motorcycle shop located in the Hampden neighborhood of Baltimore, MD. We take an individual approach to each project, providing the highest levels of craftsmanship and attention to detail. Have an idea for a build? Please, <a title="email" href="mailto:{{ site.email }}">contact us</a>.
+      p id="about-second" We also provide software consultancy and development services, and maintain a variety of articles spanning various technical topics. Checkout the latest from our blog below:
 section.row.top-spaced
   .large-12.columns
     | {% for post in site.posts limit:4 %}
