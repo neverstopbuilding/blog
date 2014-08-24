@@ -2,7 +2,7 @@
 layout: post
 title: "Building a Military Spec MacBook Air Case with Long Life Battery"
 date: 2013-09-17 14:51
-category: hardware hacking
+category: build logs
 tags:  [laptop case, pelican case, mil spec, battery pack, mobile productivity]
 image: https://lh5.googleusercontent.com/hWGis50FYBbJ0H8gBNBW_xOWCNejMvvvw7oaAu8cg3s=w880-h247-no
 description: The build process of a pelican case that holds a long life battery pack with custom connectors to charge the battery and the mac book air inside.

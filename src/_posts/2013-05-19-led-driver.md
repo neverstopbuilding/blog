@@ -2,7 +2,7 @@
 layout: post
 title: "Building an LED Driver Array"
 date: 2013-05-19 12:57
-category: hardware hacking
+category: build logs
 project: robo garden
 tags:  [led driver, voltage regulator, lm317, super bright leds, circuit design]
 ---

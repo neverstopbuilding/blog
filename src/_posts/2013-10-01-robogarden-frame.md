@@ -2,7 +2,7 @@
 layout: post
 title: "Finishing the RoboGarden Frame"
 date: 2013-10-01 17:41
-category: hardware hacking
+category: build logs
 project: robo garden
 tags:  [stepper motor, led mounts, carriage back, 3d printing, prototyping, garden hacking]
 ---

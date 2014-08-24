@@ -2,7 +2,7 @@
 layout: post
 title: "Designing the RoboGarden Frame and Watering Carriage"
 date: 2013-09-25 10:12
-category: hardware hacking
+category: build logs
 project: robo garden
 tags:  [3d printing, led mounts, garden hacking, 3d printing, prototyping]
 ---

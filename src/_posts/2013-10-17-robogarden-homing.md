@@ -2,7 +2,7 @@
 layout: post
 title: "Designing and Building the Micro Switch Mount"
 date: 2013-10-17 16:02
-category: hardware hacking
+category: build logs
 project: robo garden
 tags: [micro switch, hardware debouncing, schmitt inverter, arduino, 3d printing]
 image: https://lh3.googleusercontent.com/-J-yEeuODKtU/UmAuh62wLpI/AAAAAAAAJAE/vtR87IvCbHc/w891-h668-no/IMG_1706.JPG

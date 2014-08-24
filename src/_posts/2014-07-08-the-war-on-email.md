@@ -4,7 +4,7 @@ title: The War on Email
 image: "https://www.evernote.com/shard/s5/sh/4d3e1b29-f0e0-4920-8229-f6e2a27b6374/a8fada9c4e3ed78d63b06b4449d20981/deep/0/battle-of-buda.png"
 date: 2014-07-08
 category: productivity
-tags: [email, war, productivity, "work flow", process, "get things done"]
+tags: [email, war, "work flow", process, "get things done"]
 description: "Email is pretty much the worst thing in the world. I came back from 30 days in the jungle and had to deal with a whole bunch of garbage. As a result I did some analysis and updated my defensive filters. Here is the war report."
 promotion: "Do hate dealing with email? Well check out how I use filters to lay down some law."
 ---

@@ -14,7 +14,8 @@ valid_categories = [
   'test driven development',
   'management',
   'software engineering',
-  'hardware hacking'
+  'build logs',
+  'motorcycle builds'
 ]
 minimum_tags = 5
 posting_weekeday = 'Tuesday'
