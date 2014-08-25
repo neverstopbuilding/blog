@@ -1,18 +1,19 @@
 footer.default-footer
   .row.bottom-spaced
     .large-12.columns.text-center.dark
-      ul.vcard.address
-        li.fn
-          img src="/images/white-logo.png" alt="Never Stop Building"
-        li.street-address
-          | {{ site.address }}
-        li
-          span.locality
-            | {{ site.city }},
-          span.state
-            |  {{ site.state }}
-          span.zip
-            |  {{ site.zip }}
+      a href="https://www.google.com/maps/@39.3332284,-76.6348904,21z"
+        ul.vcard.address
+          li.fn
+            img src="/images/white-logo.png" alt="Never Stop Building"
+          li.street-address
+              | {{ site.address }}
+          li
+            span.locality
+              | {{ site.city }},
+            span.state
+              |  {{ site.state }}
+            span.zip
+              |  {{ site.zip }}
   .row.dark.text-center.top-spaced
     ul.large-block-grid-7.medium-block-grid-3.small-block-grid-2.red
       li
