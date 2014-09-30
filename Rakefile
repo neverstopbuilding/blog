@@ -15,7 +15,8 @@ valid_categories = [
   'management',
   'software engineering',
   'build logs',
-  'motorcycle builds'
+  'motorcycle builds',
+  'philosophy'
 ]
 minimum_tags = 5
 posting_weekeday = 'Tuesday'
