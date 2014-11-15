@@ -61,6 +61,29 @@ task :new, :slug do |t, args|
   end
 end
 
+desc 'Create a new project'
+task :project, :slug do |t, args|
+  fail 'Enter a slug for your post!' unless args.slug
+  slug = args.slug.gsub(/\s/, '-').gsub(/[^\w-]/, '').downcase
+  folder_name = File.join('src', 'project', slug)
+  fail "#{folder_name} already exists!" if File.exist?(folder_name)
+  FileUtils.mkdir_p(folder_name)
+  filename = File.join(folder_name, 'index.md')
+  puts "Creating new article: #{filename}"
+  open(filename, 'w') do |file|
+    file.puts '---'
+    file.puts 'layout: project_page'
+    file.puts 'title: '
+    file.puts 'has_feed: false'
+    file.puts 'project: '
+    file.puts "date: #{}"
+    file.puts 'description: ""'
+    file.puts 'image: '
+    file.puts 'tags: []'
+    file.puts '---'
+  end
+end
+
 def calculate_next_post_date(posting_weekeday)
   latest_post_date = posts_data.to_a.last[1]['date']
   today = Date.today
