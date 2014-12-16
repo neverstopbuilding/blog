@@ -5,7 +5,6 @@ image:
 date: 2014-12-03
 category: productivity
 tags: [data, cities, charts]
-description: "A comparison of US cities by days of sun and cost of living."
 promotion: "I made a little chart that plots days of sun versus cost of living for us cities. Check it out!"
 ---
 I was curious about which places in the United States were both really sunny and really inexpensive. It's fine to live in Detroit from a cost stand point, but the weather is terrible. Similarly, Hawaii is probably beautiful, but surly expensive.
